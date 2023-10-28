@@ -1,0 +1,19 @@
+package Model;
+
+import lombok.*;
+
+import java.util.ArrayList;
+
+@ToString
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+public class PaqueteTuristico {
+
+    private ArrayList<Destino> destinos= new ArrayList<>();
+    private String nombrePaquete;
+    private int duracion;
+    private String serviciosAdicionales;
+    private double precio;
+}
