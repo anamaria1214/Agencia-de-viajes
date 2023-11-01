@@ -1,17 +1,17 @@
 .subtitulo{
     -fx-font-family: "Arial"; /* Fuente */
-    -fx-font-size: 16px; /* Tamaño de fuente */
-    -fx-text-fill: #53959b; /* Color del texto */
+    -fx-font-size: 24px; /* Tamaño de fuente */
+    -fx-text-fill: #9672cf; /* Color del texto */
     -fx-padding: 5 10 5 10; /* Espaciado interior (arriba, derecha, abajo, izquierda) */
     -fx-background-color: transparent;
     -fx-alignment: CENTER_LEFT;
 }
 .tiulo{
     -fx-font-family: "Arial"; /* Fuente */
-    -fx-font-size: 24px; /* Tamaño de fuente */
-    -fx-text-fill: #53959b; /* Color del texto */
+    -fx-font-size: 30px; /* Tamaño de fuente */
+    -fx-text-fill: #9672cf; /* Color del texto */
     -fx-padding: 5 10 5 10; /* Espaciado interior (arriba, derecha, abajo, izquierda) */
     -fx-background-color: transparent;
-    -fx-alignment: CENTER_LEFT;
+    -fx-alignment: center;
     -fx-font-weight: bold; /* Fuente negrita */
 }

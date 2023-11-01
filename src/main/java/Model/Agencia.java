@@ -1,8 +1,8 @@
 package Model;
 
-import App.Main;
+import App.AppPrincipal;
 import Archivos.ArchivoUtils;
-import com.sun.glass.ui.Window;
+import com.sun.tools.javac.Main;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -66,7 +66,7 @@ public class Agencia {
         this.paquetesTuristicos = new ArrayList<>();
         // leerPaquetesTuristicos();
         this.reservas = new ArrayList<>();
-        leerReservas();
+        //leerReservas();
     }
 
     private void leerReservas() {
@@ -143,26 +143,27 @@ public class Agencia {
 
     }
 
-    public boolean comprobarExistenciaClienteRecur(String id, int i, boolean flag) {
+    public boolean comprobarExistenciaClienteRecur(String email, int i, boolean flag) {
         if (i < clientes.size() && !flag) {
-            if (id.equals(clientes.get(i).getIdCliente())) {
-                return comprobarExistenciaClienteRecur(id, i, true);
+            if (email.equals(clientes.get(i).getEmailCliente()
+            )) {
+                return comprobarExistenciaClienteRecur(email, i, true);
             } else {
-                return comprobarExistenciaClienteRecur(id, i + 1, false);
+                return comprobarExistenciaClienteRecur(email, i + 1, false);
             }
         } else {
             return flag;
         }
     }
 
-    public void iniciarSesionClienteRecur(String id, String contrasenia, int i, boolean flag) throws NonRegisteredCustomer {
+    public void iniciarSesionClienteRecur(String email, String contrasenia, int i, boolean flag) throws NonRegisteredCustomer {
         if (i <clientes.size() && !flag) {
-            if (!comprobarExistenciaClienteRecur(clientes.get(i).getContraseniaCliente(), 0, false)) {
+            if (!comprobarExistenciaClienteRecur(clientes.get(i).getEmailCliente(), 0, false)) {
                 throw new NonRegisteredCustomer("El cliente que ingresó no se encuentra registrado");
             }else{
                 if(clientes.get(i).getContraseniaCliente().equals(contrasenia)) {
                     try {
-                        FXMLLoader loader = new FXMLLoader(Main.class.getResource("/InicioCliente.fxml"));
+                        FXMLLoader loader = new FXMLLoader(AppPrincipal.class.getResource("/InicioCliente.fxml"));
                         Parent parent = loader.load();
 
                         Stage stage = new Stage();
@@ -180,45 +181,13 @@ public class Agencia {
                     alert.setHeaderText(null);
                     alert.show();
                 }
-                iniciarSesionClienteRecur(id, contrasenia, i, true);
+                iniciarSesionClienteRecur(email, contrasenia, i, true);
             }
         }else{
-            iniciarSesionClienteRecur(id, contrasenia, i+1, false);
+            iniciarSesionClienteRecur(email, contrasenia, i+1, false);
         }
 
     }
-
-    /* Método iniciar Sesión no recursivo cliente
-    public void iniciarSesionCliente(String id, String contrasenia) throws NonRegisteredCustomer {
-        boolean flag=false;
-        for(int i=0;i< clientes.size() && !flag;i++){
-            if(comprobarExistenciaClienteRecur(id, 0, false)){
-                flag=true;
-                if(clientes.get(i).getContraseniaCliente().equals(contrasenia)){
-                    try {
-                        FXMLLoader loader = new FXMLLoader(Main.class.getResource("/InicioCliente.fxml"));
-                        Parent parent = loader.load();
-                        Stage stage = new Stage();
-                        Scene scene = new Scene(parent);
-                        stage.setScene(scene);
-                        stage.setTitle("Agencia de viajes");
-                        stage.show();
-                    }catch (IOException ioException){
-                        ioException.printStackTrace();
-                    }
-                }else {
-                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setContentText("La contraseña que ingresó es incorrecta. Ingresela de nuevo");
-                    alert.setHeaderText(null);
-                    alert.show();
-                }
-            }else{
-                LOGGER.log(Level.SEVERE, "Cliente no se encontro registrado");
-                throw new NonRegisteredCustomer("La cédula que ingreso no corresponde a ningun cliente registrado. Intente registrarse por primera vez");
-            }
-        }
-    }*/
-
     public void crearReserva(Reserva reserva) throws EmptyFieldException, NegativeNumberException, MaximumCapacityException {
         if(reserva.getFechaSolicitud()==null){
             LOGGER.log(Level.SEVERE, "La fecha de solicitud es nula");
@@ -264,6 +233,15 @@ public class Agencia {
         }else{
             return reser;
         }
+    }
+    public void abrirVentanaRegistro() throws IOException {
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource("/View/RegistroCliente.fxml"));
+        Parent parent = loader.load();
+        Stage stage = new Stage();
+        Scene scene = new Scene(parent);
+        stage.setScene(scene);
+        stage.setTitle("Agencia de viajes");
+        stage.show();
     }
 
     //Metodos de busqueda dado atributos dados
