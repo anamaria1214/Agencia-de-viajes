@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="c56749ba-87c2-40c3-b6ca-a9bc8123ef5b" name="Changes" comment="Commit con una parte de la ventana principal" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="FxmlFile" />
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;customColor&quot;: &quot;&quot;,
+  &quot;associatedIndex&quot;: 3
+}</component>
+  <component name="ProjectId" id="2XYE2TnEX9zGUIHA1H9a0Sfi0Ys" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\ANAMARIA\OneDrive\Documentos\GitHub\Agencia de viajes\src\main\resources\Propiedades" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="c56749ba-87c2-40c3-b6ca-a9bc8123ef5b" name="Changes" comment="" />
+      <created>1698797409697</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1698797409697</updated>
+      <workItem from="1698797414199" duration="845000" />
+      <workItem from="1698840128362" duration="2557000" />
+      <workItem from="1698842711107" duration="532000" />
+      <workItem from="1698843260907" duration="2791000" />
+      <workItem from="1698853635674" duration="2982000" />
+      <workItem from="1698873224122" duration="1083000" />
+      <workItem from="1698881386094" duration="6360000" />
+      <workItem from="1698975619517" duration="8880000" />
+    </task>
+    <task id="LOCAL-00001" summary="Cambio con ventana IniciarSesion hecha">
+      <option name="closed" value="true" />
+      <created>1698844809011</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1698844809011</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Cambio con ventana IniciarSesion hecha">
+      <option name="closed" value="true" />
+      <created>1698976755467</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1698976755467</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Commit con una parte de la ventana principal">
+      <option name="closed" value="true" />
+      <created>1698983873987</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1698983873988</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Cambio con ventana IniciarSesion hecha" />
+    <MESSAGE value="Commit con una parte de la ventana principal" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit con una parte de la ventana principal" />
+  </component>
+</project>
