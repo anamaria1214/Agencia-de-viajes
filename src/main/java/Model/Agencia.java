@@ -244,8 +244,8 @@ public class Agencia {
             return reser;
         }
     }
-    public void abrirVentanaRegistro() throws IOException {
-        FXMLLoader loader = new FXMLLoader(Main.class.getResource("/View/InicioTest.fxml"));
+    public void abrirVentana(String ruta) throws IOException {
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource(ruta));
         Parent parent = loader.load();
         Stage stage = new Stage();
         Scene scene = new Scene(parent);
