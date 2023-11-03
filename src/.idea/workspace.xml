@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b654fd54-a0d2-4996-945f-d3ee1cf7a0b0" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../logs.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/java/Controller/IniciarAnimadoController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main/resources/View/IniciarAnimado.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/resources/View/IniciarSesion.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/main/resources/View/IniciarSesion.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,6 +56,8 @@
       <updated>1698463988000</updated>
       <workItem from="1698463989027" duration="19000" />
       <workItem from="1698985290260" duration="9000" />
+      <workItem from="1698985434419" duration="11000" />
+      <workItem from="1698985450378" duration="14000" />
     </task>
     <servers />
   </component>
