@@ -4,7 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c56749ba-87c2-40c3-b6ca-a9bc8123ef5b" name="Changes" comment="Commit con una parte de la ventana principal" />
+    <list default="true" id="c56749ba-87c2-40c3-b6ca-a9bc8123ef5b" name="Changes" comment="commit imagenes">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/View/PaquetesPrincipal.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/App/AppPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App/AppPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/IniciarAnimado.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/IniciarAnimado.fxml" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,8 +19,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -64,7 +70,8 @@
       <workItem from="1698853635674" duration="2982000" />
       <workItem from="1698873224122" duration="1083000" />
       <workItem from="1698881386094" duration="6360000" />
-      <workItem from="1698975619517" duration="8880000" />
+      <workItem from="1698975619517" duration="9853000" />
+      <workItem from="1699043360757" duration="1799000" />
     </task>
     <task id="LOCAL-00001" summary="Cambio con ventana IniciarSesion hecha">
       <option name="closed" value="true" />
@@ -90,7 +97,15 @@
       <option name="project" value="LOCAL" />
       <updated>1698983873988</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="commit imagenes">
+      <option name="closed" value="true" />
+      <created>1698985055474</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698985055474</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -99,6 +114,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Cambio con ventana IniciarSesion hecha" />
     <MESSAGE value="Commit con una parte de la ventana principal" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit con una parte de la ventana principal" />
+    <MESSAGE value="commit imagenes" />
+    <option name="LAST_COMMIT_MESSAGE" value="commit imagenes" />
   </component>
 </project>
