@@ -4,17 +4,17 @@
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="421.0" prefWidth="426.0" style="-fx-background-color: #e8c5e8;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" >
+<AnchorPane prefHeight="421.0" prefWidth="426.0" style="-fx-background-color: #e8c5e8;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
    <children>
       <ImageView fitHeight="106.0" fitWidth="200.0" layoutX="160.0" layoutY="14.0" pickOnBounds="true" preserveRatio="true">
          <image>
             <Image url="@../../resources/Imagenes/logoGrandeMorado.png" />
          </image></ImageView>
-      <Label fx:id="idLabel" layoutX="113.0" layoutY="172.0" prefHeight="30.0" prefWidth="201.0" styleClass="subtitulo" stylesheets="@../../resources/CSS/Label.css" text="Número de identificación:" />
-      <TextField fx:id="idCliente" layoutX="128.0" layoutY="220.0" prefHeight="28.0" prefWidth="170.0" styleClass="textoField" stylesheets="@../../resources/CSS/TextField.css" AnchorPane.leftAnchor="128.0" AnchorPane.rightAnchor="128.0" />
-      <Label fx:id="contraseniaLabel" layoutX="159.0" layoutY="265.0" styleClass="subtitulo" stylesheets="@../../resources/CSS/Label.css" text="Contraseña:" />
+      <Label fx:id="idLabel" layoutX="68.0" layoutY="166.0" prefHeight="37.0" prefWidth="291.0" styleClass="subtitulo" stylesheets="@../../resources/CSS/Label.css" text="Número de identificación:" />
+      <TextField fx:id="idCliente" layoutX="132.0" layoutY="220.0" prefHeight="28.0" prefWidth="170.0" styleClass="textoField" stylesheets="@../../resources/CSS/TextField.css" AnchorPane.leftAnchor="132.0" AnchorPane.rightAnchor="124.0" />
+      <Label fx:id="contraseniaLabel" layoutX="138.0" layoutY="262.0" styleClass="subtitulo" stylesheets="@../../resources/CSS/Label.css" text="Contraseña:" />
       <Button fx:id="btnIniciarSesion" layoutX="163.0" layoutY="362.0" mnemonicParsing="false" stylesheets="@../../resources/CSS/Button.css" text="Iniciar sesión" />
-      <PasswordField fx:id="contraseniaTextField" layoutX="128.0" layoutY="308.0" prefHeight="25.0" prefWidth="170.0" styleClass="textoField" stylesheets="@../../resources/CSS/TextField.css" />
-      <Label fx:id="agenciaLabel" layoutX="135.0" layoutY="120.0" styleClass="tiulo" stylesheets="@../../resources/CSS/Label.css" text="Agencia UQ" />
+      <PasswordField fx:id="contraseniaTextField" layoutX="132.0" layoutY="308.0" prefHeight="25.0" prefWidth="170.0" styleClass="textoField" stylesheets="@../../resources/CSS/TextField.css" />
+      <Label fx:id="agenciaLabel" layoutX="113.0" layoutY="120.0" prefHeight="46.0" prefWidth="201.0" styleClass="tiulo" stylesheets="@../../resources/CSS/Label.css" text="Agencia UQ" />
    </children>
 </AnchorPane>

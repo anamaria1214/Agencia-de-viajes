@@ -12,4 +12,5 @@
          <Image url="@../Imagenes/flecha-hacia-atras(1).png" />
       </image>
    </ImageView>
+   <Slider layoutX="139.0" layoutY="157.0" />
 </AnchorPane>

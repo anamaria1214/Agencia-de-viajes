@@ -1,6 +1,7 @@
 package Controller;
 
 import Model.Agencia;
+import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -15,6 +16,8 @@ import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import Exception.NonRegisteredCustomer;
+import javafx.scene.layout.VBox;
+import javafx.util.Duration;
 
 public class IniciarSesionController implements Initializable {
 
@@ -35,11 +38,15 @@ public class IniciarSesionController implements Initializable {
     private Button btnIniciarSesion;
     @FXML
     private Button btnVentanaRegistrarse;
+    @FXML
+    private VBox vBboxR;
+    @FXML
+    private VBox vBoxL;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        EmailLabel.setText(propiedades.getBundle().getString("EmailLabel"));
-        contraseniaLabel.setText(propiedades.getBundle().getString("idLabel"));
+        EmailLabel.setText(propiedades.getBundle().getString("emailLabel"));
+        contraseniaLabel.setText(propiedades.getBundle().getString("contraLabel"));
         btnIniciarSesion.setText(propiedades.getBundle().getString("btnIniciarSesion"));
         btnVentanaRegistrarse.setText(propiedades.getBundle().getString("btnVentanaRegistrarse"));
     }
@@ -60,13 +67,18 @@ public class IniciarSesionController implements Initializable {
         }
 
     }
-
     public void volverPrincipal(){
-        try {
-            agencia.abrirVentanaRegistro();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        vBoxL.setVisible(false);
+        TranslateTransition slide  = new TranslateTransition();
+        slide.setDuration(Duration.seconds(0.7));
+        slide.setNode(vBboxR);
+        slide.setToX(-2433);
+        slide.play();
+        slide.setOnFinished((e->{
+
+        }));
+
+        //agencia.abrirVentanaRegistro();
 
     }
 

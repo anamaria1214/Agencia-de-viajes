@@ -145,14 +145,24 @@ public class Agencia {
 
     public boolean comprobarExistenciaClienteRecur(String email, int i, boolean flag) {
         if (i < clientes.size() && !flag) {
-            if (email.equals(clientes.get(i).getEmailCliente()
-            )) {
+            if (email.equals(clientes.get(i).getEmailCliente())) {
                 return comprobarExistenciaClienteRecur(email, i, true);
             } else {
                 return comprobarExistenciaClienteRecur(email, i + 1, false);
             }
         } else {
             return flag;
+        }
+    }
+    public Cliente encontrarCliente(String id, int i, boolean flag, Cliente cliente){
+        if(i < clientes.size() && !flag){
+            if(id.equals(clientes.get(i).getIdCliente())){
+                return encontrarCliente(id, i, true, clientes.get(i));
+            }else{
+                return encontrarCliente(id,i+1,false, cliente);
+            }
+        }else{
+            return cliente;
         }
     }
 
@@ -235,13 +245,26 @@ public class Agencia {
         }
     }
     public void abrirVentanaRegistro() throws IOException {
-        FXMLLoader loader = new FXMLLoader(Main.class.getResource("/View/RegistroCliente.fxml"));
+        FXMLLoader loader = new FXMLLoader(Main.class.getResource("/View/InicioTest.fxml"));
         Parent parent = loader.load();
         Stage stage = new Stage();
         Scene scene = new Scene(parent);
         stage.setScene(scene);
         stage.setTitle("Agencia de viajes");
         stage.show();
+    }
+
+    public ArrayList<Reserva> listarReserva(String id, int i, ArrayList<Reserva> reservasCliente){
+        if(reservas.size()<i){
+            if (reservas.get(i).getCliente().getIdCliente().equals(id)){
+                reservasCliente.add(reservas.get(i));
+                return listarReserva(id,i+1, reservasCliente);
+            }else{
+                return listarReserva(id,i+1, reservasCliente);
+            }
+        }else{
+            return reservasCliente;
+        }
     }
 
     //Metodos de busqueda dado atributos dados

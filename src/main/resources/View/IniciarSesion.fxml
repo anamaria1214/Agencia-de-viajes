@@ -8,17 +8,21 @@
 
 <HBox prefHeight="502.0" prefWidth="854.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.IniciarSesionController">
 
-   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="427.0" style="-fx-background-color: #d6bbff;" HBox.hgrow="ALWAYS">
+   <VBox fx:id="vBoxL" alignment="TOP_CENTER" prefHeight="200.0" prefWidth="427.0" style="-fx-background-color: #d6bbff;" HBox.hgrow="ALWAYS">
       <children>
-         <Button fx:id="btnRegresar" mnemonicParsing="false" onAction="#volverPrincipal" prefHeight="61.0" prefWidth="54.0" styleClass="buttonConImagen" stylesheets="@../CSS/Button.css">
-            <graphic>
-               <ImageView fitHeight="57.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
-                  <image>
-                     <Image url="@../Imagenes/flecha-hacia-atras(1).png" />
-                  </image>
-               </ImageView>
-            </graphic>
-         </Button>
+         <HBox prefHeight="59.0" prefWidth="427.0">
+            <children>
+               <Button fx:id="btnRegresar" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#volverPrincipal" prefHeight="61.0" prefWidth="54.0" styleClass="buttonConImagen" stylesheets="@../CSS/Button.css">
+                  <graphic>
+                     <ImageView id="buttonConImagen" fitHeight="57.0" fitWidth="47.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" styleClass="buttonConImagen">
+                        <image>
+                           <Image url="@../Imagenes/flecha-hacia-atras(1).png" />
+                        </image>
+                     </ImageView>
+                  </graphic>
+               </Button>
+            </children>
+         </HBox>
          <Label alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="58.0" prefWidth="235.0" styleClass="tiulo" stylesheets="@../CSS/Label.css" text="Inicio Sesión" textAlignment="CENTER">
             <font>
                <Font size="40.0" />
@@ -72,7 +76,7 @@
          </VBox>
       </children>
    </VBox>
-   <VBox alignment="CENTER" prefHeight="200.0" prefWidth="427.0" style="-fx-background-color: #e8c5e8;">
+   <VBox fx:id="vBoxR" alignment="CENTER" prefHeight="200.0" prefWidth="534.0" style="-fx-background-color: #e8c5e8;">
       <children>
          <ImageView fitHeight="318.0" fitWidth="294.0" pickOnBounds="true" preserveRatio="true">
             <image>

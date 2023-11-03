@@ -28,13 +28,13 @@ public class Propiedades {
 
     private Propiedades(){
         idioma = leerIdioma();
-        bundle= ResourceBundle.getBundle("propiedades", new Locale(idioma) );
+        bundle= ResourceBundle.getBundle("Propiedades.propiedades", new Locale(idioma) );
     }
 
     public String leerIdioma(){
         try {
             Properties ppr = new Properties();
-            FileInputStream fos = new FileInputStream("idioma.properties");
+            FileInputStream fos = new FileInputStream("src/main/resources/Propiedades/idioma.properties");
             ppr.load(fos);
             idioma = ppr.getProperty("idioma");
             fos.close();
@@ -50,7 +50,7 @@ public class Propiedades {
             this.idioma = idioma;
             this.bundle = ResourceBundle.getBundle("propiedades", new Locale(idioma));
             Properties ppr = new Properties();
-            FileOutputStream fos = new FileOutputStream("idioma.properties");
+            FileOutputStream fos = new FileOutputStream("Propiedades/idioma.properties");
             ppr.setProperty("idioma", idioma);
             ppr.store(fos,"");
             fos.close();
