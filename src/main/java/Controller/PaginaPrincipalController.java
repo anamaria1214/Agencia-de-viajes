@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.shape.SVGPath;
 import javafx.stage.Stage;
 
@@ -16,6 +17,7 @@ import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javafx.scene.Node;
 
 public class PaginaPrincipalController implements Initializable {
 
@@ -31,12 +33,35 @@ public class PaginaPrincipalController implements Initializable {
     private Button btnPaquetes;
     @FXML
     private Button btnAdministrador;
+    @FXML
+    private BorderPane centerPane;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
     }
+    private void cambiarVentana(String fxmlname) {
+        try {
+            Node nodo = AppPrincipal.loadFXML(fxmlname);
+            setCenter(nodo);
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
+    @SuppressWarnings("exports")
+    public void setCenter(Node node) {
+        centerPane.setCenter(node);
+    }
 
+    public void mostrarPaquetes(){
+        cambiarVentana("paquetesPrincipal");
+    }
+    public void mostrarDestinos(){
+        cambiarVentana("DestinosPrincipal");
+    }
+    public void mostarInicioSesionAdmin(){
+        cambiarVentana("IniciarSesionAdmin");
+    }
     public void abrirInicioSesionRegistrar(){
         try {
             agencia.abrirVentana("/View/InicioSesion.fxml");

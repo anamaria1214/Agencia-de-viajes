@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+   <top>
+      <HBox prefHeight="120.0" prefWidth="200.0" style="-fx-background-color: #e8c5e8; -fx-border-color: #a368ff;" BorderPane.alignment="CENTER">
+         <children>
+            <ImageView fitHeight="121.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Imagenes/logoGrandeMorado.png" />
+               </image>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin></ImageView>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label styleClass="tiulo" stylesheets="@../CSS/Label.css" text="Agencia UQ" />
+               </children>
+            </HBox>
+         </children></HBox>
+   </top>
+   <left>
+      <VBox prefHeight="394.0" prefWidth="210.0" style="-fx-background-color: #e8c5e8; -fx-border-color: #a368ff;" BorderPane.alignment="CENTER">
+         <children>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../CSS/Button.css" text="Gestionar destinos">
+               <VBox.margin>
+                  <Insets left="11.0" right="11.0" top="32.0" />
+               </VBox.margin>
+            </Button>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../CSS/Button.css" text="Gestionar paquetes">
+               <VBox.margin>
+                  <Insets left="11.0" right="11.0" top="32.0" />
+               </VBox.margin>
+            </Button>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefWidth="187.0" stylesheets="@../CSS/Button.css" text="Gestionar guias turísticos" textOverrun="CLIP">
+               <VBox.margin>
+                  <Insets left="11.0" right="11.0" top="32.0" />
+               </VBox.margin>
+            </Button>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../CSS/Button.css" text="Estadísticas">
+               <VBox.margin>
+                  <Insets left="11.0" right="11.0" top="32.0" />
+               </VBox.margin>
+            </Button>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../CSS/Button.css" text="Paquetes">
+               <VBox.margin>
+                  <Insets left="11.0" right="11.0" top="32.0" />
+               </VBox.margin>
+            </Button>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../CSS/Button.css" text="Destinos">
+               <VBox.margin>
+                  <Insets left="11.0" right="11.0" top="32.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin></VBox>
+   </left>
+</BorderPane>

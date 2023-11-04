@@ -44,9 +44,9 @@
       </HBox>
    </top>
    <left>
-      <VBox prefHeight="398.0" prefWidth="193.0" style="-fx-background-color: #e8c5e8; -fx-border-color: #a368ff;" BorderPane.alignment="CENTER">
+      <VBox prefHeight="394.0" prefWidth="193.0" style="-fx-background-color: #e8c5e8; -fx-border-color: #a368ff;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btnPaquetes" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../CSS/Button.css" text="Paquetes">
+            <Button fx:id="btnPaquetes" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#mostrarPaquetes" stylesheets="@../CSS/Button.css" text="Paquetes">
                <cursor>
                   <Cursor fx:constant="HAND" />
                </cursor>
@@ -54,12 +54,12 @@
                   <Insets left="11.0" right="11.0" top="70.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="btnDestinos" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../CSS/Button.css" text="Destinos">
+            <Button fx:id="btnDestinos" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#mostrarDestinos" stylesheets="@../CSS/Button.css" text="Destinos">
                <VBox.margin>
                   <Insets left="11.0" right="11.0" top="70.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="btnAdministrador" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../CSS/Button.css" text="Administrador">
+            <Button fx:id="btnAdministrador" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#mostarInicioSesionAdmin" stylesheets="@../CSS/Button.css" text="Administrador">
                <VBox.margin>
                   <Insets left="11.0" right="11.0" top="70.0" />
                </VBox.margin>
@@ -81,7 +81,7 @@
          </BorderPane.margin></VBox>
    </left>
    <center>
-      <BorderPane BorderPane.alignment="CENTER">
+      <BorderPane fx:id="centerPane" BorderPane.alignment="CENTER">
          <center>
             <BorderPane prefHeight="200.0" prefWidth="200.0" />
          </center>

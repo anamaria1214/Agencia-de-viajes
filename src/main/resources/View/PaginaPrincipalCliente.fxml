@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <top>
+      <HBox prefHeight="100.0" prefWidth="200.0" style="-fx-background-color: #e8c5e8; -fx-border-color: #9672cf;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox prefHeight="100.0" prefWidth="101.0">
+               <children>
+                  <ImageView fitHeight="100.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../Imagenes/logoGrandeMorado.png" />
+                     </image>
+                  </ImageView>
+               </children>
+               <HBox.margin>
+                  <Insets left="20.0" />
+               </HBox.margin></HBox>
+            <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" stylesheets="@../CSS/Label.css" text="Agencia UQ">
+                     <styleClass>
+                        <String fx:value="subtitulo" />
+                        <String fx:value="tiulo" />
+                     </styleClass>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="479.0">
+               <children>
+                  <SVGPath content="M38 23c6.382 0 11.833 3.986 14 9.604v10.792C49.833 49.014 44.382 53 38 53c-1.03 0-2.037-.104-3.009-.302a5 5 0 0 0-7.519-4.013A15.016 15.016 0 0 1 24 43.396V32.604C26.167 26.986 31.618 23 38 23ZM23 33.5v9l-.116.757a16.02 16.02 0 0 0 4.502 6.715A4 4 0 1 1 26 53l.008-.261a19.05 19.05 0 0 1-5.68-7.745A2.5 2.5 0 0 1 18 42.5v-9a2.5 2.5 0 0 1 2.329-2.494C23.114 23.974 29.976 19 38 19s14.886 4.974 17.671 12.006A2.5 2.5 0 0 1 58 33.5v9a2.5 2.5 0 0 1-5 0v-9l.117-.757C50.942 26.49 44.995 22 38 22c-6.995 0-12.942 4.49-15.116 10.743L23 33.5Z" fill="#9672cf" scaleX="2.0" scaleY="2.0">
+                     <HBox.margin>
+                        <Insets right="45.0" />
+                     </HBox.margin>
+                  </SVGPath>
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </HBox>
+         </children>
+      </HBox>
+   </top>
+   <left>
+      <VBox prefHeight="200.0" prefWidth="210.0" style="-fx-background-color: #e8c5e8; -fx-border-color: #9672cf;" BorderPane.alignment="CENTER">
+         <children>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../CSS/Button.css" text="Destinos">
+               <VBox.margin>
+                  <Insets left="11.0" right="11.0" top="75.0" />
+               </VBox.margin></Button>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../CSS/Button.css" text="Paquetes">
+               <VBox.margin>
+                  <Insets left="11.0" right="11.0" top="50.0" />
+               </VBox.margin></Button>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../CSS/Button.css" text="Mis reservas">
+               <VBox.margin>
+                  <Insets left="11.0" right="11.0" top="50.0" />
+               </VBox.margin></Button>
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../CSS/Button.css" text="Calificar">
+               <VBox.margin>
+                  <Insets left="11.0" right="11.0" top="50.0" />
+               </VBox.margin></Button>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin></VBox>
+   </left>
+   <center>
+      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+   </center>
+</BorderPane>

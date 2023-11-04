@@ -5,12 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c56749ba-87c2-40c3-b6ca-a9bc8123ef5b" name="Changes" comment="Commit con una parte de la ventana principal">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/DestinosPrincipalController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/PaquetesPrincipalController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/View/DestinosPrincipal.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/View/IniciarSesionAdmin.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/View/PaginaPrincipalAdmin.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/App/AppPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App/AppPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/IniciarAnimadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/IniciarAnimadoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/View/IniciarAnimado.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/IniciarAnimado.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/PaginaPrincipalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PaginaPrincipalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Agencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Agencia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/InicioCliente.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/PaginaPrincipalCliente.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/PaginaPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/PaginaPrincipal.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/PaquetesPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/PaquetesPrincipal.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/RegistroCliente.fxml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/test.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -20,8 +29,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="FxmlFile" />
         <option value="Class" />
+        <option value="FxmlFile" />
       </list>
     </option>
   </component>
@@ -80,6 +89,8 @@
       <workItem from="1698985432449" duration="11000" />
       <workItem from="1698985476328" duration="3722000" />
       <workItem from="1698989226411" duration="151000" />
+      <workItem from="1699049160803" duration="125000" />
+      <workItem from="1699071046963" duration="7308000" />
     </task>
     <task id="LOCAL-00001" summary="Cambio con ventana IniciarSesion hecha">
       <option name="closed" value="true" />

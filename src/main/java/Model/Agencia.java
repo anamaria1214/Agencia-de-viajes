@@ -173,7 +173,7 @@ public class Agencia {
             }else{
                 if(clientes.get(i).getContraseniaCliente().equals(contrasenia)) {
                     try {
-                        FXMLLoader loader = new FXMLLoader(AppPrincipal.class.getResource("/InicioCliente.fxml"));
+                        FXMLLoader loader = new FXMLLoader(AppPrincipal.class.getResource("/PaginaPrincipalCliente.fxml"));
                         Parent parent = loader.load();
 
                         Stage stage = new Stage();

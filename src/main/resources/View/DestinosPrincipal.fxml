@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="408.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DestinosPrincipalC">
+   <children>
+      <TableView layoutX="51.0" layoutY="34.0" prefHeight="305.0" prefWidth="505.0">
+        <columns>
+          <TableColumn prefWidth="75.0" text="C1" />
+          <TableColumn prefWidth="75.0" text="C2" />
+        </columns>
+      </TableView>
+      <Button layoutX="462.0" layoutY="359.0" mnemonicParsing="false" stylesheets="@../CSS/Button.css" text="Ver imagen" />
+   </children>
+</AnchorPane>
