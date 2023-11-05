@@ -3,14 +3,16 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="408.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DestinosPrincipalC">
+<AnchorPane prefHeight="408.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DestinosPrincipalController">
    <children>
-      <TableView layoutX="51.0" layoutY="34.0" prefHeight="305.0" prefWidth="505.0">
+      <TableView fx:id="tablaDestinos" layoutX="22.0" layoutY="34.0" prefHeight="305.0" prefWidth="562.0">
         <columns>
-          <TableColumn prefWidth="75.0" text="C1" />
-          <TableColumn prefWidth="75.0" text="C2" />
+          <TableColumn fx:id="clmNombreDestino" prefWidth="107.0" text="Nombre" />
+          <TableColumn fx:id="clmCiudadDestino" prefWidth="102.0" text="Ciudad" />
+            <TableColumn fx:id="clmDescripcionDestino" prefWidth="251.0" text="Descripción" />
+            <TableColumn fx:id="clmClimaDestinos" prefWidth="101.0" text="Clima" />
         </columns>
       </TableView>
-      <Button layoutX="462.0" layoutY="359.0" mnemonicParsing="false" stylesheets="@../CSS/Button.css" text="Ver imagen" />
+      <Button fx:id="btnVerImagen" layoutX="490.0" layoutY="358.0" mnemonicParsing="false" onAction="#mostrarImagen" stylesheets="@../CSS/Button.css" text="Ver imagen" />
    </children>
 </AnchorPane>

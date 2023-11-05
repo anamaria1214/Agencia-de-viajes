@@ -8,6 +8,7 @@ import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.shape.SVGPath;
 import javafx.stage.Stage;
@@ -35,9 +36,15 @@ public class PaginaPrincipalController implements Initializable {
     private Button btnAdministrador;
     @FXML
     private BorderPane centerPane;
+    @FXML
+    private Label labelAgenciaUQ;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
+        btnDestinos.setText(propiedades.getBundle().getString("btnDestinos"));
+        btnPaquetes.setText(propiedades.getBundle().getString("btnPaquetes"));
+        btnAdministrador.setText(propiedades.getBundle().getString("btnAdministrador"));
+        labelAgenciaUQ.setText(propiedades.getBundle().getString("labelAgenciaUQ"));
 
     }
     private void cambiarVentana(String fxmlname) {
@@ -54,7 +61,7 @@ public class PaginaPrincipalController implements Initializable {
     }
 
     public void mostrarPaquetes(){
-        cambiarVentana("paquetesPrincipal");
+        cambiarVentana("PaquetesPrincipal");
     }
     public void mostrarDestinos(){
         cambiarVentana("DestinosPrincipal");
@@ -64,7 +71,7 @@ public class PaginaPrincipalController implements Initializable {
     }
     public void abrirInicioSesionRegistrar(){
         try {
-            agencia.abrirVentana("/View/InicioSesion.fxml");
+            agencia.abrirVentana("/View/IniciarAnimado.fxml");
         } catch (IOException e) {
             LOGGER.log(Level.WARNING, "Ventana no encontrada");
         }

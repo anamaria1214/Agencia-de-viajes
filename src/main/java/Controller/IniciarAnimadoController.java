@@ -37,6 +37,8 @@ public class IniciarAnimadoController implements Initializable {
     @FXML
     private Button btnVentanaRegistrarse;
     @FXML
+    private Label labelInicioSesion;
+    @FXML
     private VBox vBoxR;
     @FXML
     private VBox vBoxL;
@@ -48,6 +50,7 @@ public class IniciarAnimadoController implements Initializable {
         contraseniaLabel.setText(propiedades.getBundle().getString("contraLabel"));
         btnIniciarSesion.setText(propiedades.getBundle().getString("btnIniciarSesion"));
         btnVentanaRegistrarse.setText(propiedades.getBundle().getString("btnVentanaRegistrarse"));
+        labelInicioSesion.setText(propiedades.getBundle().getString("labelInicioSesion"));
     }
 
     public void setTamaño(String confirmacion, double dimension){

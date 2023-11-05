@@ -7,6 +7,7 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
+import javafx.scene.control.Dialog;
 import javafx.stage.Stage;
 import lombok.Getter;
 
@@ -25,6 +26,7 @@ import Exception.ExistingCustomerException;
 import Exception.NonRegisteredCustomer;
 import Exception.NegativeNumberException;
 import Exception.MaximumCapacityException;
+import Exception.WrongPasswordException;
 @Getter
 public class Agencia {
 
@@ -265,6 +267,41 @@ public class Agencia {
         }else{
             return reservasCliente;
         }
+    }
+
+    public void iniciarSesionAdmin(String id, String contrasenia, int i, boolean flag){
+        if(i<administradores.size() && !flag){
+            if(administradores.get(i).getIdAdministrador().equals(id)){
+                if(administradores.get(i).getContrasenia().equals(contrasenia)){
+                    iniciarSesionAdmin(id, contrasenia, i, true);
+                    try {
+                        FXMLLoader loader = new FXMLLoader(AppPrincipal.class.getResource("/PaginaPrincipalAdmin.fxml"));
+                        Parent parent = loader.load();
+                        Stage stage = new Stage();
+                        Scene scene = new Scene(parent);
+                        stage.setScene(scene);
+                        stage.setTitle("Agencia de viajes");
+                        stage.show();
+                    } catch (IOException ioException) {
+                        ioException.printStackTrace();
+                    }
+                }else{
+                    iniciarSesionAdmin(id, contrasenia, i, true);
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setContentText("La contraseña que ingresó es incorrecta. Ingresela de nuevo");
+                    alert.setHeaderText(null);
+                    alert.show();
+                }
+            }else{
+                iniciarSesionAdmin(id, contrasenia,i+1, false);
+            }
+        }else {
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("Usuario no encontrado");
+            alert.setHeaderText(null);
+            alert.show();
+        }
+
     }
 
     //Metodos de busqueda dado atributos dados

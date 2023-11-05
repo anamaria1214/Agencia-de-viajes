@@ -23,7 +23,7 @@
                        </Button>
                    </children>
                </HBox>
-               <Label alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="58.0" prefWidth="235.0" styleClass="tiulo" stylesheets="@../CSS/Label.css" text="Inicio Sesión" textAlignment="CENTER">
+               <Label fx:id="labelInicioSesion" alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="58.0" prefWidth="235.0" styleClass="tiulo" stylesheets="@../CSS/Label.css" text="Inicio Sesión" textAlignment="CENTER">
                    <font>
                        <Font size="40.0" />
                    </font>

@@ -4,22 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c56749ba-87c2-40c3-b6ca-a9bc8123ef5b" name="Changes" comment="Commit con una parte de la ventana principal">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/DestinosPrincipalController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/PaquetesPrincipalController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/View/DestinosPrincipal.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/View/IniciarSesionAdmin.fxml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/View/PaginaPrincipalAdmin.fxml" afterDir="false" />
+    <list default="true" id="c56749ba-87c2-40c3-b6ca-a9bc8123ef5b" name="Changes" comment="Commit con las ventanas principales (Inicio, Admin, cliente)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/IniciarSesionAdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Exception/WrongPasswordException.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log.1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/App/AppPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App/AppPrincipal.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/DestinosPrincipalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/DestinosPrincipalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/IniciarAnimadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/IniciarAnimadoController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/PaginaPrincipalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PaginaPrincipalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/PaquetesPrincipalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PaquetesPrincipalController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/Agencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Agencia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/View/InicioCliente.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/PaginaPrincipalCliente.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Propiedades/propiedades_en.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Propiedades/propiedades_en.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Propiedades/propiedades_es.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Propiedades/propiedades_es.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/DestinosPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/DestinosPrincipal.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/IniciarAnimado.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/IniciarAnimado.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/IniciarSesionAdmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/IniciarSesionAdmin.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/View/PaginaPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/PaginaPrincipal.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/View/PaquetesPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/PaquetesPrincipal.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/View/RegistroCliente.fxml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/View/test.fxml" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,8 +32,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="FxmlFile" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -90,7 +93,8 @@
       <workItem from="1698985476328" duration="3722000" />
       <workItem from="1698989226411" duration="151000" />
       <workItem from="1699049160803" duration="125000" />
-      <workItem from="1699071046963" duration="7308000" />
+      <workItem from="1699071046963" duration="7417000" />
+      <workItem from="1699107293453" duration="8110000" />
     </task>
     <task id="LOCAL-00001" summary="Cambio con ventana IniciarSesion hecha">
       <option name="closed" value="true" />
@@ -116,17 +120,37 @@
       <option name="project" value="LOCAL" />
       <updated>1698983873988</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Commit con las ventanas principales (Inicio, Admin, cliente)">
+      <option name="closed" value="true" />
+      <created>1699078419660</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699078419661</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
   </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Cambio con ventana IniciarSesion hecha" />
     <MESSAGE value="Commit con una parte de la ventana principal" />
-    <option name="LAST_COMMIT_MESSAGE" value="Commit con una parte de la ventana principal" />
+    <MESSAGE value="Commit con las ventanas principales (Inicio, Admin, cliente)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Commit con las ventanas principales (Inicio, Admin, cliente)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
