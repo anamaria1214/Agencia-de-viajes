@@ -57,6 +57,8 @@ public class Agencia {
         }
         LOGGER.log(Level.INFO, "Se creó una nueva instancia");
 
+
+
         this.clientes = new ArrayList<>();
         leerClientes();
         this.administradores = new ArrayList<>();
@@ -270,12 +272,14 @@ public class Agencia {
     }
 
     public void iniciarSesionAdmin(String id, String contrasenia, int i, boolean flag){
+        Administrador admin1= new Administrador("1090272715","admin1");
+        administradores.add(admin1);
         if(i<administradores.size() && !flag){
             if(administradores.get(i).getIdAdministrador().equals(id)){
                 if(administradores.get(i).getContrasenia().equals(contrasenia)){
                     iniciarSesionAdmin(id, contrasenia, i, true);
                     try {
-                        FXMLLoader loader = new FXMLLoader(AppPrincipal.class.getResource("/PaginaPrincipalAdmin.fxml"));
+                        FXMLLoader loader = new FXMLLoader(AppPrincipal.class.getResource("/View/PaginaPrincipalAdmin.fxml"));
                         Parent parent = loader.load();
                         Stage stage = new Stage();
                         Scene scene = new Scene(parent);

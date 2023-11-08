@@ -2,6 +2,7 @@
 
 <?import java.lang.*?>
 <?import javafx.geometry.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
@@ -34,7 +35,7 @@
             </HBox>
             <HBox alignment="CENTER_RIGHT" prefHeight="100.0" prefWidth="479.0">
                <children>
-                  <SVGPath content="M38 23c6.382 0 11.833 3.986 14 9.604v10.792C49.833 49.014 44.382 53 38 53c-1.03 0-2.037-.104-3.009-.302a5 5 0 0 0-7.519-4.013A15.016 15.016 0 0 1 24 43.396V32.604C26.167 26.986 31.618 23 38 23ZM23 33.5v9l-.116.757a16.02 16.02 0 0 0 4.502 6.715A4 4 0 1 1 26 53l.008-.261a19.05 19.05 0 0 1-5.68-7.745A2.5 2.5 0 0 1 18 42.5v-9a2.5 2.5 0 0 1 2.329-2.494C23.114 23.974 29.976 19 38 19s14.886 4.974 17.671 12.006A2.5 2.5 0 0 1 58 33.5v9a2.5 2.5 0 0 1-5 0v-9l.117-.757C50.942 26.49 44.995 22 38 22c-6.995 0-12.942 4.49-15.116 10.743L23 33.5Z" fill="#9672cf" scaleX="2.0" scaleY="2.0">
+                  <SVGPath content="M6.03531778,18.739764 C7.62329979,20.146176 9.71193925,21 12,21 C14.2880608,21 16.3767002,20.146176 17.9646822,18.739764 C17.6719994,17.687349 15.5693823,17 12,17 C8.43061774,17 6.32800065,17.687349 6.03531778,18.739764 Z M4.60050358,17.1246475 C5.72595131,15.638064 8.37060189,15 12,15 C15.6293981,15 18.2740487,15.638064 19.3994964,17.1246475 C20.4086179,15.6703183 21,13.9042215 21,12 C21,7.02943725 16.9705627,3 12,3 C7.02943725,3 3,7.02943725 3,12 C3,13.9042215 3.59138213,15.6703183 4.60050358,17.1246475 Z M12,23 C5.92486775,23 1,18.0751322 1,12 C1,5.92486775 5.92486775,1 12,1 C18.0751322,1 23,5.92486775 23,12 C23,18.0751322 18.0751322,23 12,23 Z M8,10 C8,7.75575936 9.57909957,6 12,6 C14.4141948,6 16,7.92157821 16,10.2 C16,13.479614 14.2180861,15 12,15 C9.76086382,15 8,13.4273743 8,10 Z M10,10 C10,12.2692568 10.8182108,13 12,13 C13.1777063,13 14,12.2983927 14,10.2 C14,8.95041736 13.2156568,8 12,8 C10.7337387,8 10,8.81582479 10,10 Z" fill="#9672cf" scaleX="2.3" scaleY="2.3">
                      <HBox.margin>
                         <Insets right="45.0" />
                      </HBox.margin>
@@ -52,7 +53,7 @@
          <children>
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../CSS/Button.css" text="Destinos">
                <VBox.margin>
-                  <Insets left="11.0" right="11.0" top="75.0" />
+                  <Insets left="11.0" right="11.0" top="50.0" />
                </VBox.margin></Button>
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../CSS/Button.css" text="Paquetes">
                <VBox.margin>
@@ -72,6 +73,41 @@
          </BorderPane.margin></VBox>
    </left>
    <center>
-      <BorderPane prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER" />
+      <BorderPane BorderPane.alignment="CENTER">
+         <center>
+            <BorderPane prefHeight="338.0" prefWidth="590.0" />
+         </center>
+      </BorderPane>
    </center>
+   <bottom>
+      <HBox alignment="CENTER_RIGHT" prefHeight="52.0" prefWidth="799.0" style="-fx-background-color: #e8c5e8; -fx-border-color: #a368ff;" BorderPane.alignment="CENTER">
+         <children>
+            <HBox alignment="CENTER_LEFT" prefHeight="52.0" prefWidth="210.0">
+               <HBox.margin>
+                  <Insets right="530.0" />
+               </HBox.margin>
+               <children>
+                  <SVGPath content="M19,13a1,1,0,0,0-1,1v.39l-1.48-1.48a2.79,2.79,0,0,0-3.93,0l-.7.7L9.41,11.12a2.87,2.87,0,0,0-3.93,0L4,12.61V7A1,1,0,0,1,5,6H9A1,1,0,0,0,9,4H5A3,3,0,0,0,2,7V19a3,3,0,0,0,3,3H17a3,3,0,0,0,3-3V14A1,1,0,0,0,19,13ZM5,20a1,1,0,0,1-1-1V15.43l2.9-2.89a.79.79,0,0,1,1.09,0l3.17,3.17,0,0L15.45,20Zm13-1a1,1,0,0,1-.18.54L13.31,15l.7-.69a.77.77,0,0,1,1.1,0L18,17.22Zm3.71-8.71L20,8.57a4.31,4.31,0,1,0-6.72.79,4.27,4.27,0,0,0,3,1.26A4.34,4.34,0,0,0,18.57,10l1.72,1.73a1,1,0,0,0,1.42,0A1,1,0,0,0,21.71,10.29ZM18,8a2.32,2.32,0,1,1,0-3.27A2.32,2.32,0,0,1,18,8Z" fill="#9672cf" scaleX="2.0" scaleY="2.0">
+                     <HBox.margin>
+                        <Insets left="30.0" />
+                     </HBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </SVGPath>
+               </children>
+            </HBox>
+            <SVGPath fx:id="buscador" content="M38 23c6.382 0 11.833 3.986 14 9.604v10.792C49.833 49.014 44.382 53 38 53c-1.03 0-2.037-.104-3.009-.302a5 5 0 0 0-7.519-4.013A15.016 15.016 0 0 1 24 43.396V32.604C26.167 26.986 31.618 23 38 23ZM23 33.5v9l-.116.757a16.02 16.02 0 0 0 4.502 6.715A4 4 0 1 1 26 53l.008-.261a19.05 19.05 0 0 1-5.68-7.745A2.5 2.5 0 0 1 18 42.5v-9a2.5 2.5 0 0 1 2.329-2.494C23.114 23.974 29.976 19 38 19s14.886 4.974 17.671 12.006A2.5 2.5 0 0 1 58 33.5v9a2.5 2.5 0 0 1-5 0v-9l.117-.757C50.942 26.49 44.995 22 38 22c-6.995 0-12.942 4.49-15.116 10.743L23 33.5Z" fill="#9672cf">
+               <HBox.margin>
+                  <Insets right="20.0" />
+               </HBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></SVGPath>
+         </children>
+         <BorderPane.margin>
+            <Insets />
+         </BorderPane.margin>
+      </HBox>
+   </bottom>
 </BorderPane>

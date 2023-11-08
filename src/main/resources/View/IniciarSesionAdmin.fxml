@@ -1,15 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane prefHeight="408.0" prefWidth="607.0" style="-fx-background-color: #e8c5e8;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller=" Controller.IniciarSesionAdminController">
+<AnchorPane prefHeight="408.0" prefWidth="607.0" style="-fx-background-color: #f0dcf2;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.IniciarSesionAdminController">
    <children>
       <Label layoutX="197.0" layoutY="27.0" styleClass="tiulo" stylesheets="@../CSS/Label.css" text="Iniciar Sesión" />
       <Label layoutX="159.0" layoutY="99.0" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Número de identificación:" />
       <TextField fx:id="idAdmin" layoutX="205.0" layoutY="163.0" prefHeight="26.0" prefWidth="198.0" styleClass="textoField" stylesheets="@../CSS/TextField.css" />
       <Label layoutX="228.0" layoutY="219.0" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Contraseña:" />
       <TextField fx:id="contraseniaAdmin" layoutX="205.0" layoutY="277.0" prefHeight="26.0" prefWidth="198.0" styleClass="textoField" stylesheets="@../CSS/TextField.css" />
-      <Button fx:id="btnIniciarSesionAdmin" layoutX="249.0" layoutY="339.0" mnemonicParsing="false" onAction="#iniciarSesionAdminX" stylesheets="@../CSS/Button.css" text="Iniciar Sesión" />
+      <Button fx:id="btnIniciarSesionAdmin" layoutX="249.0" layoutY="339.0" mnemonicParsing="false" onAction="#iniciarSesionAdmin" stylesheets="@../CSS/Button.css" text="Iniciar Sesión">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
    </children>
 </AnchorPane>

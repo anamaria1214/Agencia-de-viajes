@@ -36,7 +36,7 @@ public class DestinosPrincipalController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        btnVerImagen.setText(propiedades.getBundle().getString("btnVerImagen"));
+        //btnVerImagen.setText(propiedades.getBundle().getString("btnVerImagen"));
 
         clmNombreDestino.setCellValueFactory( new PropertyValueFactory<>("Nombre"));
         clmCiudadDestino.setCellValueFactory( new PropertyValueFactory<>("Modelo"));
