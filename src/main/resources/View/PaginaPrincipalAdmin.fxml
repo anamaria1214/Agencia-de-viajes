@@ -46,10 +46,13 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="btnGestionarPaquetes" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../CSS/Button.css" text="Gestionar paquetes">
+            <Button fx:id="btnGestionarPaquetes" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#abrirGestionarPaquetes" stylesheets="@../CSS/Button.css" text="Gestionar paquetes">
                <VBox.margin>
                   <Insets left="11.0" right="11.0" top="32.0" />
                </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefWidth="187.0" stylesheets="@../CSS/Button.css" text="Gestionar guias turísticos" textOverrun="CLIP">
                <VBox.margin>

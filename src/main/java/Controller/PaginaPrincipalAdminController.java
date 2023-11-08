@@ -55,4 +55,5 @@ public class PaginaPrincipalAdminController implements Initializable {
     public void abrirGestonarDestinos(){
         cambiarVentana("GestionarDestinosAdmin");
     }
+    public void abrirGestionarPaquetes(){ cambiarVentana("GestionarPaquetesAdmin"); }
 }

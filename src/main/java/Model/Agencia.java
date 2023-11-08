@@ -64,13 +64,21 @@ public class Agencia {
         this.administradores = new ArrayList<>();
         // leeerAdministradores
         this.destinos = new ArrayList<>();
-        // leerDestinos();
+        leerDestinos();
         this.guiasTuristicos = new ArrayList<>();
         // leerGuiasTuristicos();
         this.paquetesTuristicos = new ArrayList<>();
         // leerPaquetesTuristicos();
         this.reservas = new ArrayList<>();
         //leerReservas();
+    }
+
+    private void leerDestinos() {
+        try {
+            this.destinos = (ArrayList<Destino>) ArchivoUtils.deserializarObjeto("src/main/resources/persistencia/destinos.data");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void leerReservas() {
@@ -201,6 +209,30 @@ public class Agencia {
             iniciarSesionClienteRecur(email, contrasenia, i+1, false);
         }
 
+    }
+    public void crearDestino(Destino destino) throws EmptyFieldException {
+        if(destino.getNombreDestino()==null){
+            LOGGER.log(Level.SEVERE, "El nombre del destino esta vacio");
+            throw new EmptyFieldException("El nombre del destino esta vacio. Ingrese el nombre");
+        }if(destino.getCiudad()==null){
+            LOGGER.log(Level.SEVERE, "La ciudad del destino esta vacia");
+            throw new EmptyFieldException("La ciudad del destino esta vacia. Ingrese la ciudad");
+        }if(destino.getDescripcion()==null){
+            LOGGER.log(Level.SEVERE, "La descripcion del destino esta vacia");
+            throw new EmptyFieldException("La descripcion del destino esta vacia. Ingrese la descripción");
+        }if(destino.getImagenRepresentativa()==null){
+            LOGGER.log(Level.SEVERE, "No se agregó imagen");
+            throw new EmptyFieldException("Agregué una imagen");
+        }if(destino.getClima()==null){
+            LOGGER.log(Level.SEVERE, "No se agregó el clima");
+            throw new EmptyFieldException("Agregué el clima");
+        }
+        destinos.add(destino);
+        try {
+            ArchivoUtils.serializarObjeto("src/main/resources/persistencia/destinos.data", destinos);
+        } catch (IOException e) {
+            LOGGER.log(Level.WARNING, e.getMessage());
+        }
     }
     public void crearReserva(Reserva reserva) throws EmptyFieldException, NegativeNumberException, MaximumCapacityException {
         if(reserva.getFechaSolicitud()==null){

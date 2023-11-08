@@ -39,9 +39,9 @@ public class DestinosPrincipalController implements Initializable {
         //btnVerImagen.setText(propiedades.getBundle().getString("btnVerImagen"));
 
         clmNombreDestino.setCellValueFactory( new PropertyValueFactory<>("Nombre"));
-        clmCiudadDestino.setCellValueFactory( new PropertyValueFactory<>("Modelo"));
-        clmDescripcionDestino.setCellValueFactory( new PropertyValueFactory<>("Precio"));
-        clmClimaDestinos.setCellValueFactory( new PropertyValueFactory<>("Marca"));
+        clmCiudadDestino.setCellValueFactory( new PropertyValueFactory<>("Ciudad"));
+        clmDescripcionDestino.setCellValueFactory( new PropertyValueFactory<>("Descripción"));
+        clmClimaDestinos.setCellValueFactory( new PropertyValueFactory<>("Clima"));
 
         tablaDestinos.setItems( FXCollections.observableArrayList(agencia.getDestinos()));
 

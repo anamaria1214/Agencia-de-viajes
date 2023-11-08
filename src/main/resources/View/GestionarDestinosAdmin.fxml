@@ -4,37 +4,37 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="387.0" prefWidth="590.0" style="-fx-background-color: #f0dcf2;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="387.0" prefWidth="590.0" style="-fx-background-color: #f0dcf2;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GestionarDestinosAdminController">
    <children>
       <VBox alignment="CENTER" prefHeight="355.0" prefWidth="295.0">
          <children>
-            <Label styleClass="tiulo" stylesheets="@../CSS/Label.css" text="Registrar Destino" />
+            <Label fx:id="lblResgistrarDestino" styleClass="tiulo" stylesheets="@../CSS/Label.css" text="Registrar Destino" />
             <VBox prefHeight="295.0" prefWidth="295.0">
                <children>
-                  <Label styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Nombre del destino:">
+                  <Label fx:id="lblNombreDestino" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Nombre del destino:">
                      <VBox.margin>
                         <Insets left="11.0" top="25.0" />
                      </VBox.margin></Label>
-                  <TextField styleClass="textoField" stylesheets="@../CSS/TextField.css">
+                  <TextField fx:id="nombreDestino" styleClass="textoField" stylesheets="@../CSS/TextField.css">
                      <VBox.margin>
                         <Insets left="11.0" right="11.0" />
                      </VBox.margin></TextField>
-                  <Label styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Ciudad:">
+                  <Label fx:id="lblCiudad" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Ciudad:">
                      <VBox.margin>
                         <Insets left="11.0" top="30.0" />
                      </VBox.margin>
                   </Label>
-                  <TextField styleClass="textoField" stylesheets="@../CSS/TextField.css">
+                  <TextField fx:id="ciudadDestino" styleClass="textoField" stylesheets="@../CSS/TextField.css">
                      <VBox.margin>
                         <Insets left="11.0" right="11.0" />
                      </VBox.margin>
                   </TextField>
-                  <Label styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Imagen:">
+                  <Label fx:id="lblImagen" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Imagen:">
                      <VBox.margin>
                         <Insets left="11.0" top="30.0" />
                      </VBox.margin>
                   </Label>
-                  <TextField styleClass="textoField" stylesheets="@../CSS/TextField.css">
+                  <TextField fx:id="imagenDestino" styleClass="textoField" stylesheets="@../CSS/TextField.css">
                      <VBox.margin>
                         <Insets left="11.0" right="11.0" />
                      </VBox.margin>
@@ -47,19 +47,19 @@
          <children>
             <VBox alignment="CENTER_LEFT" prefHeight="350.0" prefWidth="295.0">
                <children>
-                  <Label styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Clima:">
+                  <Label fx:id="lblClima" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Clima:">
                      <VBox.margin>
                         <Insets top="20.0" />
                      </VBox.margin></Label>
-                  <ComboBox maxWidth="1.7976931348623157E308" prefWidth="150.0" styleClass="textoField" stylesheets="@../CSS/TextField.css">
+                  <ComboBox fx:id="climaCiudad" maxWidth="1.7976931348623157E308" prefWidth="150.0" styleClass="textoField" stylesheets="@../CSS/TextField.css">
                      <VBox.margin>
                         <Insets left="11.0" right="11.0" />
                      </VBox.margin></ComboBox>
-                  <Label styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Descripción:">
+                  <Label fx:id="lblDescrpcion" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Descripción:">
                      <VBox.margin>
                         <Insets top="20.0" />
                      </VBox.margin></Label>
-                  <TextArea prefHeight="200.0" prefWidth="200.0" styleClass="textoField" stylesheets="@../CSS/TextField.css">
+                  <TextArea fx:id="descripcionDestino" prefHeight="200.0" prefWidth="200.0" styleClass="textoField" stylesheets="@../CSS/TextField.css">
                      <VBox.margin>
                         <Insets bottom="10.0" left="11.0" right="11.0" />
                      </VBox.margin>
@@ -69,9 +69,9 @@
                   <Insets />
                </VBox.margin>
             </VBox>
-            <Button mnemonicParsing="false" stylesheets="@../CSS/Button.css" text="Agregar">
+            <Button fx:id="btnAgregarDestino" mnemonicParsing="false" onAction="#registrarDestino" stylesheets="@../CSS/Button.css" text="Agregar">
                <VBox.margin>
-                  <Insets bottom="20.0" right="11.0" />
+                  <Insets bottom="20.0" right="11.0" top="5.0" />
                </VBox.margin></Button>
          </children>
       </VBox>
