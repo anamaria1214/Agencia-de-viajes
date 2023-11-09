@@ -10,6 +10,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.HBox;
 import javafx.scene.shape.SVGPath;
 import javafx.stage.Stage;
 
@@ -25,7 +26,8 @@ public class PaginaPrincipalController implements Initializable {
     private Agencia agencia= Agencia.getInstance();
     private static final Logger LOGGER = Logger.getLogger(Agencia.class.getName());
     private Propiedades propiedades = Propiedades.getInstance();
-
+    @FXML
+    private SVGPath iconoUsuario;
     @FXML
     private SVGPath btnCambioIdioma;
     @FXML
@@ -38,6 +40,8 @@ public class PaginaPrincipalController implements Initializable {
     private BorderPane centerPane;
     @FXML
     private Label labelAgenciaUQ;
+    @FXML
+    private HBox hbIniciarSesion;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
@@ -71,7 +75,21 @@ public class PaginaPrincipalController implements Initializable {
     }
     public void abrirInicioSesionRegistrar(){
         try {
-            agencia.abrirVentana("/View/IniciarAnimado.fxml");
+            ((Stage) btnCambioIdioma.getScene().getWindow()).close();
+            System.out.println("Se crea ventana inicio sesion animado");
+            FXMLLoader loader = new FXMLLoader( AppPrincipal.class.getResource("/View/IniciarAnimado.fxml") );
+            Parent parent = loader.load();
+            Stage stage = new Stage();
+            Scene scene = new Scene(parent);
+            stage.setScene(scene);
+            stage.setTitle("Agencia de viajes");
+            stage.setOnShown(event -> {
+                IniciarAnimadoController c = loader.getController();
+            });
+            stage.setResizable(false);
+            stage.centerOnScreen();
+            stage.show();
+
         } catch (IOException e) {
             LOGGER.log(Level.WARNING, "Ventana no encontrada");
         }

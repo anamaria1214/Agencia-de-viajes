@@ -1,10 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Spinner?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
 
-<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="387.0" prefWidth="590.0" style="-fx-background-color: #f0dcf2;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<HBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="387.0" prefWidth="590.0" style="-fx-background-color: #f0dcf2;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GestionarPaquetesAdminController">
    <children>
       <VBox prefHeight="200.0" prefWidth="295.0">
          <children>
@@ -14,21 +21,21 @@
                </VBox.margin></Label>
             <VBox prefHeight="342.0" prefWidth="295.0">
                <children>
-                  <Label styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Destinos:">
+                  <Label fx:id="lblDestinos" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Destinos:">
                      <VBox.margin>
                         <Insets left="11.0" top="5.0" />
                      </VBox.margin>
                   </Label>
-                  <TableView prefHeight="200.0" prefWidth="200.0">
+                  <TableView fx:id="tablaDestinos" prefHeight="200.0" prefWidth="266.0">
                     <columns>
-                      <TableColumn prefWidth="159.0" text="Nombre Destino" />
-                      <TableColumn prefWidth="135.0" text="Ciudad" />
+                      <TableColumn fx:id="columnNombre" prefWidth="159.0" text="Nombre Destino" />
+                      <TableColumn fx:id="columnCiudad" prefWidth="135.0" text="Ciudad" />
                     </columns>
                      <VBox.margin>
                         <Insets left="12.0" right="11.0" />
                      </VBox.margin>
                   </TableView>
-                  <Label styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Nombre:">
+                  <Label fx:id="lblNombre" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Nombre:">
                      <opaqueInsets>
                         <Insets />
                      </opaqueInsets>
@@ -36,7 +43,7 @@
                         <Insets left="11.0" top="10.0" />
                      </VBox.margin>
                   </Label>
-                  <TextField styleClass="textoField" stylesheets="@../CSS/TextField.css">
+                  <TextField fx:id="nombrePaquetes" styleClass="textoField" stylesheets="@../CSS/TextField.css">
                      <VBox.margin>
                         <Insets left="11.0" right="11.0" />
                      </VBox.margin>
@@ -48,36 +55,36 @@
          <children>
             <VBox prefHeight="337.0" prefWidth="295.0">
                <children>
-                  <Label styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Duración:">
+                  <Label fx:id="lblDuracionPaquete" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Duración:">
                      <VBox.margin>
                         <Insets left="11.0" top="15.0" />
                      </VBox.margin>
                   </Label>
-                  <Spinner maxWidth="1.7976931348623157E308" styleClass="textoField" stylesheets="@../CSS/TextField.css">
+                  <Spinner fx:id="duracionPaquetes" maxWidth="1.7976931348623157E308" styleClass="textoField" stylesheets="@../CSS/TextField.css">
                      <VBox.margin>
                         <Insets left="11.0" right="11.0" />
                      </VBox.margin>
                   </Spinner>
-                  <Label styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Servivios adicionales:">
+                  <Label fx:id="lblServiciosAd" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Servivios adicionales:">
                      <VBox.margin>
                         <Insets left="11.0" top="15.0" />
                      </VBox.margin></Label>
-                  <TextArea prefHeight="109.0" prefWidth="295.0" styleClass="textoField" stylesheets="@../CSS/TextField.css">
+                  <TextArea fx:id="serviviosAdicionales" prefHeight="109.0" prefWidth="295.0" styleClass="textoField" stylesheets="@../CSS/TextField.css">
                      <VBox.margin>
                         <Insets left="11.0" right="11.0" />
                      </VBox.margin></TextArea>
-                  <Label styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Precio:">
+                  <Label fx:id="lblPrecio" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Precio:">
                      <VBox.margin>
                         <Insets left="11.0" top="15.0" />
                      </VBox.margin>
                   </Label>
-                  <TextField styleClass="textoField" stylesheets="@../CSS/TextField.css">
+                  <TextField fx:id="precioPaquete" styleClass="textoField" stylesheets="@../CSS/TextField.css">
                      <VBox.margin>
                         <Insets left="11.0" right="11.0" />
                      </VBox.margin>
                   </TextField>
                </children></VBox>
-            <Button mnemonicParsing="false" stylesheets="@../CSS/Button.css" text="Agregar">
+            <Button fx:id="btnAgregarPaquete" mnemonicParsing="false" stylesheets="@../CSS/Button.css" text="Agregar">
                <VBox.margin>
                   <Insets right="11.0" top="10.0" />
                </VBox.margin>

@@ -23,16 +23,9 @@ public class AppPrincipal extends Application {
         Parent parent = loader.load();
         Scene scene = new Scene(parent);
         stage.setScene(scene);
-       /* stage.setTitle("Agencia de viajes");
-        stage.setOnShown(event -> {
-            double anchoEscena = stage.getScene().getWidth();
-            double altoEscena = stage.getScene().getHeight();
-            IniciarAnimadoController c = loader.getController();
-            c.setTamaño("ancho",anchoEscena/2);
-            c.setTamaño("alto",altoEscena);
-        });
+        stage.setTitle("Agencia de viajes");
         stage.setResizable(false);
-        stage.centerOnScreen();*/
+        stage.centerOnScreen();
         stage.show();
 
     }

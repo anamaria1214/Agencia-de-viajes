@@ -9,7 +9,7 @@
 
 <BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="510.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.PaginaPrincipalController">
    <top>
-      <HBox prefHeight="70.0" prefWidth="800.0" style="-fx-background-color: #e8c5e8; -fx-border-color: #a368ff;" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER_RIGHT" prefHeight="70.0" prefWidth="800.0" style="-fx-background-color: #e8c5e8; -fx-border-color: #a368ff;" BorderPane.alignment="CENTER">
          <children>
             <VBox prefHeight="200.0" prefWidth="100.0">
                <children>
@@ -25,17 +25,20 @@
             </VBox>
             <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
                <children>
-                  <Label fx:id="labelAgenciaUQ" styleClass="tiulo" stylesheets="@../CSS/Label.css" text="Agencia UQ" />
+                  <Label fx:id="labelAgenciaUQ" prefWidth="203.0" styleClass="tiulo" stylesheets="@../CSS/Label.css" text="Agencia UQ" />
                </children>
+               <HBox.margin>
+                  <Insets right="390.0" />
+               </HBox.margin>
             </HBox>
-            <HBox alignment="CENTER_RIGHT" prefHeight="120.0" prefWidth="490.0">
+            <HBox fx:id="hbIniciarSesion" alignment="CENTER_RIGHT" onMouseClicked="#abrirInicioSesionRegistrar" prefHeight="100.0" prefWidth="102.0">
                <children>
                   <SVGPath fx:id="iconoUsuario" content="M6.03531778,18.739764 C7.62329979,20.146176 9.71193925,21 12,21 C14.2880608,21 16.3767002,20.146176 17.9646822,18.739764 C17.6719994,17.687349 15.5693823,17 12,17 C8.43061774,17 6.32800065,17.687349 6.03531778,18.739764 Z M4.60050358,17.1246475 C5.72595131,15.638064 8.37060189,15 12,15 C15.6293981,15 18.2740487,15.638064 19.3994964,17.1246475 C20.4086179,15.6703183 21,13.9042215 21,12 C21,7.02943725 16.9705627,3 12,3 C7.02943725,3 3,7.02943725 3,12 C3,13.9042215 3.59138213,15.6703183 4.60050358,17.1246475 Z M12,23 C5.92486775,23 1,18.0751322 1,12 C1,5.92486775 5.92486775,1 12,1 C18.0751322,1 23,5.92486775 23,12 C23,18.0751322 18.0751322,23 12,23 Z M8,10 C8,7.75575936 9.57909957,6 12,6 C14.4141948,6 16,7.92157821 16,10.2 C16,13.479614 14.2180861,15 12,15 C9.76086382,15 8,13.4273743 8,10 Z M10,10 C10,12.2692568 10.8182108,13 12,13 C13.1777063,13 14,12.2983927 14,10.2 C14,8.95041736 13.2156568,8 12,8 C10.7337387,8 10,8.81582479 10,10 Z" fill="#9672cf" onMouseClicked="#abrirInicioSesionRegistrar" scaleX="2.5" scaleY="2.5">
                      <HBox.margin>
                         <Insets right="40.0" />
                      </HBox.margin>
                      <cursor>
-                        <Cursor fx:constant="OPEN_HAND" />
+                        <Cursor fx:constant="HAND" />
                      </cursor>
                   </SVGPath>
                </children>
@@ -62,7 +65,7 @@
                   <Insets left="11.0" right="11.0" top="70.0" />
                </VBox.margin>
                <cursor>
-                  <Cursor fx:constant="OPEN_HAND" />
+                  <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
             <Button fx:id="btnAdministrador" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#mostarInicioSesionAdmin" stylesheets="@../CSS/Button.css" text="Administrador">
@@ -70,7 +73,7 @@
                   <Insets left="11.0" right="11.0" top="70.0" />
                </VBox.margin>
                <cursor>
-                  <Cursor fx:constant="OPEN_HAND" />
+                  <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
             <HBox prefHeight="75.0" prefWidth="193.0">
@@ -80,7 +83,7 @@
                         <Insets bottom="10.0" left="30.0" top="40.0" />
                      </HBox.margin>
                      <cursor>
-                        <Cursor fx:constant="OPEN_HAND" />
+                        <Cursor fx:constant="HAND" />
                      </cursor></SVGPath>
                </children>
                <VBox.margin>

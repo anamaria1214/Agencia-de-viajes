@@ -2,12 +2,14 @@ package Model;
 
 import lombok.*;
 
+import java.io.Serializable;
+
 @ToString
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Destino {
+public class Destino implements Serializable {
 
     private String nombreDestino;
     private String ciudad;

@@ -4,20 +4,32 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c56749ba-87c2-40c3-b6ca-a9bc8123ef5b" name="Changes" comment="Se agregó ventana de gestionar destinos desde la ventana del admin">
-      <change afterPath="$PROJECT_DIR$/logs.log.3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs.log.lck" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/GestionarPaquetesAdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Persistencia/destinos.data" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/View/GestionarPaquetesAdmin.fxml" afterDir="false" />
+    <list default="true" id="c56749ba-87c2-40c3-b6ca-a9bc8123ef5b" name="Changes" comment="Se agregó ventana gestionar paquetes, se puede agregar destino, los destinos están serializados">
+      <change afterPath="$PROJECT_DIR$/logs.log.4" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs.log.5" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/logs.log.6" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/DestinosAdminController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/Persistencia/paquetesTuristicos.data" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/View/DestinosAdmin.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log.1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs.log.2" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log.2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs.log.3" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log.3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs.log.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/App/AppPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App/AppPrincipal.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/DestinosPrincipalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/DestinosPrincipalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/GestionarDestinosAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/GestionarDestinosAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/GestionarPaquetesAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/GestionarPaquetesAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/PaginaPrincipalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PaginaPrincipalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/PaquetesPrincipalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PaquetesPrincipalController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/Agencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Agencia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/View/GestionarDestinosAdmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/GestionarDestinosAdmin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Destino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Destino.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/PaqueteTuristico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/PaqueteTuristico.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Reserva.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Persistencia/destinos.data" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Persistencia/destinos.data" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Propiedades/idioma.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Propiedades/idioma.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/GestionarPaquetesAdmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/GestionarPaquetesAdmin.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/PaginaPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/PaginaPrincipal.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +46,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectColorInfo">{
   &quot;customColor&quot;: &quot;&quot;,
@@ -68,6 +83,42 @@
       <recent name="C:\Users\ANAMARIA\OneDrive\Documentos\GitHub\Agencia de viajes\src\main\resources\Propiedades" />
     </key>
   </component>
+  <component name="RunManager">
+    <configuration name="AgenciaDeViajes [javafx:run]" type="MavenRunConfiguration" factoryName="Maven" temporary="true">
+      <MavenSettings>
+        <option name="myGeneralSettings" />
+        <option name="myRunnerSettings" />
+        <option name="myRunnerParameters">
+          <MavenRunnerParameters>
+            <option name="cmdOptions" />
+            <option name="profiles">
+              <set />
+            </option>
+            <option name="goals">
+              <list>
+                <option value="javafx:run" />
+              </list>
+            </option>
+            <option name="pomFileName" value="pom.xml" />
+            <option name="profilesMap">
+              <map />
+            </option>
+            <option name="projectsCmdOptionValues">
+              <list />
+            </option>
+            <option name="resolveToWorkspace" value="false" />
+            <option name="workingDirPath" value="$PROJECT_DIR$" />
+          </MavenRunnerParameters>
+        </option>
+      </MavenSettings>
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Maven.AgenciaDeViajes [javafx:run]" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -93,7 +144,9 @@
       <workItem from="1699194046945" duration="3931000" />
       <workItem from="1699401966250" duration="2053000" />
       <workItem from="1699406869305" duration="3518000" />
-      <workItem from="1699444738432" duration="5822000" />
+      <workItem from="1699444738432" duration="6202000" />
+      <workItem from="1699457537260" duration="1247000" />
+      <workItem from="1699461501448" duration="14765000" />
     </task>
     <task id="LOCAL-00001" summary="Cambio con ventana IniciarSesion hecha">
       <option name="closed" value="true" />
@@ -151,7 +204,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699410303728</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="Se agregó ventana gestionar paquetes, se puede agregar destino, los destinos están serializados">
+      <option name="closed" value="true" />
+      <created>1699450936431</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1699450936431</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -175,7 +236,8 @@
     <MESSAGE value="Commit con las ventanas principales (Inicio, Admin, cliente)" />
     <MESSAGE value="Commit cambio de ventanas en Pagina Principal" />
     <MESSAGE value="Se agregó ventana de gestionar destinos desde la ventana del admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se agregó ventana de gestionar destinos desde la ventana del admin" />
+    <MESSAGE value="Se agregó ventana gestionar paquetes, se puede agregar destino, los destinos están serializados" />
+    <option name="LAST_COMMIT_MESSAGE" value="Se agregó ventana gestionar paquetes, se puede agregar destino, los destinos están serializados" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

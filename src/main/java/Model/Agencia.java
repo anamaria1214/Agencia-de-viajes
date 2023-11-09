@@ -68,9 +68,17 @@ public class Agencia {
         this.guiasTuristicos = new ArrayList<>();
         // leerGuiasTuristicos();
         this.paquetesTuristicos = new ArrayList<>();
-        // leerPaquetesTuristicos();
+        leerPaquetesTuristicos();
         this.reservas = new ArrayList<>();
         //leerReservas();
+    }
+
+    private void leerPaquetesTuristicos() {
+        try {
+            this.paquetesTuristicos = (ArrayList<PaqueteTuristico>) ArchivoUtils.deserializarObjeto("src/main/resources/persistencia/paquetesTuristicos.data");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     private void leerDestinos() {
@@ -207,6 +215,31 @@ public class Agencia {
             }
         }else{
             iniciarSesionClienteRecur(email, contrasenia, i+1, false);
+        }
+
+    }
+    public void crearPaquete(PaqueteTuristico paquete) throws EmptyFieldException, NegativeNumberException {
+        if(paquete.getDestinos()==null){
+            LOGGER.log(Level.SEVERE, "No tienen destinos");
+            throw new EmptyFieldException("Ingrese los destinos del paquete");
+        }if(paquete.getNombrePaquete()==null){
+            LOGGER.log(Level.SEVERE, "El nombre del paquete está vacio");
+            throw new EmptyFieldException("El nombre del destino esta vacio. Ingrese el nombre");
+        }if(paquete.getDuracion()<=0){
+            LOGGER.log(Level.SEVERE, "Duración de paquete no válido");
+            throw new NegativeNumberException("Ingrese una duración valida del paquete");
+        }if(paquete.getServiciosAdicionales()==null){
+            LOGGER.log(Level.SEVERE, "No se ingresaron los servicios");
+            throw new NegativeNumberException("Ingrese una duración valida del paquete");
+        }if(paquete.getPrecio()<=0){
+            LOGGER.log(Level.SEVERE, "Precio no válido");
+            throw new NegativeNumberException("Ingrese un precio valido");
+        }
+        paquetesTuristicos.add(paquete);
+        try {
+            ArchivoUtils.serializarObjeto("src/main/resources/persistencia/paquetesTuristicos.data", paquetesTuristicos);
+        } catch (IOException e) {
+            LOGGER.log(Level.WARNING, e.getMessage());
         }
 
     }

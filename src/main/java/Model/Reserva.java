@@ -2,6 +2,7 @@ package Model;
 
 import lombok.*;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
@@ -10,7 +11,7 @@ import java.time.LocalDateTime;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Reserva {
+public class Reserva implements Serializable {
 
     private LocalDateTime fechaSolicitud;
     private LocalDateTime fechaViaje;

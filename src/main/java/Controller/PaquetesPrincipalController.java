@@ -38,11 +38,11 @@ public class PaquetesPrincipalController implements Initializable {
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        clmNombrePaquete.setCellValueFactory( new PropertyValueFactory<>("Nombre"));
-        clmDuracionPaquetes.setCellValueFactory( new PropertyValueFactory<>("Modelo"));
-        clmServiciosPaquetes.setCellValueFactory( new PropertyValueFactory<>("Precio"));
-        clmPrecioPaquete.setCellValueFactory( new PropertyValueFactory<>("Marca"));
+        clmNombrePaquete.setCellValueFactory( new PropertyValueFactory<>("nombrePaquete"));
+        clmDuracionPaquetes.setCellValueFactory( new PropertyValueFactory<>("duracion"));
+        clmServiciosPaquetes.setCellValueFactory( new PropertyValueFactory<>("serviciosAdicionales"));
+        clmPrecioPaquete.setCellValueFactory( new PropertyValueFactory<>("precio"));
 
-        tablaPaquetes.setItems( FXCollections.observableArrayList(agencia.getPaquetesTuristicos()));
+        tablaPaquetes.setItems(FXCollections.observableArrayList(agencia.getPaquetesTuristicos()));
     }
 }
