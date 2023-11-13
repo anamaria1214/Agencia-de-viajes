@@ -62,5 +62,6 @@ public class PaginaPrincipalClienteController implements Initializable {
     }
 
     public void abrirMisReservas(){ cambiarVentana("MisReservas");}
+    public void abrirCalificar(){ cambiarVentana("Calificar");}
 
 }

@@ -14,7 +14,6 @@ import java.util.ArrayList;
 public class PaqueteTuristico implements Serializable {
 
     private ArrayList<Destino> destinos= new ArrayList<>();
-    @EqualsAndHashCode.Include
     private String nombrePaquete;
     private int duracion;
     private String serviciosAdicionales;
