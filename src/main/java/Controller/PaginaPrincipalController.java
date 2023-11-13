@@ -15,6 +15,7 @@ import javafx.scene.shape.SVGPath;
 import javafx.stage.Stage;
 
 import java.io.IOException;
+import java.net.MalformedURLException;
 import java.net.URL;
 import java.util.ResourceBundle;
 import java.util.logging.Level;
@@ -80,13 +81,14 @@ public class PaginaPrincipalController implements Initializable {
             FXMLLoader loader = new FXMLLoader( AppPrincipal.class.getResource("/View/IniciarAnimado.fxml") );
             Parent parent = loader.load();
             Stage stage = new Stage();
+            stage.setResizable(false);
             Scene scene = new Scene(parent);
             stage.setScene(scene);
             stage.setTitle("Agencia de viajes");
+
             stage.setOnShown(event -> {
                 IniciarAnimadoController c = loader.getController();
             });
-            stage.setResizable(false);
             stage.centerOnScreen();
             stage.show();
 
@@ -103,7 +105,7 @@ public class PaginaPrincipalController implements Initializable {
         }
 
         try {
-            FXMLLoader loader = new FXMLLoader(AppPrincipal.class.getResource("/PaginaPrincipal.fxml") );
+            FXMLLoader loader = new FXMLLoader(AppPrincipal.class.getResource("/View/PaginaPrincipal.fxml") );
 
             Parent parent = loader.load();
 

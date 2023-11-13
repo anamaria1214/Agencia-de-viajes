@@ -156,7 +156,7 @@ public class Agencia {
             LOGGER.log(Level.SEVERE, "La persona no se asigno una contraseña");
             throw new EmptyFieldException("La contraseña es obligatoria");
         }
-        if (comprobarExistenciaClienteRecur(cliente.getIdCliente(), 0, false)) {
+        if (!comprobarExistenciaClienteRecur(cliente.getIdCliente(), 0, false)) {
             LOGGER.log(Level.SEVERE, "El cliente ya se encuentra registrado");
             throw new ExistingCustomerException("El cliente ya se encuentra registrado");
         }
@@ -180,7 +180,7 @@ public class Agencia {
     }
 
     public boolean comprobarExistenciaClienteRecur(String email, int i, boolean flag) {
-        if (i < clientes.size() && !flag) {
+        if (i < clientes.size() && flag) {
             if (email.equals(clientes.get(i).getEmailCliente())) {
                 return comprobarExistenciaClienteRecur(email, i, true);
             } else {

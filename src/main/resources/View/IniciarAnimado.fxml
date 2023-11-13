@@ -1,32 +1,38 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="502.0" prefWidth="854.0" style="-fx-background-color: #e8c5e8;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.IniciarAnimadoController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" prefHeight="660.0" prefWidth="1000.0" style="-fx-background-color: #e8c5e8;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.IniciarAnimadoController">
    <children>
-       <VBox fx:id="vBoxL" alignment="TOP_CENTER" prefHeight="502.0" prefWidth="427.0" style="-fx-background-color: #d6bbff;" HBox.hgrow="ALWAYS">
+       <VBox fx:id="vBoxL" alignment="TOP_CENTER" prefHeight="709.0" prefWidth="500.0" style="-fx-background-color: #d6bbff;" HBox.hgrow="ALWAYS">
            <children>
                <HBox prefHeight="59.0" prefWidth="427.0">
                    <children>
                        <Button fx:id="btnRegresar" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#volverPrincipal" prefHeight="61.0" prefWidth="54.0" styleClass="buttonConImagen" stylesheets="@../CSS/Button.css">
-                           <graphic>
-                               <ImageView id="buttonConImagen" fitHeight="57.0" fitWidth="47.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" styleClass="buttonConImagen">
+                     <graphic>
+                               <ImageView fitHeight="57.0" fitWidth="47.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true">
                                    <image>
                                        <Image url="@../Imagenes/flecha-hacia-atras(1).png" />
                                    </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
                                </ImageView>
-                           </graphic>
-                       </Button>
+                     </graphic></Button>
                    </children>
                </HBox>
                <Label fx:id="labelInicioSesion" alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="58.0" prefWidth="235.0" styleClass="tiulo" stylesheets="@../CSS/Label.css" text="Inicio Sesión" textAlignment="CENTER">
                    <font>
                        <Font size="40.0" />
                    </font>
+               <VBox.margin>
+                  <Insets top="95.0" />
+               </VBox.margin>
                </Label>
                <VBox alignment="CENTER" prefHeight="302.0" prefWidth="381.0">
                    <children>
@@ -76,10 +82,91 @@
                </VBox>
            </children>
        </VBox>
-      <ImageView fx:id="logoAgencia" fitHeight="294.0" fitWidth="318.0" layoutX="483.0" layoutY="104.0" pickOnBounds="true" preserveRatio="true">
+      <ImageView fx:id="logoAgencia" fitHeight="294.0" fitWidth="318.0" layoutX="633.0" layoutY="106.0" pickOnBounds="true" preserveRatio="true">
        <image>
            <Image url="@../Imagenes/logoGrandeConTitulo.png" />
        </image>
        </ImageView>
+      <VBox fx:id="vBoxR" alignment="TOP_CENTER" layoutX="521.0" prefHeight="660.0" prefWidth="542.0" style="-fx-background-color: #d6bbff;">
+         <children>
+            <HBox prefHeight="59.0" prefWidth="427.0">
+               <children>
+                  <Button fx:id="btnRegresar1" alignment="TOP_LEFT" mnemonicParsing="false" onAction="#volverPrincipal" prefHeight="61.0" prefWidth="54.0" styleClass="buttonConImagen" stylesheets="@../CSS/Button.css">
+                     <graphic>
+                        <ImageView id="buttonConImagen" fitHeight="57.0" fitWidth="47.0" nodeOrientation="INHERIT" pickOnBounds="true" preserveRatio="true" styleClass="buttonConImagen">
+                           <image>
+                              <Image url="@../Imagenes/flecha-hacia-atras(1).png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <Label fx:id="labelRegistro" alignment="TOP_LEFT" contentDisplay="CENTER" prefHeight="58.0" prefWidth="235.0" styleClass="tiulo" stylesheets="@../CSS/Label.css" text="Registro" textAlignment="CENTER">
+               <font>
+                  <Font size="40.0" />
+               </font>
+               <VBox.margin>
+                  <Insets bottom="20.0" />
+               </VBox.margin>
+            </Label>
+            <VBox alignment="CENTER" prefHeight="611.0" prefWidth="482.0">
+               <children>
+                  <Label fx:id="EmailLabel1" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Correo electrónico:">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="14.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="emailRegistro" styleClass="textoField" stylesheets="@../CSS/TextField.css">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="contraseniaLabel1" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Contraseña:">
+                     <font>
+                        <Font size="24.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="14.0" />
+                     </VBox.margin>
+                  </Label>
+                  <PasswordField fx:id="passwordRegistro" styleClass="textoField" stylesheets="@../CSS/TextField.css">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                  </PasswordField>
+                  <Label fx:id="nombreLbl" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Nombre:" />
+                  <TextField fx:id="nombreTextField" styleClass="textoField" stylesheets="@../CSS/TextField.css" />
+                  <Label fx:id="apellidoLbl" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Apellido:" />
+                  <TextField fx:id="apellidoTextField" styleClass="textoField" stylesheets="@../CSS/TextField.css" />
+                  <Label fx:id="IdLbl" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Identificación:" />
+                  <TextField fx:id="idTextField" styleClass="textoField" stylesheets="@../CSS/TextField.css" />
+                  <Label fx:id="telefonoLbl" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Telefono:" />
+                  <TextField fx:id="telefonoTextF" styleClass="textoField" stylesheets="@../CSS/TextField.css" />
+                  <Label fx:id="direccionLbl" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Dirección:" />
+                  <TextField fx:id="direccionTextF" styleClass="textoField" stylesheets="@../CSS/TextField.css" />
+                  <Button fx:id="btnRegistro" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#registrarse" stylesheets="@../CSS/Button.css" text="Finalizar Registro">
+                     <font>
+                        <Font size="15.0" />
+                     </font>
+                     <VBox.margin>
+                        <Insets top="25.0" />
+                     </VBox.margin>
+                  </Button>
+                  <Button fx:id="btnIniciarSesion" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#chgIniciarSesion" stylesheets="@../CSS/Button.css" text="Iniciar Sesión">
+                     <VBox.margin>
+                        <Insets bottom="20.0" top="20.0" />
+                     </VBox.margin>
+                  </Button>
+               </children>
+               <VBox.margin>
+                  <Insets left="30.0" right="30.0" />
+               </VBox.margin>
+            </VBox>
+         </children>
+      </VBox>
    </children>
 </AnchorPane>
