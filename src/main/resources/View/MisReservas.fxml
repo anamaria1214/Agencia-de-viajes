@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="338.0" prefWidth="590.0" style="-fx-background-color: #f0dcf2;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" prefHeight="57.0" prefWidth="590.0">
+         <children>
+            <Label fx:id="labelMIsReservas" styleClass="tiulo" stylesheets="@../CSS/Label.css" text="Mis reservas" />
+         </children>
+      </HBox>
+      <HBox prefHeight="287.0" prefWidth="590.0">
+         <children>
+            <TableView fx:id="tablaReservasClientes" prefHeight="284.0" prefWidth="590.0">
+              <columns>
+                <TableColumn fx:id="columnaNombrePaquete" prefWidth="198.0" text="Paquete" />
+                <TableColumn fx:id="columnaFechaViaje" prefWidth="140.0" text="Fecha viaje" />
+                  <TableColumn fx:id="columnaCantPersonas" prefWidth="129.0" text="Cant. Personas viajan" />
+                  <TableColumn fx:id="columnaEstadoReserva" prefWidth="102.0" text="Estado" />
+              </columns>
+               <HBox.margin>
+                  <Insets bottom="15.0" left="10.0" right="10.0" top="10.0" />
+               </HBox.margin>
+            </TableView>
+         </children>
+      </HBox>
+   </children>
+</VBox>

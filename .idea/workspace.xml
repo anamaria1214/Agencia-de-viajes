@@ -5,31 +5,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c56749ba-87c2-40c3-b6ca-a9bc8123ef5b" name="Changes" comment="Se agregó ventana gestionar paquetes, se puede agregar destino, los destinos están serializados">
-      <change afterPath="$PROJECT_DIR$/logs.log.4" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs.log.5" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/logs.log.6" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/DestinosAdminController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Persistencia/paquetesTuristicos.data" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/View/DestinosAdmin.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/MisReservasController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/PaginaPrincipalClienteController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/VentanaPaquetesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/View/MisReservas.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/View/PaqueteComponente.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/View/VentanaPaquetes.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log.1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs.log.2" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log.2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs.log.3" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log.3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs.log.lck" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/App/AppPrincipal.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/App/AppPrincipal.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/DestinosPrincipalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/DestinosPrincipalController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/GestionarPaquetesAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/GestionarPaquetesAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/PaginaPrincipalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PaginaPrincipalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/PaquetesPrincipalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PaquetesPrincipalController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/IniciarSesionAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/IniciarSesionAdminController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/PaginaPrincipalAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PaginaPrincipalAdminController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/Agencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Agencia.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/Destino.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Destino.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/PaqueteTuristico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/PaqueteTuristico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Reserva.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/Persistencia/destinos.data" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Persistencia/destinos.data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Propiedades/idioma.properties" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Propiedades/idioma.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/Persistencia/paquetesTuristicos.data" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Persistencia/paquetesTuristicos.data" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/View/GestionarPaquetesAdmin.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/GestionarPaquetesAdmin.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/View/PaginaPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/PaginaPrincipal.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/PaginaPrincipalCliente.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/PaginaPrincipalCliente.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +64,7 @@
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/Juanes/Desktop/Github/Agencia-de-viajes&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/ANAMARIA/OneDrive/Documentos/GitHub/Agencia de viajes/src/main/resources/Persistencia&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -79,6 +73,9 @@
   }
 }</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\ANAMARIA\OneDrive\Documentos\GitHub\Agencia de viajes\src\main\resources\Persistencia" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ANAMARIA\OneDrive\Documentos\GitHub\Agencia de viajes\src\main\resources\Propiedades" />
     </key>
@@ -147,6 +144,11 @@
       <workItem from="1699444738432" duration="6202000" />
       <workItem from="1699457537260" duration="1247000" />
       <workItem from="1699461501448" duration="14765000" />
+      <workItem from="1699556734736" duration="9445000" />
+      <workItem from="1699567382707" duration="40000" />
+      <workItem from="1699568895879" duration="1623000" />
+      <workItem from="1699756938179" duration="3840000" />
+      <workItem from="1699907972018" duration="336000" />
     </task>
     <task id="LOCAL-00001" summary="Cambio con ventana IniciarSesion hecha">
       <option name="closed" value="true" />

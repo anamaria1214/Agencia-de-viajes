@@ -71,11 +71,23 @@ public class Agencia {
         leerPaquetesTuristicos();
         this.reservas = new ArrayList<>();
         //leerReservas();
+
+        Administrador admin1= new Administrador("1090272715","admin1");
+        administradores.add(admin1);
     }
 
     private void leerPaquetesTuristicos() {
         try {
-            this.paquetesTuristicos = (ArrayList<PaqueteTuristico>) ArchivoUtils.deserializarObjeto("src/main/resources/persistencia/paquetesTuristicos.data");
+            Object objeto = ArchivoUtils.deserializarObjeto("src/main/resources/persistencia/paquetesTuristicos.data");
+            this.paquetesTuristicos = (ArrayList<PaqueteTuristico>) objeto;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    private void escribirPaquetesTuristicos() {
+        try {
+            ArchivoUtils.serializarObjeto("src/main/resources/persistencia/paquetesTuristicos.data", paquetesTuristicos);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -97,6 +109,10 @@ public class Agencia {
         }
     }
 
+    public void agregarPaquete(PaqueteTuristico paqueteTuristico){
+        paquetesTuristicos.add( paqueteTuristico );
+        escribirPaquetesTuristicos();
+    }
 
     private void leerClientes() {
         try (Scanner scanner = new Scanner(new File("src/main/resources/persistencia/clientes.txt"))) {
@@ -336,40 +352,21 @@ public class Agencia {
         }
     }
 
-    public void iniciarSesionAdmin(String id, String contrasenia, int i, boolean flag){
-        Administrador admin1= new Administrador("1090272715","admin1");
-        administradores.add(admin1);
-        if(i<administradores.size() && !flag){
-            if(administradores.get(i).getIdAdministrador().equals(id)){
-                if(administradores.get(i).getContrasenia().equals(contrasenia)){
-                    iniciarSesionAdmin(id, contrasenia, i, true);
-                    try {
-                        FXMLLoader loader = new FXMLLoader(AppPrincipal.class.getResource("/View/PaginaPrincipalAdmin.fxml"));
-                        Parent parent = loader.load();
-                        Stage stage = new Stage();
-                        Scene scene = new Scene(parent);
-                        stage.setScene(scene);
-                        stage.setTitle("Agencia de viajes");
-                        stage.show();
-                    } catch (IOException ioException) {
-                        ioException.printStackTrace();
-                    }
-                }else{
-                    iniciarSesionAdmin(id, contrasenia, i, true);
-                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setContentText("La contraseña que ingresó es incorrecta. Ingresela de nuevo");
-                    alert.setHeaderText(null);
-                    alert.show();
+    public boolean iniciarSesionAdmin(String id, String contrasenia, int i){
+
+        if(i<administradores.size()){
+
+            if(administradores.get(i).getIdAdministrador().equals(id)) {
+                if (administradores.get(i).getContrasenia().equals(contrasenia)) {
+                    return true;
                 }
-            }else{
-                iniciarSesionAdmin(id, contrasenia,i+1, false);
             }
-        }else {
-            Alert alert = new Alert(Alert.AlertType.INFORMATION);
-            alert.setContentText("Usuario no encontrado");
-            alert.setHeaderText(null);
-            alert.show();
+
+            return iniciarSesionAdmin(id, contrasenia,i+1);
+
         }
+
+        return false;
 
     }
 

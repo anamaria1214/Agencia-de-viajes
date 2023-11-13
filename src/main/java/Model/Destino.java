@@ -9,9 +9,13 @@ import java.io.Serializable;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode(onlyExplicitlyIncluded = true)
 public class Destino implements Serializable {
 
+    @EqualsAndHashCode.Include
     private String nombreDestino;
+
+    @EqualsAndHashCode.Include
     private String ciudad;
     private String descripcion;
     private String imagenRepresentativa;
