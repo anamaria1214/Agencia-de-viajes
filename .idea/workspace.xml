@@ -5,15 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c56749ba-87c2-40c3-b6ca-a9bc8123ef5b" name="Changes" comment="Se agregó ventana gestionar paquetes, se puede agregar destino, los destinos están serializados">
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/ContenedorPaquetesController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/DestinosDinamicoController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/View/ContenedorPaquetes.fxml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/View/DestinosDinamico.fxml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log.1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/IniciarAnimadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/IniciarAnimadoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/PaginaPrincipalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PaginaPrincipalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Agencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Agencia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CSS/Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CSS/Button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/View/IniciarAnimado.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/IniciarAnimado.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/View/PaginaPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/PaginaPrincipal.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,28 +43,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Juanes/Desktop/Github/Agencia-de-viajes/src/main/resources/View/IniciarAnimado.fxml",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Juanes/Desktop/Github/Agencia-de-viajes/src/main/resources/View/IniciarAnimado.fxml&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ANAMARIA\OneDrive\Documentos\GitHub\Agencia de viajes\src\main\resources\Persistencia" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ANAMARIA\OneDrive\Documentos\GitHub\Agencia de viajes\src\main\resources\Propiedades" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="Controller" />
     </key>
   </component>
   <component name="RunManager">
@@ -139,7 +139,8 @@
       <workItem from="1699568895879" duration="1623000" />
       <workItem from="1699756938179" duration="3840000" />
       <workItem from="1699907972018" duration="336000" />
-      <workItem from="1699909010752" duration="9801000" />
+      <workItem from="1699909010752" duration="14205000" />
+      <workItem from="1699985233720" duration="414000" />
     </task>
     <task id="LOCAL-00001" summary="Cambio con ventana IniciarSesion hecha">
       <option name="closed" value="true" />

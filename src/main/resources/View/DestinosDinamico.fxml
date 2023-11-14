@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="408.0" prefWidth="607.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.DestinosDinamicoController">
+   <children>
+      <ScrollPane prefHeight="408.0" prefWidth="607.0">
+         <content>
+            <VBox fx:id="contenedorPaquetes" prefHeight="407.0" prefWidth="607.0" />
+         </content>
+      </ScrollPane>
+   </children>
+</AnchorPane>
