@@ -57,7 +57,7 @@
                                <Insets top="14.0" />
                            </VBox.margin>
                        </Label>
-                       <PasswordField styleClass="textoField" stylesheets="@../CSS/TextField.css">
+                       <PasswordField fx:id="contraseniaIniciar" styleClass="textoField" stylesheets="@../CSS/TextField.css">
                            <font>
                                <Font size="15.0" />
                            </font>
@@ -156,7 +156,7 @@
                         <Insets top="25.0" />
                      </VBox.margin>
                   </Button>
-                  <Button fx:id="btnIniciarSesion" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#chgIniciarSesion" stylesheets="@../CSS/Button.css" text="Iniciar Sesión">
+                  <Button fx:id="btnIniciarSesion1" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#chgIniciarSesion" stylesheets="@../CSS/Button.css" text="Iniciar Sesión">
                      <VBox.margin>
                         <Insets bottom="20.0" top="20.0" />
                      </VBox.margin>

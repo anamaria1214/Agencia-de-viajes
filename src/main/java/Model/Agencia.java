@@ -158,7 +158,7 @@ public class Agencia {
             LOGGER.log(Level.SEVERE, "La persona no se asigno una contraseña");
             throw new EmptyFieldException("La contraseña es obligatoria");
         }
-        if (!comprobarExistenciaClienteRecur(cliente.getIdCliente(), 0, false)) {
+        if (comprobarExistenciaClienteRecur(cliente.getIdCliente(), 0, false)) {
             LOGGER.log(Level.SEVERE, "El cliente ya se encuentra registrado");
             throw new ExistingCustomerException("El cliente ya se encuentra registrado");
         }
@@ -181,8 +181,8 @@ public class Agencia {
 
     }
 
-    public boolean comprobarExistenciaClienteRecur(String email, int i, boolean flag) {
-        if (i < clientes.size() && flag) {
+    /*public boolean comprobarExistenciaClienteRecur(String email, int i, boolean flag) {
+        if (i < clientes.size() && !flag) {
             if (email.equals(clientes.get(i).getEmailCliente())) {
                 return comprobarExistenciaClienteRecur(email, i, true);
             } else {
@@ -191,31 +191,40 @@ public class Agencia {
         } else {
             return flag;
         }
+    }*/
+    public boolean comprobarExistenciaClienteRecur(String email, int i, boolean flag) {
+        if (i < clientes.size() && !flag) {
+            if (email.equals(clientes.get(i).getEmailCliente())) {
+                return true;
+            } else {
+                return comprobarExistenciaClienteRecur(email, i + 1, false);
+            }
+        } else {
+            return flag;
+        }
     }
-    public Cliente encontrarCliente(String id, int i, boolean flag, Cliente cliente){
+    public Cliente encontrarCliente(String email, int i, boolean flag, Cliente cliente){
         if(i < clientes.size() && !flag){
-            if(id.equals(clientes.get(i).getIdCliente())){
-                return encontrarCliente(id, i, true, clientes.get(i));
+            if(email.equals(clientes.get(i).getIdCliente())){
+                return encontrarCliente(email, i, true, clientes.get(i));
             }else{
-                return encontrarCliente(id,i+1,false, cliente);
+                return encontrarCliente(email,i+1,false, cliente);
             }
         }else{
             return cliente;
         }
     }
 
-    public void iniciarSesionClienteRecur(String email, String contrasenia, int i, boolean flag) throws NonRegisteredCustomer {
-        if (i <clientes.size() && !flag) {
+    /*public void iniciarSesionClienteRecur(String email, String contrasenia, int i, boolean flag) throws NonRegisteredCustomer {
+        if (i<clientes.size() && !flag) {
             if (!comprobarExistenciaClienteRecur(clientes.get(i).getEmailCliente(), 0, false)) {
                 throw new NonRegisteredCustomer("El cliente que ingresó no se encuentra registrado");
             }else{
                 if(clientes.get(i).getContraseniaCliente().equals(contrasenia)) {
                     try {
-                        FXMLLoader loader = new FXMLLoader(AppPrincipal.class.getResource("/PaginaPrincipalCliente.fxml"));
+                        FXMLLoader loader = new FXMLLoader(AppPrincipal.class.getResource("/View/PaginaPrincipalCliente.fxml"));
                         Parent parent = loader.load();
-
                         Stage stage = new Stage();
-
                         Scene scene = new Scene(parent);
                         stage.setScene(scene);
                         stage.setTitle("Agencia de viajes");
@@ -235,6 +244,34 @@ public class Agencia {
             iniciarSesionClienteRecur(email, contrasenia, i+1, false);
         }
 
+    }*/
+    public void iniciarSesionClienteRecur(String email, String contrasenia, int i, boolean flag) throws NonRegisteredCustomer {
+        if (i < clientes.size() && !flag) {
+            if (!comprobarExistenciaClienteRecur(clientes.get(i).getEmailCliente(), 0, false)) {
+                throw new NonRegisteredCustomer("El cliente que ingresó no se encuentra registrado");
+            } else {
+                if (clientes.get(i).getContraseniaCliente().equals(contrasenia)) {
+                    try {
+                        FXMLLoader loader = new FXMLLoader(AppPrincipal.class.getResource("/View/PaginaPrincipalCliente.fxml"));
+                        Parent parent = loader.load();
+                        Stage stage = new Stage();
+                        Scene scene = new Scene(parent);
+                        stage.setScene(scene);
+                        stage.setTitle("Agencia de viajes");
+                        stage.show();
+                    } catch (IOException ioException) {
+                        ioException.printStackTrace();
+                    }
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setContentText("La contraseña que ingresó es incorrecta. Ingresela de nuevo");
+                    alert.setHeaderText(null);
+                    alert.show();
+                }
+            }
+        } else {
+            iniciarSesionClienteRecur(email, contrasenia, i + 1, false);
+        }
     }
     public void crearPaquete(PaqueteTuristico paquete) throws EmptyFieldException, NegativeNumberException {
         if(paquete.getDestinos()==null){
@@ -341,6 +378,24 @@ public class Agencia {
         stage.show();
     }
 
+    public ArrayList<PaqueteTuristico> filtrarClima(Clima clima, int i, int j, ArrayList<PaqueteTuristico> paqueteFiltrado){
+        if(paquetesTuristicos.size()<i){
+            if(paquetesTuristicos.get(i).getDestinos().size()<j){
+                if(paquetesTuristicos.get(i).getDestinos().get(j).getClima().equals(clima)){
+                    paqueteFiltrado.add(paquetesTuristicos.get(i));
+                    return filtrarClima(clima,i,j+1,paqueteFiltrado);
+                }else{
+                    return filtrarClima(clima,i,j+1,paqueteFiltrado);
+                }
+            }else{
+                return filtrarClima(clima,i+1,0, paqueteFiltrado);
+            }
+        }else{
+            return paqueteFiltrado;
+        }
+    }
+
+    
     public ArrayList<Reserva> listarReserva(String id, int i, ArrayList<Reserva> reservasCliente){
         if(reservas.size()<i){
             if (reservas.get(i).getCliente().getIdCliente().equals(id)){

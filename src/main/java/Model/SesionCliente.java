@@ -8,6 +8,7 @@ import lombok.*;
 @AllArgsConstructor
 @NoArgsConstructor
 public class SesionCliente {
+
     private static SesionCliente instancia;
     private Cliente cliente;
 

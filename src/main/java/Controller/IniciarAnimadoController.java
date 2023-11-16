@@ -3,6 +3,7 @@ package Controller;
 import App.AppPrincipal;
 import Model.Agencia;
 import Model.Cliente;
+import Model.SesionCliente;
 import javafx.animation.TranslateTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -27,6 +28,7 @@ public class IniciarAnimadoController implements Initializable {
     private Agencia agencia= Agencia.getInstance();
     private static final Logger LOGGER = Logger.getLogger(Agencia.class.getName());
     private Propiedades propiedades = Propiedades.getInstance();
+    private SesionCliente sesionCliente= SesionCliente.getInstance();
 
 
     @FXML
@@ -58,7 +60,8 @@ public class IniciarAnimadoController implements Initializable {
 
     @FXML
     private Button btnVentanaRegistrarse;
-
+    @FXML
+    private PasswordField contraseniaIniciar;
     @FXML
     private Label contraseniaLabel;
 
@@ -106,6 +109,8 @@ public class IniciarAnimadoController implements Initializable {
     private TextField telefonoTextF;
     @FXML
     private TextField direccionTextF;
+    @FXML
+    private Button btnIniciarSesion1;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         EmailLabel.setText(propiedades.getBundle().getString("emailLabel"));
@@ -174,6 +179,15 @@ public class IniciarAnimadoController implements Initializable {
 
     }
     public void iniciarSesion(ActionEvent actionEvent) {
+        try {
+            agencia.iniciarSesionClienteRecur(emailCliente.getText(),contraseniaIniciar.getText(),0, false);
+            SesionCliente.getInstance().setCliente(agencia.encontrarCliente(emailCliente.getText(), 0, false, new Cliente()));
+        } catch (NonRegisteredCustomer e) {
+            Alert alert = new Alert(Alert.AlertType.WARNING);
+            alert.setContentText(e.getMessage());
+            alert.setHeaderText(null);
+            alert.show();
+        }
     }
     public void chgIniciarSesion(){
         logoAgencia.setVisible(false);

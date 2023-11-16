@@ -12,6 +12,8 @@ import java.io.IOException;
 
 public class AppPrincipal extends Application {
 
+    //Contraseña para enviar Email: ebmn eeui oixa ayga
+
     public static Parent loadFXML(String fxml) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(AppPrincipal.class.getResource("/View/" + fxml + ".fxml"));
         return fxmlLoader.load();
