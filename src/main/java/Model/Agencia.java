@@ -376,6 +376,24 @@ public class Agencia {
         stage.show();
     }
 
+    public ArrayList<PaqueteTuristico> filtrarClima(Clima clima, int i, int j, ArrayList<PaqueteTuristico> paqueteFiltrado){
+        if(paquetesTuristicos.size()<i){
+            if(paquetesTuristicos.get(i).getDestinos().size()<j){
+                if(paquetesTuristicos.get(i).getDestinos().get(j).getClima().equals(clima)){
+                    paqueteFiltrado.add(paquetesTuristicos.get(i));
+                    return filtrarClima(clima,i,j+1,paqueteFiltrado);
+                }else{
+                    return filtrarClima(clima,i,j+1,paqueteFiltrado);
+                }
+            }else{
+                return filtrarClima(clima,i+1,0, paqueteFiltrado);
+            }
+        }else{
+            return paqueteFiltrado;
+        }
+    }
+
+    
     public ArrayList<Reserva> listarReserva(String id, int i, ArrayList<Reserva> reservasCliente){
         if(reservas.size()<i){
             if (reservas.get(i).getCliente().getIdCliente().equals(id)){
