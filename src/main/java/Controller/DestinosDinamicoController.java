@@ -2,10 +2,14 @@ package Controller;
 
 import App.AppPrincipal;
 import Model.Agencia;
+import Model.Clima;
+import Model.PaqueteTuristico;
 import Model.SesionCliente;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.control.ComboBox;
+import javafx.scene.control.TextField;
 import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.VBox;
 
@@ -17,6 +21,17 @@ import java.util.ResourceBundle;
 public class DestinosDinamicoController implements Initializable {
     @FXML
     private VBox contenedorPaquetes;
+    @FXML
+    private TextField ciudadField;
+
+    @FXML
+    private ComboBox<Clima> climasCombo;
+    @FXML
+    private TextField destinoField;
+
+    @FXML
+    private TextField precioField;
+
     SesionCliente sesion = SesionCliente.getInstance();
 
     Agencia agencia = Agencia.getInstance();
@@ -39,4 +54,5 @@ public class DestinosDinamicoController implements Initializable {
             }
         }
     }
+
 }

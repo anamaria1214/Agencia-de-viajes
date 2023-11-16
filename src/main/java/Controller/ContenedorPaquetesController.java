@@ -10,6 +10,7 @@ import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 
 import java.net.URL;
+import java.util.ArrayList;
 import java.util.ResourceBundle;
 
 public class ContenedorPaquetesController implements Initializable {
@@ -40,13 +41,17 @@ public class ContenedorPaquetesController implements Initializable {
     private Label verBoton;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-
+        pintarComponente();
     }
     public void pintarComponente(){
         setearTodo();
     }
     public void setNameDestinos(){
-        destinos.setText(paquete.getDestinos().toString());
+        String destinos1 = "";
+        for (int i =0 ; i<paquete.getDestinos().size();i++){
+            destinos1 = destinos1 + paquete.getDestinos().get(i).getNombreDestino();
+        }
+        destinos.setText(destinos1);
     }
     public void setNombrePaquete(){
         nombrePaquete.setText(paquete.getNombrePaquete());
