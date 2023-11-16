@@ -3,10 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="b654fd54-a0d2-4996-945f-d3ee1cf7a0b0" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/java/Controller/ContenedorPaquetesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/Controller/ContenedorPaquetesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/java/Controller/DestinosDinamicoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/Controller/DestinosDinamicoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/java/Model/Agencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/main/java/Model/Agencia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main/resources/View/ContenedorPaquetes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/main/resources/View/ContenedorPaquetes.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.name" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,7 +27,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "Juanes",
+    "git-widget-placeholder": "af9a0029",
     "last_opened_file_path": "C:/Users/Juanes/Desktop/Github/Agencia-de-viajes/src",
     "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.0",
@@ -65,6 +63,10 @@
       <workItem from="1698985434419" duration="11000" />
       <workItem from="1698985450378" duration="14000" />
       <workItem from="1700106309956" duration="19000" />
+      <workItem from="1700112406838" duration="16000" />
+      <workItem from="1700112445302" duration="15000" />
+      <workItem from="1700112490435" duration="5000" />
+      <workItem from="1700112626284" duration="5000" />
     </task>
     <servers />
   </component>
