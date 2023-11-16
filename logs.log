@@ -416,3 +416,29 @@ nov. 13, 2023 6:34:51 P. M. Model.Agencia registrarCliente
 GRAVE: El cliente ya se encuentra registrado
 nov. 13, 2023 6:37:41 P. M. Model.Agencia <init>
 INFORMACIÓN: Se creó una nueva instancia
+nov. 13, 2023 6:50:26 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 13, 2023 7:15:21 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 13, 2023 7:16:31 P. M. Model.Agencia registrarCliente
+SEVERE: El cliente ya se encuentra registrado
+nov. 13, 2023 7:29:53 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 13, 2023 7:31:03 P. M. Model.Agencia registrarCliente
+SEVERE: El cliente ya se encuentra registrado
+nov. 13, 2023 7:31:10 P. M. Model.Agencia registrarCliente
+SEVERE: El cliente ya se encuentra registrado
+nov. 13, 2023 7:47:32 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 13, 2023 7:49:45 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 13, 2023 7:53:26 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 13, 2023 7:54:52 P. M. Model.Agencia registrarCliente
+INFO: Cliente registrado exitosamente
+nov. 14, 2023 2:55:52 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 14, 2023 2:58:33 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 14, 2023 5:39:52 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
