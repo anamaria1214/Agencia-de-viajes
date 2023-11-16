@@ -11,11 +11,13 @@ import javafx.scene.control.Dialog;
 import javafx.stage.Stage;
 import lombok.Getter;
 
+import java.awt.*;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Formatter;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
@@ -372,6 +374,17 @@ public class Agencia {
 
     //Metodos de busqueda dado atributos dados
 
-
+    public String imagenAleatoria(){
+        File carpetaDestinosImg =  new File("src/main/resources/Imagenes/Paquetes");
+        File[] archivos  = carpetaDestinosImg.listFiles();
+        String ruta="";
+        if (archivos != null & archivos.length>0){
+            Random random = new Random();
+            int indiceR = random.nextInt(archivos.length);
+            ruta = archivos[indiceR].getPath();
+        }
+        else return null;
+        return ruta;
+    }
 }
 
