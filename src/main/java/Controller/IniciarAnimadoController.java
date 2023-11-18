@@ -137,12 +137,13 @@ public class IniciarAnimadoController implements Initializable {
     public void registrarse(){
         Cliente cliente = new Cliente(idTextField.getText(), nombreTextField.getText(), apellidoTextField.getText(), emailRegistro.getText(),telefonoTextF.getText() ,direccionTextF.getText(), passwordRegistro.getText() );
         try{
+            System.out.println(emailRegistro.getText());
             agencia.registrarCliente(cliente);
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setContentText("Cliente registrado exitosamente");
             alert.setHeaderText(null);
             alert.show();
-        }catch(ExistingCustomerException  | EmptyFieldException e){
+        }catch(Exception e){
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setContentText(e.getMessage());
             alert.setHeaderText(null);

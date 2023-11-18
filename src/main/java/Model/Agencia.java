@@ -28,7 +28,8 @@ import Exception.ExistingCustomerException;
 import Exception.NonRegisteredCustomer;
 import Exception.NegativeNumberException;
 import Exception.MaximumCapacityException;
-import Exception.WrongPasswordException;
+import Exception.WrongUseOfDatesException;
+
 @Getter
 public class Agencia {
 
@@ -111,8 +112,9 @@ public class Agencia {
         }
     }
 
-    public void agregarPaquete(PaqueteTuristico paqueteTuristico){
-        paquetesTuristicos.add( paqueteTuristico );
+    public void agregarPaquete(PaqueteTuristico paqueteTuristico) throws NegativeNumberException, WrongUseOfDatesException, EmptyFieldException {
+        crearPaquete(paqueteTuristico);
+        //paquetesTuristicos.add(paqueteTuristico);
         escribirPaquetesTuristicos();
     }
 
@@ -129,7 +131,7 @@ public class Agencia {
     }
 
 
-    public void registrarCliente(Cliente cliente) throws EmptyFieldException, ExistingCustomerException {
+    public void registrarCliente(Cliente cliente) throws EmptyFieldException, ExistingCustomerException, Exception {
         if (cliente.getIdCliente() == null || cliente.getIdCliente().isBlank()) {
             LOGGER.log(Level.SEVERE, "La persona no ingreso su cedula");
             throw new EmptyFieldException("La cedula es obligatoria");
@@ -158,40 +160,30 @@ public class Agencia {
             LOGGER.log(Level.SEVERE, "La persona no se asigno una contraseña");
             throw new EmptyFieldException("La contraseña es obligatoria");
         }
-        if (comprobarExistenciaClienteRecur(cliente.getIdCliente(), 0, false)) {
+        if (comprobarExistenciaClienteRecur(cliente.getEmailCliente(), 0, false)) {
             LOGGER.log(Level.SEVERE, "El cliente ya se encuentra registrado");
             throw new ExistingCustomerException("El cliente ya se encuentra registrado");
         }
+
+        clientes.add(cliente);
 
         try {
             FileWriter fw = new FileWriter(new File("src/main/resources/persistencia/clientes.txt"), true);
             Formatter ft = new Formatter(fw);
             ft.format(cliente.getIdCliente() + ";" + cliente.getNombreCliente()
                     + ";" + cliente.getApellidoCliente()
-                    + ";" + cliente.getTelefono() + ";" + cliente.getEmailCliente()
-                    + ";" + cliente.getTelefono() + ";" + cliente.getDireccion()
-                    + ";" + cliente.getContraseniaCliente() + "%n");
+                    + ";" + cliente.getEmailCliente() + ";" + cliente.getTelefono()
+                    + ";" + cliente.getDireccion()  + ";" + cliente.getContraseniaCliente() + "%n");
             ft.close();
         } catch (IOException e) {
             LOGGER.log(Level.SEVERE, e.getMessage());
+            throw new Exception("El cliente no se pudo guardar");
         }
 
-        clientes.add(cliente);
         LOGGER.log(Level.INFO, "Cliente registrado exitosamente");
 
     }
 
-    /*public boolean comprobarExistenciaClienteRecur(String email, int i, boolean flag) {
-        if (i < clientes.size() && !flag) {
-            if (email.equals(clientes.get(i).getEmailCliente())) {
-                return comprobarExistenciaClienteRecur(email, i, true);
-            } else {
-                return comprobarExistenciaClienteRecur(email, i + 1, false);
-            }
-        } else {
-            return flag;
-        }
-    }*/
     public boolean comprobarExistenciaClienteRecur(String email, int i, boolean flag) {
         if (i < clientes.size() && !flag) {
             if (email.equals(clientes.get(i).getEmailCliente())) {
@@ -215,36 +207,7 @@ public class Agencia {
         }
     }
 
-    /*public void iniciarSesionClienteRecur(String email, String contrasenia, int i, boolean flag) throws NonRegisteredCustomer {
-        if (i<clientes.size() && !flag) {
-            if (!comprobarExistenciaClienteRecur(clientes.get(i).getEmailCliente(), 0, false)) {
-                throw new NonRegisteredCustomer("El cliente que ingresó no se encuentra registrado");
-            }else{
-                if(clientes.get(i).getContraseniaCliente().equals(contrasenia)) {
-                    try {
-                        FXMLLoader loader = new FXMLLoader(AppPrincipal.class.getResource("/View/PaginaPrincipalCliente.fxml"));
-                        Parent parent = loader.load();
-                        Stage stage = new Stage();
-                        Scene scene = new Scene(parent);
-                        stage.setScene(scene);
-                        stage.setTitle("Agencia de viajes");
-                        stage.show();
-                    } catch (IOException ioException) {
-                        ioException.printStackTrace();
-                    }
-                } else {
-                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                    alert.setContentText("La contraseña que ingresó es incorrecta. Ingresela de nuevo");
-                    alert.setHeaderText(null);
-                    alert.show();
-                }
-                iniciarSesionClienteRecur(email, contrasenia, i, true);
-            }
-        }else{
-            iniciarSesionClienteRecur(email, contrasenia, i+1, false);
-        }
 
-    }*/
     public void iniciarSesionClienteRecur(String email, String contrasenia, int i, boolean flag) throws NonRegisteredCustomer {
         if (i < clientes.size() && !flag) {
             if (!comprobarExistenciaClienteRecur(clientes.get(i).getEmailCliente(), 0, false)) {
@@ -273,14 +236,14 @@ public class Agencia {
             iniciarSesionClienteRecur(email, contrasenia, i + 1, false);
         }
     }
-    public void crearPaquete(PaqueteTuristico paquete) throws EmptyFieldException, NegativeNumberException {
+    public void crearPaquete(PaqueteTuristico paquete) throws EmptyFieldException, NegativeNumberException, WrongUseOfDatesException {
         if(paquete.getDestinos()==null){
             LOGGER.log(Level.SEVERE, "No tienen destinos");
             throw new EmptyFieldException("Ingrese los destinos del paquete");
         }if(paquete.getNombrePaquete()==null){
             LOGGER.log(Level.SEVERE, "El nombre del paquete está vacio");
             throw new EmptyFieldException("El nombre del destino esta vacio. Ingrese el nombre");
-        }if(paquete.getDuracion()<=0){
+        }if(paquete.getCupoMaximo()<=0){
             LOGGER.log(Level.SEVERE, "Duración de paquete no válido");
             throw new NegativeNumberException("Ingrese una duración valida del paquete");
         }if(paquete.getServiciosAdicionales()==null){
@@ -289,6 +252,12 @@ public class Agencia {
         }if(paquete.getPrecio()<=0){
             LOGGER.log(Level.SEVERE, "Precio no válido");
             throw new NegativeNumberException("Ingrese un precio valido");
+        }if(paquete.getFechaFin().isBefore(paquete.getFechaInicio())){
+            LOGGER.log(Level.SEVERE, "Fecha no válida");
+            throw new WrongUseOfDatesException("Ingreso una la fecha fin no válida");
+        }if(paquete.getFechaInicio().isAfter(paquete.getFechaFin())){
+            LOGGER.log(Level.SEVERE, "Fecha no válida");
+            throw new WrongUseOfDatesException("Ingreso una la fecha inicio no válida");
         }
         paquetesTuristicos.add(paquete);
         try {
@@ -378,26 +347,92 @@ public class Agencia {
         stage.show();
     }
 
-    public ArrayList<PaqueteTuristico> filtrarClima(Clima clima, int i, int j, ArrayList<PaqueteTuristico> paqueteFiltrado){
-        if(paquetesTuristicos.size()<i){
-            if(paquetesTuristicos.get(i).getDestinos().size()<j){
+    public void filtrarClima(Clima clima, int i, int j, ArrayList<PaqueteTuristico> paqueteFiltrado){
+        if(paquetesTuristicos.size()>i){
+            if(paquetesTuristicos.get(i).getDestinos().size()>j){
                 if(paquetesTuristicos.get(i).getDestinos().get(j).getClima().equals(clima)){
                     paqueteFiltrado.add(paquetesTuristicos.get(i));
-                    return filtrarClima(clima,i,j+1,paqueteFiltrado);
+                    filtrarClima(clima,i,j+1,paqueteFiltrado);
                 }else{
-                    return filtrarClima(clima,i,j+1,paqueteFiltrado);
+                    filtrarClima(clima,i,j+1,paqueteFiltrado);
                 }
             }else{
-                return filtrarClima(clima,i+1,0, paqueteFiltrado);
+                filtrarClima(clima,i+1,0, paqueteFiltrado);
             }
-        }else{
-            return paqueteFiltrado;
         }
     }
+    public void filtrarPrecio(double precio, int i, ArrayList<PaqueteTuristico> paquetesFiltrados) {
+        if(paquetesTuristicos.size()>i){
+            if(paquetesTuristicos.get(i).getPrecio()<=precio){
+                paquetesFiltrados.add(paquetesTuristicos.get(i));
+                filtrarPrecio(precio,i+1,paquetesFiltrados);
+            }else{
+                filtrarPrecio(precio,i+1,paquetesFiltrados);
+            }
+        }
+    }
+    public void filtrarCiudad(String ciudad, int i,int j, ArrayList<PaqueteTuristico> paqueteFiltrados){
+        if(paquetesTuristicos.size()>i){
+            if(paquetesTuristicos.get(i).getDestinos().size()>j){
+                if(paquetesTuristicos.get(i).getDestinos().get(j).getCiudad().equals(ciudad)){
+                    paqueteFiltrados.add(paquetesTuristicos.get(i));
+                    filtrarCiudad(ciudad,i,j+1,paqueteFiltrados);
+                }else{
+                    filtrarCiudad(ciudad,i,j+1,paqueteFiltrados);
+                }
+            }else{
+                filtrarCiudad(ciudad,i+1,0,paqueteFiltrados);
+            }
+        }
+    }
+    public void filtrarDestino(String nombreDestino, int i, int j, ArrayList<PaqueteTuristico> paquetesFiltrados){
+        if(paquetesTuristicos.size()>i){
+            if(paquetesTuristicos.get(i).getDestinos().size()>j){
+                if(paquetesTuristicos.get(i).getDestinos().get(j).getNombreDestino().toLowerCase().contains(nombreDestino.toLowerCase())){
+                    paquetesFiltrados.add(paquetesTuristicos.get(i));
+                    filtrarDestino(nombreDestino,i,j+1,paquetesFiltrados);
+                }else{
+                    filtrarDestino(nombreDestino,i,j+1,paquetesFiltrados);
+                }
+            }else{
+                filtrarDestino(nombreDestino, i+1,0,paquetesFiltrados);
+            }
+        }
+    }
+    public void eliminarRepetidosPaquetes(ArrayList<PaqueteTuristico> paquetes){
+        for(int i=0;i< paquetes.size();i++){
+            for(int j=i+1;j<paquetes.size();j++){
+                if(paquetes.get(i).equals(paquetes.get(j))){
+                    paquetes.remove(paquetes.get(j));
+                    j--;
+                }
+            }
+        }
+    }
+    public ArrayList<PaqueteTuristico> filtrar(String nombreDestino, String ciudad, double precio, Clima clima){
+        ArrayList<PaqueteTuristico> paquetesFiltrados=new ArrayList<>();
 
-    
+        if(nombreDestino!=null && !nombreDestino.isEmpty()){
+            filtrarDestino(nombreDestino,0,0,paquetesFiltrados);
+        }
+
+        if(ciudad!=null && !ciudad.isEmpty()){
+            filtrarCiudad(ciudad,0,0, paquetesFiltrados);
+        }
+
+        if(precio>0){
+            filtrarPrecio(precio,0,paquetesFiltrados);
+        }
+
+        if (clima!=null){
+            filtrarClima(clima,0,0,paquetesFiltrados);
+        }
+        eliminarRepetidosPaquetes(paquetesFiltrados);
+        return paquetesFiltrados;
+    }
+
     public ArrayList<Reserva> listarReserva(String id, int i, ArrayList<Reserva> reservasCliente){
-        if(reservas.size()<i){
+        if(reservas.size()>i){
             if (reservas.get(i).getCliente().getIdCliente().equals(id)){
                 reservasCliente.add(reservas.get(i));
                 return listarReserva(id,i+1, reservasCliente);
@@ -432,14 +467,17 @@ public class Agencia {
     public String imagenAleatoria(){
         File carpetaDestinosImg =  new File("src/main/resources/Imagenes/Paquetes");
         File[] archivos  = carpetaDestinosImg.listFiles();
+
         String ruta="";
-        if (archivos != null & archivos.length>0){
+
+        if (archivos != null && archivos.length>0){
             Random random = new Random();
             int indiceR = random.nextInt(archivos.length);
-            ruta = archivos[indiceR].getPath();
+            ruta = archivos[indiceR].getAbsolutePath();
+            return ruta;
+        }else{
+            throw new RuntimeException("No hay imágenes");
         }
-        else return null;
-        return ruta;
     }
 }
 

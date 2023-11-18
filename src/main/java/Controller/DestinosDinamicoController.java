@@ -5,6 +5,7 @@ import Model.Agencia;
 import Model.Clima;
 import Model.PaqueteTuristico;
 import Model.SesionCliente;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
@@ -15,6 +16,8 @@ import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.ResourceBundle;
 
 
@@ -35,17 +38,27 @@ public class DestinosDinamicoController implements Initializable {
     SesionCliente sesion = SesionCliente.getInstance();
 
     Agencia agencia = Agencia.getInstance();
+    ArrayList<PaqueteTuristico> paquetesFiltrados;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        pintarPaquetes();
+
+        this.paquetesFiltrados = agencia.getPaquetesTuristicos();
+        pintarPaquetes(paquetesFiltrados);
+        climasCombo.getItems().addAll(Clima.values());
     }
-    public void pintarPaquetes(){
-        for(int i=0;i<agencia.getPaquetesTuristicos().size();i++){
-            FXMLLoader loader = new FXMLLoader(AppPrincipal.class.getResource("/View/ContenedorPaquetes.fxml") );
+
+    public void pintarPaquetes(ArrayList<PaqueteTuristico> paquetes){
+        contenedorPaquetes.getChildren().clear();
+        contenedorPaquetes.setSpacing(0);
+
+        System.out.println( paquetes );
+
+        for(int i=0;i<paquetes.size();i++){
+            FXMLLoader loader = new FXMLLoader(AppPrincipal.class.getResource("/View/ContenedorPaquetes.fxml"));
             try {
                 AnchorPane paquete = loader.load();
                 ContenedorPaquetesController paqueteC = loader.getController();
-                paqueteC.setPaquete(agencia.getPaquetesTuristicos().get(i));
+                paqueteC.setPaquete(paquetes.get(i));
                 paqueteC.pintarComponente();
                 paqueteC.setIdCliente(sesion.getCliente().getIdCliente());
                 contenedorPaquetes.getChildren().add(paquete);
@@ -53,6 +66,12 @@ public class DestinosDinamicoController implements Initializable {
                 throw new RuntimeException(e);
             }
         }
+    }
+
+    public void filtrarPaquetes(){
+        ArrayList<PaqueteTuristico> lista = agencia.filtrar( destinoField.getText(), ciudadField.getText(), Double.parseDouble( precioField.getText() ), climasCombo.getValue() );
+        System.out.println("Lista:"+lista);
+        pintarPaquetes(lista);
     }
 
 }

@@ -41,7 +41,8 @@ public class ContenedorPaquetesController implements Initializable {
     private Label verBoton;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
-        pintarComponente();
+        System.out.println(paquete);
+        //pintarComponente();
     }
     public void pintarComponente(){
         setearTodo();
@@ -82,6 +83,7 @@ public class ContenedorPaquetesController implements Initializable {
     }
     public void setPaquete(PaqueteTuristico paqueteT){
         paquete = paqueteT;
+        pintarComponente();
     }
     public void setIdCliente(String id){
         idCliente=id;

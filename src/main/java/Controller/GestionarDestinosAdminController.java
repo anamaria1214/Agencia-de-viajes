@@ -13,6 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import Exception.EmptyFieldException;
 
+
 public class GestionarDestinosAdminController implements Initializable {
 
     private Agencia agencia= Agencia.getInstance();

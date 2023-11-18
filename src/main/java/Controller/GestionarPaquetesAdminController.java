@@ -14,7 +14,11 @@ import javafx.scene.control.cell.PropertyValueFactory;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
+import java.util.logging.Level;
 import java.util.logging.Logger;
+import Exception.NegativeNumberException;
+import Exception.EmptyFieldException;
+import Exception.WrongUseOfDatesException;
 
 public class GestionarPaquetesAdminController implements Initializable {
 
@@ -25,7 +29,7 @@ public class GestionarPaquetesAdminController implements Initializable {
         @FXML
         private Button btnAgregarPaquete;
         @FXML
-        private TextField duracionPaquetes;
+        private TextField cupoMaximo;
         @FXML
         private Label lblDestinos;
         @FXML
@@ -48,6 +52,10 @@ public class GestionarPaquetesAdminController implements Initializable {
         private TableColumn columnCiudad;
         @FXML
         private TableColumn<Destino,String> columnNombre;
+        @FXML
+        private DatePicker fechaInicio;
+        @FXML
+        private DatePicker fechaFin;
 
         private ArrayList<Destino> destinosSeleccionados;
 
@@ -84,17 +92,26 @@ public class GestionarPaquetesAdminController implements Initializable {
 
     public void registrarPaquete (){
             PaqueteTuristico paquete = new PaqueteTuristico(destinosSeleccionados, nombrePaquetes.getText(),
-                    Integer.parseInt(duracionPaquetes.getText()), serviviosAdicionales.getText(), Double.parseDouble(precioPaquete.getText()) );
+                    Integer.parseInt(cupoMaximo.getText()), serviviosAdicionales.getText(), Double.parseDouble(precioPaquete.getText()),fechaInicio.getValue(), fechaFin.getValue());
 
+        try {
             agencia.agregarPaquete(paquete);
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("El paquete fue añadido correctamente");
+            alert.setHeaderText(null);
+            alert.show();
+        } catch (NegativeNumberException | WrongUseOfDatesException | EmptyFieldException e) {
+            LOGGER.log(Level.WARNING, e.getMessage());
+            Alert alert = new Alert(Alert.AlertType.ERROR);
+            alert.setContentText(e.getMessage());
+            alert.setHeaderText(null);
+            alert.show();
+        }
 
 
-            //if(!agencia.getPaquetesTuristicos().contains(paquete)){
+        //if(!agencia.getPaquetesTuristicos().contains(paquete)){
              //   agencia.getPaquetesTuristicos().add(paquete);
-                Alert alert = new Alert(Alert.AlertType.INFORMATION);
-                alert.setContentText("El paquete fue añadido correctamente");
-                alert.setHeaderText(null);
-                alert.show();
+
             //}
             //else{
             //    Alert alert = new Alert(Alert.AlertType.INFORMATION);

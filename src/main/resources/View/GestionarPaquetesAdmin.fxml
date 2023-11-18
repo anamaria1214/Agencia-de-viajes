@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.geometry.*?>
+<?import javafx.scene.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
@@ -19,10 +20,10 @@
                         <Insets left="11.0" top="5.0" />
                      </VBox.margin>
                   </Label>
-                  <TableView fx:id="tablaDestinos" prefHeight="200.0" prefWidth="266.0">
+                  <TableView fx:id="tablaDestinos" prefHeight="120.0" prefWidth="252.0">
                     <columns>
-                      <TableColumn fx:id="columnNombre" prefWidth="159.0" text="Nombre Destino" />
-                      <TableColumn fx:id="columnCiudad" prefWidth="135.0" text="Ciudad" />
+                      <TableColumn fx:id="columnNombre" prefWidth="144.0" text="Nombre Destino" />
+                      <TableColumn fx:id="columnCiudad" prefWidth="145.0" text="Ciudad" />
                     </columns>
                      <VBox.margin>
                         <Insets left="12.0" right="11.0" />
@@ -40,7 +41,18 @@
                      <VBox.margin>
                         <Insets left="11.0" right="11.0" />
                      </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
                   </TextField>
+                  <Label styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Fecha inicio:">
+                     <VBox.margin>
+                        <Insets left="11.0" top="10.0" />
+                     </VBox.margin></Label>
+                  <DatePicker fx:id="fechaInicio" maxWidth="1.7976931348623157E308" prefHeight="26.0" prefWidth="273.0" styleClass="textoField" stylesheets="@../CSS/TextField.css">
+                     <VBox.margin>
+                        <Insets left="11.0" right="11.0" />
+                     </VBox.margin></DatePicker>
                </children></VBox>
          </children>
       </VBox>
@@ -48,35 +60,61 @@
          <children>
             <VBox prefHeight="337.0" prefWidth="295.0">
                <children>
-                  <Label fx:id="lblDuracionPaquete" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Duración:">
+                  <Label styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Fecha fin disponibilidad:">
                      <VBox.margin>
-                        <Insets left="11.0" top="15.0" />
-                     </VBox.margin>
-                  </Label>
-                  <TextField fx:id="duracionPaquetes" />
-                  <Label fx:id="lblServiciosAd" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Servivios adicionales:">
-                     <VBox.margin>
-                        <Insets left="11.0" top="15.0" />
+                        <Insets top="10.0" />
                      </VBox.margin></Label>
-                  <TextArea fx:id="serviviosAdicionales" prefHeight="109.0" prefWidth="295.0" styleClass="textoField" stylesheets="@../CSS/TextField.css">
+                  <DatePicker fx:id="fechaFin" maxWidth="1.7976931348623157E308" styleClass="textoField" stylesheets="@../CSS/TextField.css">
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
                      <VBox.margin>
                         <Insets left="11.0" right="11.0" />
-                     </VBox.margin></TextArea>
+                     </VBox.margin></DatePicker>
+                  <Label fx:id="lblDuracionPaquete" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Cupo máximo:">
+                     <VBox.margin>
+                        <Insets left="11.0" top="10.0" />
+                     </VBox.margin>
+                  </Label>
+                  <TextField fx:id="cupoMaximo" styleClass="textoField" stylesheets="@../CSS/TextField.css">
+                     <VBox.margin>
+                        <Insets left="11.0" right="11.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor></TextField>
+                  <Label fx:id="lblServiciosAd" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Servivios adicionales:">
+                     <VBox.margin>
+                        <Insets left="11.0" top="10.0" />
+                     </VBox.margin></Label>
+                  <TextArea fx:id="serviviosAdicionales" prefHeight="64.0" prefWidth="273.0" styleClass="textoField" stylesheets="@../CSS/TextField.css">
+                     <VBox.margin>
+                        <Insets left="11.0" right="11.0" />
+                     </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor></TextArea>
                   <Label fx:id="lblPrecio" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Precio:">
                      <VBox.margin>
-                        <Insets left="11.0" top="15.0" />
+                        <Insets left="11.0" top="10.0" />
                      </VBox.margin>
                   </Label>
                   <TextField fx:id="precioPaquete" styleClass="textoField" stylesheets="@../CSS/TextField.css">
                      <VBox.margin>
                         <Insets left="11.0" right="11.0" />
                      </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="TEXT" />
+                     </cursor>
                   </TextField>
                </children></VBox>
             <Button fx:id="btnAgregarPaquete" mnemonicParsing="false" onAction="#registrarPaquete" stylesheets="@../CSS/Button.css" text="Agregar">
                <VBox.margin>
                   <Insets right="11.0" top="10.0" />
                </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
          </children>
          <HBox.margin>
