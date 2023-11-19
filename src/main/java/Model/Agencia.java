@@ -537,19 +537,16 @@ public class Agencia {
     }
 
     public ArrayList<PaqueteTuristico> paquetesAleatorios(){
-        Random random = new Random();
-        ArrayList<Integer> indexes = new ArrayList<>();
-        while (indexes.size()<3){
-            int index = random.nextInt(paquetesTuristicos.size());
-            if(!indexes.contains(index)){
-                indexes.add(index);
+        ArrayList<PaqueteTuristico> randoms = new ArrayList<>();
+        Random rand = new Random();
+        while(randoms.size()<3){
+            int index = rand.nextInt(paquetesTuristicos.size());
+            PaqueteTuristico paq = paquetesTuristicos.get(index);
+            if(!randoms.contains(paq)){
+                randoms.add(paq);
             }
         }
-        ArrayList<PaqueteTuristico> paquetesRandom = new ArrayList<>();
-        for(int i =0 ; i<indexes.size();i++){
-            paquetesRandom.add(paquetesTuristicos.get(indexes.get(i)));
-        }
-        return paquetesAleatorios();
+        return randoms;
     }
 }
 
