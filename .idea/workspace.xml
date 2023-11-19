@@ -6,13 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="c56749ba-87c2-40c3-b6ca-a9bc8123ef5b" name="Changes" comment="Se agregó ventana gestionar paquetes, se puede agregar destino, los destinos están serializados">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs.log.1.lck" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs.log.2" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs.log.3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs.log.4" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs.log.5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs.log.6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs.log.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Agencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Agencia.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -152,6 +148,7 @@
       <workItem from="1700107045101" duration="1122000" />
       <workItem from="1700108611892" duration="2398000" />
       <workItem from="1700112644538" duration="75000" />
+      <workItem from="1700367929963" duration="641000" />
     </task>
     <task id="LOCAL-00001" summary="Cambio con ventana IniciarSesion hecha">
       <option name="closed" value="true" />
