@@ -377,7 +377,11 @@ public class Agencia {
 
         reservas.remove(reserva);
     }
+<<<<<<< Updated upstream
 
+=======
+    
+>>>>>>> Stashed changes
 
     public ArrayList<Reserva> encontrarReservasRecur(String id, int i, ArrayList<Reserva> reser){
         if(i<reservas.size()){
