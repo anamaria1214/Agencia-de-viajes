@@ -722,3 +722,53 @@ INFO: Se creó una nueva instancia
 nov. 18, 2023 11:06:31 P. M. Model.Agencia <init>
 INFO: Se creó una nueva instancia
 >>>>>>> Stashed changes
+nov. 18, 2023 11:43:47 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 11:49:52 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 11:50:27 P. M. Model.Agencia crearReserva
+SEVERE: Fecha escogida no es válida
+nov. 18, 2023 11:50:27 P. M. Controller.ReservarController hacerReserva
+WARNING: La fecha que escogio no corresponde a las fechas disponibles del paquete. Estas fechas van desde: 2023-11-19T00:00 hasta: 2023-11-19T00:00
+nov. 18, 2023 11:50:39 P. M. Model.Agencia crearReserva
+SEVERE: Fecha escogida no es válida
+nov. 18, 2023 11:50:39 P. M. Controller.ReservarController hacerReserva
+WARNING: La fecha que escogio no corresponde a las fechas disponibles del paquete. Estas fechas van desde: 2023-11-19T00:00 hasta: 2023-11-19T00:00
+nov. 18, 2023 11:50:56 P. M. Model.Agencia crearReserva
+SEVERE: Fecha escogida no es válida
+nov. 18, 2023 11:50:56 P. M. Controller.ReservarController hacerReserva
+WARNING: La fecha que escogio no corresponde a las fechas disponibles del paquete. Estas fechas van desde: 2023-11-19T00:00 hasta: 2023-11-19T00:00
+nov. 18, 2023 11:51:12 P. M. Model.Agencia crearReserva
+SEVERE: Fecha escogida no es válida
+nov. 18, 2023 11:51:12 P. M. Controller.ReservarController hacerReserva
+WARNING: La fecha que escogio no corresponde a las fechas disponibles del paquete. Estas fechas van desde: 2023-11-19T00:00 hasta: 2023-11-19T00:00
+nov. 18, 2023 11:51:25 P. M. Model.Agencia crearReserva
+SEVERE: Fecha escogida no es válida
+nov. 18, 2023 11:51:25 P. M. Controller.ReservarController hacerReserva
+WARNING: La fecha que escogio no corresponde a las fechas disponibles del paquete. Estas fechas van desde: 2023-11-19T00:00 hasta: 2023-11-19T00:00
+nov. 18, 2023 11:51:39 P. M. Model.Agencia crearReserva
+SEVERE: Fecha escogida no es válida
+nov. 18, 2023 11:51:39 P. M. Controller.ReservarController hacerReserva
+WARNING: La fecha que escogio no corresponde a las fechas disponibles del paquete. Estas fechas van desde: 2023-11-19T00:00 hasta: 2023-11-19T00:00
+nov. 18, 2023 11:53:04 P. M. Model.Agencia crearReserva
+SEVERE: Se excedió el cupo máximo de personas para la reserva
+nov. 18, 2023 11:53:04 P. M. Controller.ReservarController hacerReserva
+WARNING: Se excedió el cupo máximo de personas para la reserva. Ingrese un número válido
+nov. 18, 2023 11:53:09 P. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 18, 2023 11:55:34 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 19, 2023 12:00:05 A. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 19, 2023 12:03:38 A. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 19, 2023 12:16:51 A. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 19, 2023 12:17:48 A. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 19, 2023 12:18:55 A. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 19, 2023 12:35:50 A. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 19, 2023 12:38:09 A. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia

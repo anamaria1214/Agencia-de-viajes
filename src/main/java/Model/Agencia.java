@@ -243,34 +243,24 @@ public class Agencia {
             iniciarSesionClienteRecur(email, contrasenia, i + 1, false);
         }
     }*/
-    public void iniciarSesionClienteRecur(String email, String contrasenia, int i, boolean flag) throws NonRegisteredCustomer {
+    public boolean iniciarSesionClienteRecur(String email, String contrasenia, int i, boolean flag){
         if (i < clientes.size() && !flag) {
             if (!comprobarExistenciaClienteRecur(clientes.get(i).getEmailCliente(), 0, false)) {
-                throw new NonRegisteredCustomer("El cliente que ingresó no se encuentra registrado");
+                return iniciarSesionClienteRecur(email,contrasenia,i+1, false);
             } else {
                 if (clientes.get(i).getContraseniaCliente().equals(contrasenia)) {
-                    try {
-                        FXMLLoader loader = new FXMLLoader(AppPrincipal.class.getResource("/View/PaginaPrincipalCliente.fxml"));
-                        Parent parent = loader.load();
-                        Stage stage = new Stage();
-                        Scene scene = new Scene(parent);
-                        stage.setScene(scene);
-                        stage.setTitle("Agencia de viajes");
-                        stage.show();
-                        return; // Salir del método después de iniciar sesión exitosamente
-                    } catch (IOException ioException) {
-                        ioException.printStackTrace();
-                    }
+                    return iniciarSesionClienteRecur(email, contrasenia, i, true);
                 } else {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setContentText("La contraseña que ingresó es incorrecta. Ingresela de nuevo");
                     alert.setHeaderText(null);
                     alert.show();
+                    return iniciarSesionClienteRecur(email,contrasenia,i,false);
                 }
             }
+        }else{
+            return flag;
         }
-
-        iniciarSesionClienteRecur(email, contrasenia, i + 1, false);
     }
 
     public void crearPaquete(PaqueteTuristico paquete) throws EmptyFieldException, NegativeNumberException, WrongUseOfDatesException {
@@ -377,11 +367,7 @@ public class Agencia {
 
         reservas.remove(reserva);
     }
-<<<<<<< Updated upstream
 
-=======
-    
->>>>>>> Stashed changes
 
     public ArrayList<Reserva> encontrarReservasRecur(String id, int i, ArrayList<Reserva> reser){
         if(i<reservas.size()){

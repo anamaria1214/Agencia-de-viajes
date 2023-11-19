@@ -4,11 +4,13 @@ import App.AppPrincipal;
 import Model.Agencia;
 import Model.ConocerPaquete;
 import Model.PaqueteTuristico;
+import Model.SesionCliente;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
@@ -23,6 +25,7 @@ import java.util.ResourceBundle;
 public class ContenedorPaquetesController implements Initializable {
 
     private PaqueteTuristico paquete;
+    private SesionCliente sesionCliente= SesionCliente.getInstance();
     Agencia agencia= Agencia.getInstance();
     ConocerPaquete paqueteNecesario= ConocerPaquete.getInstance();
     private String idCliente;
@@ -101,16 +104,32 @@ public class ContenedorPaquetesController implements Initializable {
     }
 
     public void abrirVentanaMasDetalles(){
-        try {
-            FXMLLoader loader = new FXMLLoader(AppPrincipal.class.getResource("/View/Reservar.fxml"));
-            Parent parent = loader.load();
-            Stage stage = new Stage();
-            Scene scene = new Scene(parent);
-            stage.setScene(scene);
-            stage.setTitle("Agencia de viajes");
-            stage.show();
-        } catch (IOException ioException) {
-            ioException.printStackTrace();
+        if(sesionCliente.getCliente()==null){
+            try{
+                FXMLLoader loader = new FXMLLoader(AppPrincipal.class.getResource("/View/IniciarAnimado.fxml"));
+                Parent parent = loader.load();
+                Stage stage = new Stage();
+                Scene scene = new Scene(parent);
+                stage.setScene(scene);
+                stage.setTitle("Agencia de viajes");
+                stage.show();
+            }catch(IOException ioException) {
+                ioException.printStackTrace();
+            }
+
+        }else{
+            try {
+                FXMLLoader loader = new FXMLLoader(AppPrincipal.class.getResource("/View/Reservar.fxml"));
+                Parent parent = loader.load();
+                Stage stage = new Stage();
+                Scene scene = new Scene(parent);
+                stage.setScene(scene);
+                stage.setTitle("Agencia de viajes");
+                stage.show();
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            }
         }
+
     }
 }

@@ -51,7 +51,7 @@ public class IniciarSesionController implements Initializable {
         btnVentanaRegistrarse.setText(propiedades.getBundle().getString("btnVentanaRegistrarse"));
     }
 
-    public void iniciarSesion(){
+    /*public void iniciarSesion(){
         try {
             agencia.iniciarSesionClienteRecur(emailCliente.getText(), contraseniaCliente.getText(), 0, false);
             Alert alert = new Alert(Alert.AlertType.ERROR);
@@ -66,7 +66,7 @@ public class IniciarSesionController implements Initializable {
             alert.show();
         }
 
-    }
+    }*/
     public void volverPrincipal(){
         vBoxL.setVisible(false);
         TranslateTransition slide  = new TranslateTransition();

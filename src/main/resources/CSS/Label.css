@@ -24,6 +24,13 @@
     -fx-font-weight: bold; /* Fuente negrita */
 
 }
+.tituloCerrarSesion{
+    -fx-font-family: "Arial"; /* Fuente */
+    -fx-text-fill: #9672cf; /* Color del texto */
+    -fx-padding: 5 10 5 10; /* Espaciado interior (arriba, derecha, abajo, izquierda) */
+    -fx-background-color: transparent;
+
+}
 .tituloRadioButton{
     -fx-font-family: "Arial"; /* Fuente */
     -fx-font-size: 15px; /* Tamaño de fuente */

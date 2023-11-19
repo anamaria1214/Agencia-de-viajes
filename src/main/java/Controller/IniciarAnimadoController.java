@@ -183,15 +183,24 @@ public class IniciarAnimadoController implements Initializable {
 
     }
     public void iniciarSesion() {
-        try {
-
-            agencia.iniciarSesionClienteRecur(emailCliente.getText(),contraseniaIniciar.getText(),0, false);
-            Cliente cliente= agencia.encontrarCliente(emailCliente.getText(), 0, false, new Cliente());
-            sesionCliente.setCliente(cliente);
-            System.out.println(sesionCliente.getCliente());
-        } catch (NonRegisteredCustomer e) {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setContentText(e.getMessage());
+        if(agencia.iniciarSesionClienteRecur(emailCliente.getText(),contraseniaIniciar.getText(),0, false)){
+            try {
+                Cliente cliente= agencia.encontrarCliente(emailCliente.getText(), 0, false, new Cliente());
+                sesionCliente.setCliente(cliente);
+                System.out.println(sesionCliente.getCliente());
+                FXMLLoader loader = new FXMLLoader(AppPrincipal.class.getResource("/View/PaginaPrincipalCliente.fxml"));
+                Parent parent = loader.load();
+                Stage stage = new Stage();
+                Scene scene = new Scene(parent);
+                stage.setScene(scene);
+                stage.setTitle("Agencia de viajes");
+                stage.show();
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            }
+        }else{
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("Cliente no encontrado");
             alert.setHeaderText(null);
             alert.show();
         }
