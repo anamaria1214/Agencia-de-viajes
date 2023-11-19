@@ -2,6 +2,7 @@ package Model;
 
 import lombok.*;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 
 @ToString
@@ -9,7 +10,7 @@ import java.util.ArrayList;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class GuiaTuristico {
+public class GuiaTuristico implements Serializable {
 
     private String idGuia;
     private String nombreGuia;
