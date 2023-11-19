@@ -772,3 +772,75 @@ nov. 19, 2023 12:35:50 A. M. Model.Agencia <init>
 INFO: Se creó una nueva instancia
 nov. 19, 2023 12:38:09 A. M. Model.Agencia <init>
 INFO: Se creó una nueva instancia
+nov. 19, 2023 1:16:07 A. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 19, 2023 1:52:33 A. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 19, 2023 1:53:17 A. M. Model.Agencia registrarCliente
+INFO: Cliente registrado exitosamente
+nov. 19, 2023 1:53:53 A. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 19, 2023 2:12:15 A. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 19, 2023 2:12:44 A. M. Model.Agencia crearReserva
+SEVERE: Se excedió el cupo máximo de personas para la reserva
+nov. 19, 2023 2:12:44 A. M. Controller.ReservarController hacerReserva
+WARNING: Se excedió el cupo máximo de personas para la reserva. Ingrese un número válido
+nov. 19, 2023 2:12:50 A. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 19, 2023 2:21:49 A. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 19, 2023 2:22:39 A. M. Model.Agencia crearReserva
+SEVERE: Fecha escogida no es válida
+nov. 19, 2023 2:22:39 A. M. Controller.ReservarController hacerReserva
+WARNING: La fecha que escogio no corresponde a las fechas disponibles del paquete. Estas fechas van desde: 2023-11-19T00:00 hasta: 2023-11-19T00:00
+nov. 19, 2023 2:22:51 A. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 19, 2023 9:58:18 A. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 19, 2023 9:59:25 A. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 19, 2023 10:13:53 A. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 19, 2023 10:15:58 A. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 19, 2023 10:16:52 A. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 19, 2023 10:24:45 A. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 19, 2023 10:25:32 A. M. Model.Agencia registrarCliente
+INFO: Cliente registrado exitosamente
+nov. 19, 2023 10:26:03 A. M. Model.Agencia crearReserva
+SEVERE: Se excedió el cupo máximo de personas para la reserva
+nov. 19, 2023 10:26:03 A. M. Controller.ReservarController hacerReserva
+WARNING: Se excedió el cupo máximo de personas para la reserva. Ingrese un número válido
+nov. 19, 2023 10:26:10 A. M. Model.Agencia crearReserva
+SEVERE: Fecha escogida no es válida
+nov. 19, 2023 10:26:10 A. M. Controller.ReservarController hacerReserva
+WARNING: La fecha que escogio no corresponde a las fechas disponibles del paquete. Estas fechas van desde: 2023-11-30T00:00 hasta: 2024-09-10T00:00
+nov. 19, 2023 10:26:21 A. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 19, 2023 11:02:22 A. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 19, 2023 11:02:55 A. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 19, 2023 12:53:00 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 19, 2023 12:54:28 P. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 19, 2023 1:01:11 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 19, 2023 1:01:54 P. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 19, 2023 1:21:28 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 19, 2023 1:22:19 P. M. Model.Agencia crearReserva
+SEVERE: Se excedió el cupo máximo de personas para la reserva
+nov. 19, 2023 1:22:19 P. M. Controller.ReservarController hacerReserva
+WARNING: Se excedió el cupo máximo de personas para la reserva. Ingrese un número válido
+nov. 19, 2023 1:22:25 P. M. Model.Agencia crearReserva
+SEVERE: Se excedió el cupo máximo de personas para la reserva
+nov. 19, 2023 1:22:25 P. M. Controller.ReservarController hacerReserva
+WARNING: Se excedió el cupo máximo de personas para la reserva. Ingrese un número válido
+nov. 19, 2023 1:22:32 P. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente

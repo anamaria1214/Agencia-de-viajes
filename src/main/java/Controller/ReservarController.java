@@ -18,11 +18,17 @@ import Exception.WrongUseOfDatesException;
 
 public class ReservarController implements Initializable {
 
+    private EnvioCorreo envioCorreo;
     private SesionCliente sesionCliente= SesionCliente.getInstance();
     private Agencia agencia= Agencia.getInstance();
     private static final Logger LOGGER = Logger.getLogger(Agencia.class.getName());
     private Propiedades propiedades = Propiedades.getInstance();
     private ConocerPaquete paqueteNecesario= ConocerPaquete.getInstance();
+
+    public ReservarController() {
+
+        this.envioCorreo = new EnvioCorreo();
+    }
 
     @FXML
     private Button btnReservar;
@@ -50,6 +56,11 @@ public class ReservarController implements Initializable {
             alert.show();
             System.out.println(reserva.getCliente());
             System.out.println(reserva.getPaqueteTuristico());
+            System.out.println(mandarCorreo);
+            if(mandarCorreo.isSelected()){
+                envioCorreo.createEmail(sesionCliente.getCliente().getEmailCliente(), "Su reserva fue exitosa. <br> Detalles: <br>Su reserva con el paquete "+paqueteNecesario.getPaquete().getNombrePaquete()+" está programada para la fecha: "+fechaViaje.getValue().toString()+".<br>Gracias por elegirnos!");
+                envioCorreo.sendEmail();
+            }
         } catch (EmptyFieldException | NegativeNumberException | MaximumCapacityException | WrongUseOfDatesException e) {
             LOGGER.log(Level.WARNING, e.getMessage());
             Alert alert = new Alert(Alert.AlertType.ERROR);

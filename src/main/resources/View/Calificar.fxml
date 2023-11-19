@@ -140,10 +140,13 @@
                         <Cursor fx:constant="TEXT" />
                      </cursor>
                   </TextArea>
-                  <Button fx:id="btnEnviarCalificar" mnemonicParsing="false" stylesheets="@../CSS/Button.css" text="Enviar">
+                  <Button fx:id="btnEnviarCalificar" mnemonicParsing="false" onAction="#enviarCalificar" stylesheets="@../CSS/Button.css" text="Enviar">
                      <VBox.margin>
                         <Insets left="195.0" />
                      </VBox.margin>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
                   </Button>
                </children></VBox>
          </children>

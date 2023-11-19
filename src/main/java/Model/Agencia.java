@@ -249,13 +249,13 @@ public class Agencia {
                 return iniciarSesionClienteRecur(email,contrasenia,i+1, false);
             } else {
                 if (clientes.get(i).getContraseniaCliente().equals(contrasenia)) {
-                    return iniciarSesionClienteRecur(email, contrasenia, i, true);
+                    return iniciarSesionClienteRecur(email, contrasenia, i+1, true);
                 } else {
                     Alert alert = new Alert(Alert.AlertType.INFORMATION);
                     alert.setContentText("La contraseña que ingresó es incorrecta. Ingresela de nuevo");
                     alert.setHeaderText(null);
                     alert.show();
-                    return iniciarSesionClienteRecur(email,contrasenia,i,false);
+                    return iniciarSesionClienteRecur(email,contrasenia,i+1,false);
                 }
             }
         }else{

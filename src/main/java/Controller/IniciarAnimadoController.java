@@ -185,6 +185,7 @@ public class IniciarAnimadoController implements Initializable {
     public void iniciarSesion() {
         if(agencia.iniciarSesionClienteRecur(emailCliente.getText(),contraseniaIniciar.getText(),0, false)){
             try {
+
                 Cliente cliente= agencia.encontrarCliente(emailCliente.getText(), 0, false, new Cliente());
                 sesionCliente.setCliente(cliente);
                 System.out.println(sesionCliente.getCliente());
@@ -195,6 +196,7 @@ public class IniciarAnimadoController implements Initializable {
                 stage.setScene(scene);
                 stage.setTitle("Agencia de viajes");
                 stage.show();
+                ((Stage) vBoxR.getScene().getWindow()).close();
             } catch (IOException ioException) {
                 ioException.printStackTrace();
             }

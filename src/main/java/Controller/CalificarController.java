@@ -171,6 +171,13 @@ public class CalificarController implements Initializable {
         calificacionPaq= 5;
     }
 
-
+    public void enviarCalificar(){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setContentText("Su calificación se recibió exitosamente."+" \n Ha calificado al paquete "+tablaPaquetes.getSelectionModel().getSelectedItem().getNombrePaquete()
+        +" con "+calificacionPaq+" estrellas."+"\n Ha calificado a el guia turístico con "+calificacionGuia+" estrellas."+
+                "\nSu opinión es muy valiosa para nosostros");
+        alert.setHeaderText(null);
+        alert.show();
+    }
 
 }

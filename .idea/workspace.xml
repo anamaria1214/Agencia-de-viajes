@@ -4,10 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
+<<<<<<< Updated upstream
     <list default="true" id="c56749ba-87c2-40c3-b6ca-a9bc8123ef5b" name="Changes" comment="Se agregó ventana gestionar paquetes, se puede agregar destino, los destinos están serializados">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Controller/CalificarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/CalificarController.java" afterDir="false" />
+=======
+    <list default="true" id="c56749ba-87c2-40c3-b6ca-a9bc8123ef5b" name="Changes" comment="Cerrar sesión y cambio del método cerrar sesión">
+      <change afterPath="$PROJECT_DIR$/logs.log.1.lck" afterDir="false" />
+>>>>>>> Stashed changes
       <change beforePath="$PROJECT_DIR$/src/main/java/Model/Agencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Agencia.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/View/Calificar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/Calificar.fxml" afterDir="false" />
     </list>
@@ -149,8 +154,13 @@
       <workItem from="1700107045101" duration="1122000" />
       <workItem from="1700108611892" duration="2398000" />
       <workItem from="1700112644538" duration="75000" />
+<<<<<<< Updated upstream
       <workItem from="1700367929963" duration="939000" />
       <workItem from="1700373208786" duration="969000" />
+=======
+      <workItem from="1700367929963" duration="641000" />
+      <workItem from="1700372691836" duration="467000" />
+>>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="Cambio con ventana IniciarSesion hecha">
       <option name="closed" value="true" />
@@ -216,7 +226,15 @@
       <option name="project" value="LOCAL" />
       <updated>1699450936431</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Cerrar sesión y cambio del método cerrar sesión">
+      <option name="closed" value="true" />
+      <created>1700373039545</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1700373039545</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -242,7 +260,8 @@
     <MESSAGE value="Se agregó ventana de gestionar destinos desde la ventana del admin" />
     <MESSAGE value="Se agregó ventana gestionar paquetes, se puede agregar destino, los destinos están serializados" />
     <MESSAGE value="Demasiados cambios xd" />
-    <option name="LAST_COMMIT_MESSAGE" value="Demasiados cambios xd" />
+    <MESSAGE value="Cerrar sesión y cambio del método cerrar sesión" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cerrar sesión y cambio del método cerrar sesión" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
