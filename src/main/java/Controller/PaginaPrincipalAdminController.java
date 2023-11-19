@@ -2,6 +2,7 @@ package Controller;
 
 import App.AppPrincipal;
 import Model.Agencia;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.Node;
@@ -58,4 +59,8 @@ public class PaginaPrincipalAdminController implements Initializable {
         cambiarVentana("GestionarDestinosAdmin");
     }
     public void abrirGestionarPaquetes(){ cambiarVentana("GestionarPaquetesAdmin"); }
+    public void abrirEliminarDestinos(){ cambiarVentana("DestinosAdmin");}
+    public void abrirGesGuia(){ cambiarVentana("GestionarGuiasAdmin");}
+
+
 }

@@ -16,10 +16,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.temporal.ChronoUnit;
-import java.util.ArrayList;
-import java.util.Formatter;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 import java.util.logging.FileHandler;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -70,7 +67,7 @@ public class Agencia {
         this.destinos = new ArrayList<>();
         leerDestinos();
         this.guiasTuristicos = new ArrayList<>();
-        // leerGuiasTuristicos();
+        leerGuiasTuristicos();
         this.paquetesTuristicos = new ArrayList<>();
         leerPaquetesTuristicos();
         this.reservas = new ArrayList<>();
@@ -80,6 +77,15 @@ public class Agencia {
         administradores.add(admin1);
     }
 
+    private void leerGuiasTuristicos() {
+        try {
+            Object objeto = ArchivoUtils.deserializarObjeto("src/main/resources/persistencia/GuiasTuristicos.data");
+            this.guiasTuristicos = (ArrayList<GuiaTuristico>) objeto;
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
     private void leerPaquetesTuristicos() {
         try {
             Object objeto = ArchivoUtils.deserializarObjeto("src/main/resources/persistencia/paquetes.data");
@@ -87,8 +93,7 @@ public class Agencia {
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }//dame el control cómo?no te muevas
-
+    }
     private void escribirPaquetesTuristicos() {
         try {
             ArchivoUtils.serializarObjeto("src/main/resources/persistencia/paquetes.data", paquetesTuristicos);
@@ -372,6 +377,10 @@ public class Agencia {
 
         reservas.remove(reserva);
     }
+    public void eliminarDestinos(Destino destino){
+
+        destinos.remove(destino);
+    }
 
     public ArrayList<Reserva> encontrarReservasRecur(String id, int i, ArrayList<Reserva> reser){
         if(i<reservas.size()){
@@ -535,21 +544,126 @@ public class Agencia {
             throw new RuntimeException("No hay imágenes");
         }
     }
+    public void actualizarGuiaTuristico(String idViejo, String nombre, String apellido, String aniosExperiencia, String idioma, String id) throws EmptyFieldException, NegativeNumberException {
 
-    public ArrayList<PaqueteTuristico> paquetesAleatorios(){
-        Random random = new Random();
-        ArrayList<Integer> indexes = new ArrayList<>();
-        while (indexes.size()<3){
-            int index = random.nextInt(paquetesTuristicos.size());
-            if(!indexes.contains(index)){
-                indexes.add(index);
+        if(id==null){
+            LOGGER.log(Level.SEVERE, "No tiene id");
+            throw new EmptyFieldException("Ingrese el id del guia");
+        }
+        if(nombre==null){
+            LOGGER.log(Level.SEVERE, "No tiene nombre");
+            throw new EmptyFieldException("Ingrese el nombre del guia");
+        }if(apellido==null){
+            LOGGER.log(Level.SEVERE, "El apellido del guia está vacio");
+            throw new EmptyFieldException("El apellido del guia esta vacio. Ingrese el nombre");
+        }if(Integer.parseInt(aniosExperiencia)<=0){
+            LOGGER.log(Level.SEVERE, "Años de experiencia no válidos");
+            throw new NegativeNumberException("Ingrese los años de experiencia validos");
+        }if(idioma==null){
+            LOGGER.log(Level.SEVERE, "No se ingresaron los idiomas");
+            throw new NegativeNumberException("Ingrese al menos un idioma");
+        }
+        ArrayList<String> idiomas = organizarIdiomas(idioma);
+        GuiaTuristico guiaTuristico = new GuiaTuristico(id,nombre,apellido,idiomas, Integer.parseInt(aniosExperiencia));
+        buscarYActualizarGuia(guiasTuristicos,idViejo,guiaTuristico);
+    }
+
+
+    static void buscarYActualizarGuia(ArrayList<GuiaTuristico> guiasTuristicos, String idViejo, GuiaTuristico nuevoGuia) {
+        buscarYActualizarClienteRecursivo(guiasTuristicos, idViejo, nuevoGuia, 0);
+    }
+
+    static void buscarYActualizarClienteRecursivo(ArrayList<GuiaTuristico> guiasTuristicos, String idViejo, GuiaTuristico nuevoGuia, int indice) {
+        if (indice < guiasTuristicos.size()) {
+            if (guiasTuristicos.get(indice).getIdGuia().equals(idViejo)) {
+                // Cliente encontrado, actualizar atributos
+                guiasTuristicos.set(indice, nuevoGuia);
+                System.out.println("Guia actualizado: " + nuevoGuia);
+            } else {
+                // Continuar la búsqueda recursiva
+                buscarYActualizarClienteRecursivo(guiasTuristicos, idViejo, nuevoGuia, indice + 1);
+            }
+        } else {
+            System.out.println("Guia no encontrado: " + idViejo);
+        }
+    }
+
+    public void crearGuiaTuristico(String nombre, String apellido, String aniosExperiencia, String idioma, String id) throws EmptyFieldException, NegativeNumberException, ExistingCustomerException {
+
+        if(id==null || id.isBlank() || id.isEmpty()){
+            LOGGER.log(Level.SEVERE, "No tiene id");
+            throw new EmptyFieldException("Ingrese el id del guia");
+        }if(nombre==null || nombre.isBlank() || nombre.isEmpty()){
+            LOGGER.log(Level.SEVERE, "No tiene nombre");
+            throw new EmptyFieldException("Ingrese el nombre del guia");
+        }if(apellido==null || apellido.isBlank() || apellido.isEmpty()){
+            LOGGER.log(Level.SEVERE, "El apellido del guia está vacio");
+            throw new EmptyFieldException("El apellido del guia esta vacio. Ingrese el nombre");
+        }if(Integer.parseInt(aniosExperiencia)<=0 || aniosExperiencia.isBlank() || aniosExperiencia.isEmpty()){
+            LOGGER.log(Level.SEVERE, "Años de experiencia no válidos");
+            throw new NegativeNumberException("Ingrese los años de experiencia validos");
+        }if(idioma==null || idioma.isBlank() || idioma.isEmpty()){
+            LOGGER.log(Level.SEVERE, "No se ingresaron los idiomas");
+            throw new NegativeNumberException("Ingrese al menos un idioma");
+        }
+        if (existeCliente(guiasTuristicos, id,0)) {
+            LOGGER.log(Level.SEVERE, "El guia ya existe");
+            throw new ExistingCustomerException("Ya existe un guia con el numero de id: "+id);
+        }
+        ArrayList<String> idiomas = organizarIdiomas(idioma);
+        GuiaTuristico guiaTuristico = new GuiaTuristico(id, nombre, apellido, idiomas, Integer.parseInt(aniosExperiencia));
+        guiasTuristicos.add(guiaTuristico);
+        try {
+            ArchivoUtils.serializarObjeto("src/main/resources/persistencia/GuiasTuristicos.data", guiasTuristicos);
+        } catch (IOException e) {
+            LOGGER.log(Level.WARNING, e.getMessage());
+        }
+
+    }
+
+    private boolean existeCliente(ArrayList<GuiaTuristico> guiasTuristicos, String id, int indice) {
+        if (indice < guiasTuristicos.size()) {
+            if (guiasTuristicos.get(indice).getIdGuia().equals(id)) {
+                return true; // El cliente ya existe en la lista
+            } else {
+                // Continuar la búsqueda recursiva
+                return existeCliente(guiasTuristicos, id, indice + 1);
             }
         }
-        ArrayList<PaqueteTuristico> paquetesRandom = new ArrayList<>();
-        for(int i =0 ; i<indexes.size();i++){
-            paquetesRandom.add(paquetesTuristicos.get(indexes.get(i)));
+        return false; // El cliente no existe en la lista
+    }
+
+    public void eliminarGuiaTuristico (String id) throws EmptyFieldException{
+        if(id==null){
+            LOGGER.log(Level.SEVERE, "No tiene id");
+            throw new EmptyFieldException("Ingrese el id del guia para poder eliminarlo");
         }
-        return paquetesAleatorios();
+        buscarYEliminarCliente(guiasTuristicos,id);
+
+    }
+
+    static void buscarYEliminarCliente(ArrayList<GuiaTuristico> guiasTuristicos, String id) {
+        buscarYEliminarClienteRecursivo(guiasTuristicos, id, 0);
+    }
+
+    static void buscarYEliminarClienteRecursivo(ArrayList<GuiaTuristico> guiasTuristicos, String id, int indice) {
+        if (indice < guiasTuristicos.size()) {
+            if (guiasTuristicos.get(indice).getIdGuia().equals(id)) {
+                // Cliente encontrado, eliminarlo
+                guiasTuristicos.remove(indice);
+            } else {
+                // Continuar la búsqueda recursiva
+                buscarYEliminarClienteRecursivo(guiasTuristicos, id, indice + 1);
+            }
+        } else {
+            System.out.println("Guia no encontrado: " + id);
+        }
+    }
+    private ArrayList<String> organizarIdiomas(String idioma) {
+        String[] idiomasArray = idioma.split(",\\s*");
+        ArrayList<String> listaIdiomas = new ArrayList<>(Arrays.asList(idiomasArray));
+        return listaIdiomas;
+
     }
 }
 

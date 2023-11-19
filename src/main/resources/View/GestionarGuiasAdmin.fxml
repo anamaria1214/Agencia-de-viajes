@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="387.0" prefWidth="590.0" style="-fx-background-color: #e8c5e8;" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.GestionarGuiasAdminController">
+    <children>
+        <Label layoutX="16.0" layoutY="105.0" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Nombre:" />
+        <TextField fx:id="txtNombre" layoutX="168.0" layoutY="110.0" prefHeight="26.0" prefWidth="220.0" styleClass="textoField" stylesheets="@../CSS/TextField.css" />
+        <Label layoutX="16.0" layoutY="196.0" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Años de experiencia:" />
+        <Label layoutX="16.0" layoutY="149.0" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Apellido:" />
+        <TableView fx:id="tableGuias" layoutX="25.0" layoutY="253.0" prefHeight="115.0" prefWidth="361.0">
+            <columns>
+                <TableColumn fx:id="columnNombre" prefWidth="102.39999008178711" text="Nombre" />
+                <TableColumn fx:id="columnApellido" prefWidth="134.40003967285156" text="Apellido" />
+                <TableColumn fx:id="columnAniosExperiencia" prefWidth="121.5999755859375" text="Años de experiencia" />
+            </columns>
+        </TableView>
+        <TextField fx:id="txtApellido" layoutX="168.0" layoutY="154.0" prefHeight="26.0" prefWidth="220.0" styleClass="textoField" stylesheets="@../CSS/TextField.css" />
+        <TextField fx:id="txtAniosExperiencia" layoutX="259.0" layoutY="201.0" prefHeight="26.0" prefWidth="130.0" styleClass="textoField" stylesheets="@../CSS/TextField.css" />
+        <Button fx:id="btnCrear" layoutX="436.0" layoutY="241.0" mnemonicParsing="false" onAction="#crearEvent" prefHeight="26.0" prefWidth="114.0" stylesheets="@../CSS/Button.css" text="Crear" />
+        <Button fx:id="btnActualizar" layoutX="436.0" layoutY="285.0" mnemonicParsing="false" onAction="#actualizarEvent" prefHeight="26.0" prefWidth="114.0" stylesheets="@../CSS/Button.css" text="Actualizar" />
+        <Button fx:id="btnEliminar" layoutX="440.0" layoutY="332.0" mnemonicParsing="false" onAction="#eliminarEvent" prefHeight="26.0" prefWidth="106.0" stylesheets="@../CSS/Button.css" text="Eliminar" />
+        <Label layoutX="410.0" layoutY="57.0" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Idioma:" />
+        <TextArea fx:id="txtIdioma" layoutX="410.0" layoutY="98.0" prefHeight="126.0" prefWidth="166.0" promptText="Ingrese cada uno de los idiomas separados por una &quot;,&quot;" styleClass="textoField" stylesheets="@../CSS/TextField.css" />
+        <Label layoutX="14.0" layoutY="57.0" prefHeight="37.0" prefWidth="138.0" styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Cédula:">
+            <font>
+                <Font size="1.0" />
+            </font></Label>
+        <TextField fx:id="txtId" layoutX="168.0" layoutY="63.0" prefHeight="26.0" prefWidth="220.0" styleClass="textoField" stylesheets="@../CSS/TextField.css" />
+        <Label alignment="TOP_LEFT" contentDisplay="CENTER" layoutX="79.0" prefHeight="58.0" prefWidth="398.0" styleClass="tiulo" stylesheets="@../CSS/Label.css" text="Gestionar Guia Turístico" textAlignment="CENTER">
+            <font>
+                <Font size="40.0" />
+            </font>
+        </Label>
+    </children>
+</AnchorPane>
