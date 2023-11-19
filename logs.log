@@ -511,3 +511,165 @@ nov. 18, 2023 10:58:41 A. M. Model.Agencia <init>
 INFO: Se creó una nueva instancia
 nov. 18, 2023 11:43:46 A. M. Model.Agencia <init>
 INFO: Se creó una nueva instancia
+nov. 18, 2023 1:22:33 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 1:36:29 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 1:37:03 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 1:51:05 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 1:56:44 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 2:03:56 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 2:29:31 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 3:15:14 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 3:39:31 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 3:40:09 P. M. Model.Agencia crearReserva
+SEVERE: No se seleccionó un paquete turistico
+nov. 18, 2023 3:40:09 P. M. Controller.ReservarController hacerReserva
+WARNING: Sellecione un paquete turístico
+nov. 18, 2023 3:41:20 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 3:41:40 P. M. Model.Agencia crearReserva
+SEVERE: Fecha escogida no es válida
+nov. 18, 2023 3:41:40 P. M. Controller.ReservarController hacerReserva
+WARNING: La fecha que escogio no corresponde a las fechas disponibles del paquete. Estas fechas van desde: 2023-12-01T00:00 hasta: 2024-01-05T00:00
+nov. 18, 2023 3:42:05 P. M. Model.Agencia crearReserva
+WARNING: Model.Cliente
+nov. 18, 2023 3:42:05 P. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 18, 2023 3:43:01 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 3:43:27 P. M. Model.Agencia crearReserva
+WARNING: Model.Cliente
+nov. 18, 2023 3:43:27 P. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 18, 2023 3:46:31 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 3:48:13 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 3:50:48 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 4:56:43 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 4:58:04 P. M. Model.Agencia crearReserva
+SEVERE: Fecha escogida no es válida
+nov. 18, 2023 4:58:04 P. M. Controller.ReservarController hacerReserva
+WARNING: La fecha que escogio no corresponde a las fechas disponibles del paquete. Estas fechas van desde: 2023-12-01T00:00 hasta: 2024-01-05T00:00
+nov. 18, 2023 4:58:12 P. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 18, 2023 4:58:34 P. M. Model.Agencia crearReserva
+SEVERE: Fecha escogida no es válida
+nov. 18, 2023 4:58:34 P. M. Controller.ReservarController hacerReserva
+WARNING: La fecha que escogio no corresponde a las fechas disponibles del paquete. Estas fechas van desde: 2023-12-01T00:00 hasta: 2024-01-05T00:00
+nov. 18, 2023 4:58:39 P. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 18, 2023 5:04:31 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 5:06:05 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 5:06:26 P. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 18, 2023 5:09:29 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 5:29:04 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 5:29:24 P. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 18, 2023 5:37:19 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 5:46:45 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 5:47:44 P. M. Model.Agencia registrarCliente
+INFO: Cliente registrado exitosamente
+nov. 18, 2023 6:21:02 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 6:31:13 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 6:31:32 P. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 18, 2023 6:55:59 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 6:59:38 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 7:00:09 P. M. Model.Agencia crearReserva
+SEVERE: Fecha escogida no es válida
+nov. 18, 2023 7:00:09 P. M. Controller.ReservarController hacerReserva
+WARNING: La fecha que escogio no corresponde a las fechas disponibles del paquete. Estas fechas van desde: 2023-12-01T00:00 hasta: 2024-01-05T00:00
+nov. 18, 2023 7:00:14 P. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 18, 2023 7:17:04 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 7:19:08 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 7:22:56 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 7:27:43 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 7:56:12 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 8:00:26 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 8:02:58 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 8:03:32 P. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 18, 2023 8:05:32 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 8:07:15 P. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 18, 2023 8:14:33 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 8:16:09 P. M. Model.Agencia crearReserva
+SEVERE: Fecha escogida no es válida
+nov. 18, 2023 8:16:09 P. M. Controller.ReservarController hacerReserva
+WARNING: La fecha que escogio no corresponde a las fechas disponibles del paquete. Estas fechas van desde: 2023-12-01T00:00 hasta: 2024-01-05T00:00
+nov. 18, 2023 8:16:18 P. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 18, 2023 8:21:19 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 8:21:58 P. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 18, 2023 8:22:47 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 8:48:23 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 9:00:02 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 9:00:38 P. M. Model.Agencia crearReserva
+SEVERE: Fecha escogida no es válida
+nov. 18, 2023 9:00:38 P. M. Controller.ReservarController hacerReserva
+WARNING: La fecha que escogio no corresponde a las fechas disponibles del paquete. Estas fechas van desde: 2023-12-01T00:00 hasta: 2024-01-05T00:00
+nov. 18, 2023 9:00:43 P. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 18, 2023 9:05:22 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 9:16:48 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 9:17:18 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 9:18:01 P. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 18, 2023 9:18:17 P. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 18, 2023 9:21:57 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 9:22:14 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia
+nov. 18, 2023 9:23:38 P. M. Model.Agencia crearReserva
+SEVERE: Fecha escogida no es válida
+nov. 18, 2023 9:23:38 P. M. Controller.ReservarController hacerReserva
+WARNING: La fecha que escogio no corresponde a las fechas disponibles del paquete. Estas fechas van desde: 2023-11-23T00:00 hasta: 2024-01-23T00:00
+nov. 18, 2023 9:23:52 P. M. Model.Agencia crearReserva
+SEVERE: Se excedió el cupo máximo de personas para la reserva
+nov. 18, 2023 9:23:52 P. M. Controller.ReservarController hacerReserva
+WARNING: Se excedió el cupo máximo de personas para la reserva. Ingrese un número válido
+nov. 18, 2023 9:24:01 P. M. Model.Agencia crearReserva
+INFO: Se registró la reserva correctamente
+nov. 18, 2023 9:40:24 P. M. Model.Agencia <init>
+INFO: Se creó una nueva instancia

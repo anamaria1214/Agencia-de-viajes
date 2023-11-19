@@ -1,14 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.*?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="View.DestinosAdmin"
-            prefHeight="400.0" prefWidth="600.0">
-
-</AnchorPane>
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="387.0" prefWidth="590.0" style="-fx-background-color: #f0dcf2;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <HBox alignment="CENTER" prefHeight="49.0" prefWidth="590.0">
+         <children>
+            <Label styleClass="tiulo" stylesheets="@../CSS/Label.css" text="Eliminar destinos" />
+         </children>
+      </HBox>
+      <VBox alignment="CENTER_RIGHT" prefHeight="339.0" prefWidth="590.0">
+         <children>
+            <TableView fx:id="tablaDestinos" prefHeight="270.0" prefWidth="550.0">
+              <columns>
+                <TableColumn fx:id="clmNombreDestino" prefWidth="124.0" text="Nombre" />
+                <TableColumn fx:id="clmClimaDestino" prefWidth="114.0" text="Ciudad" />
+                  <TableColumn fx:id="clmDescripcionDestino" prefWidth="190.0" text="Descripción" />
+                  <TableColumn fx:id="clmClimaDestino" prefWidth="121.0" text="Clima" />
+              </columns>
+               <VBox.margin>
+                  <Insets left="20.0" right="20.0" top="10.0" />
+               </VBox.margin>
+            </TableView>
+            <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminarDestinos" stylesheets="@../CSS/Button.css" text="Eliminar">
+               <VBox.margin>
+                  <Insets bottom="5.0" left="11.0" right="20.0" top="5.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+   </children>
+</VBox>

@@ -5,8 +5,8 @@ import lombok.*;
 @ToString
 @Getter
 @Setter
-@AllArgsConstructor
 @NoArgsConstructor
+@AllArgsConstructor
 public class SesionCliente {
 
     private static SesionCliente instancia;
@@ -14,6 +14,7 @@ public class SesionCliente {
 
     public static SesionCliente getInstance() {
         if (instancia == null) {
+            System.out.println("Creando nueva instancia de SesionCliente");
             instancia = new SesionCliente();
         }
         return instancia;

@@ -15,6 +15,7 @@ import java.awt.*;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.time.temporal.ChronoUnit;
 import java.util.ArrayList;
 import java.util.Formatter;
 import java.util.Random;
@@ -73,7 +74,7 @@ public class Agencia {
         this.paquetesTuristicos = new ArrayList<>();
         leerPaquetesTuristicos();
         this.reservas = new ArrayList<>();
-        //leerReservas();
+        leerReservas();
 
         Administrador admin1= new Administrador("1090272715","admin1");
         administradores.add(admin1);
@@ -81,16 +82,16 @@ public class Agencia {
 
     private void leerPaquetesTuristicos() {
         try {
-            Object objeto = ArchivoUtils.deserializarObjeto("src/main/resources/persistencia/paquetesTuristicos.data");
+            Object objeto = ArchivoUtils.deserializarObjeto("src/main/resources/persistencia/paquetes.data");
             this.paquetesTuristicos = (ArrayList<PaqueteTuristico>) objeto;
         } catch (Exception e) {
             e.printStackTrace();
         }
-    }
+    }//dame el control cómo?no te muevas
 
     private void escribirPaquetesTuristicos() {
         try {
-            ArchivoUtils.serializarObjeto("src/main/resources/persistencia/paquetesTuristicos.data", paquetesTuristicos);
+            ArchivoUtils.serializarObjeto("src/main/resources/persistencia/paquetes.data", paquetesTuristicos);
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -123,6 +124,7 @@ public class Agencia {
             while (scanner.hasNextLine()) {
                 String linea = scanner.nextLine();
                 String[] valores = linea.split(";");
+                System.out.println(new Cliente(valores[0], valores[1], valores[2], (valores[3]), valores[4], valores[5], valores[6]));
                 this.clientes.add(new Cliente(valores[0], valores[1], valores[2], (valores[3]), valores[4], valores[5], valores[6]));
             }
         } catch (IOException e) {
@@ -177,7 +179,7 @@ public class Agencia {
             ft.close();
         } catch (IOException e) {
             LOGGER.log(Level.SEVERE, e.getMessage());
-            throw new Exception("El cliente no se pudo guardar");
+            throw new Exception("El cliente no se pudo guardar");//ahí lo guardas, pero donde lo lees?
         }
 
         LOGGER.log(Level.INFO, "Cliente registrado exitosamente");
@@ -197,7 +199,7 @@ public class Agencia {
     }
     public Cliente encontrarCliente(String email, int i, boolean flag, Cliente cliente){
         if(i < clientes.size() && !flag){
-            if(email.equals(clientes.get(i).getIdCliente())){
+            if(email.equals(clientes.get(i).getEmailCliente())){
                 return encontrarCliente(email, i, true, clientes.get(i));
             }else{
                 return encontrarCliente(email,i+1,false, cliente);
@@ -207,10 +209,10 @@ public class Agencia {
         }
     }
 
-
-    public void iniciarSesionClienteRecur(String email, String contrasenia, int i, boolean flag) throws NonRegisteredCustomer {
+    /*public void iniciarSesionClienteRecur(String email, String contrasenia, int i, boolean flag) throws NonRegisteredCustomer {
         if (i < clientes.size() && !flag) {
             if (!comprobarExistenciaClienteRecur(clientes.get(i).getEmailCliente(), 0, false)) {
+
                 throw new NonRegisteredCustomer("El cliente que ingresó no se encuentra registrado");
             } else {
                 if (clientes.get(i).getContraseniaCliente().equals(contrasenia)) {
@@ -235,7 +237,37 @@ public class Agencia {
         } else {
             iniciarSesionClienteRecur(email, contrasenia, i + 1, false);
         }
+    }*/
+    public void iniciarSesionClienteRecur(String email, String contrasenia, int i, boolean flag) throws NonRegisteredCustomer {
+        if (i < clientes.size() && !flag) {
+            if (!comprobarExistenciaClienteRecur(clientes.get(i).getEmailCliente(), 0, false)) {
+                throw new NonRegisteredCustomer("El cliente que ingresó no se encuentra registrado");
+            } else {
+                if (clientes.get(i).getContraseniaCliente().equals(contrasenia)) {
+                    try {
+                        FXMLLoader loader = new FXMLLoader(AppPrincipal.class.getResource("/View/PaginaPrincipalCliente.fxml"));
+                        Parent parent = loader.load();
+                        Stage stage = new Stage();
+                        Scene scene = new Scene(parent);
+                        stage.setScene(scene);
+                        stage.setTitle("Agencia de viajes");
+                        stage.show();
+                        return; // Salir del método después de iniciar sesión exitosamente
+                    } catch (IOException ioException) {
+                        ioException.printStackTrace();
+                    }
+                } else {
+                    Alert alert = new Alert(Alert.AlertType.INFORMATION);
+                    alert.setContentText("La contraseña que ingresó es incorrecta. Ingresela de nuevo");
+                    alert.setHeaderText(null);
+                    alert.show();
+                }
+            }
+        }
+
+        iniciarSesionClienteRecur(email, contrasenia, i + 1, false);
     }
+
     public void crearPaquete(PaqueteTuristico paquete) throws EmptyFieldException, NegativeNumberException, WrongUseOfDatesException {
         if(paquete.getDestinos()==null){
             LOGGER.log(Level.SEVERE, "No tienen destinos");
@@ -261,7 +293,7 @@ public class Agencia {
         }
         paquetesTuristicos.add(paquete);
         try {
-            ArchivoUtils.serializarObjeto("src/main/resources/persistencia/paquetesTuristicos.data", paquetesTuristicos);
+            ArchivoUtils.serializarObjeto("src/main/resources/persistencia/paquetes.data", paquetesTuristicos);
         } catch (IOException e) {
             LOGGER.log(Level.WARNING, e.getMessage());
         }
@@ -291,7 +323,7 @@ public class Agencia {
             LOGGER.log(Level.WARNING, e.getMessage());
         }
     }
-    public void crearReserva(Reserva reserva) throws EmptyFieldException, NegativeNumberException, MaximumCapacityException {
+    public void crearReserva(Reserva reserva) throws EmptyFieldException, NegativeNumberException, MaximumCapacityException, WrongUseOfDatesException {
         if(reserva.getFechaSolicitud()==null){
             LOGGER.log(Level.SEVERE, "La fecha de solicitud es nula");
             throw new EmptyFieldException("La fecha de solicitud es nula");
@@ -304,26 +336,40 @@ public class Agencia {
         }if(reserva.getCantPersonasViajan()<=0){
             LOGGER.log(Level.SEVERE, "La persona no ingreso un numero valido de personas que viajan");
             throw new NegativeNumberException("Ingrese un número válido de personas que viajan");
-        }if(reserva.getCantPersonasViajan()>30){
-            LOGGER.log(Level.SEVERE, "Se excedió el cupo máximo de personas para la reserva");
-            throw new MaximumCapacityException("Se excedió el cupo máximo de personas para la reserva. Ingrese un número válido");
         }if(reserva.getPaqueteTuristico()==null){
             LOGGER.log(Level.SEVERE, "No se seleccionó un paquete turistico");
-            throw new EmptyFieldException("Sellecione un paquete turístico");
+            throw new EmptyFieldException("Selecione un paquete turístico");
+        }if(reserva.getCantPersonasViajan()>reserva.getPaqueteTuristico().getCupoMaximo()){
+            LOGGER.log(Level.SEVERE, "Se excedió el cupo máximo de personas para la reserva");
+            throw new MaximumCapacityException("Se excedió el cupo máximo de personas para la reserva. Ingrese un número válido");
         }if(reserva.getEstadoReserva()==null){
             LOGGER.log(Level.SEVERE, "No se le asignó un estado a la reserva");
             throw new EmptyFieldException("No se le asignó un estado a la reserva");
+        }if(reserva.getFechaViaje().isBefore(reserva.getPaqueteTuristico().getFechaInicio())){
+            LOGGER.log(Level.SEVERE, "Fecha escogida no es válida");
+            throw new WrongUseOfDatesException("La fecha que escogio no corresponde a las fechas disponibles del paquete. " +
+                    "Estas fechas van desde: "+reserva.getPaqueteTuristico().getFechaInicio().toString()+" hasta: "
+                    +reserva.getPaqueteTuristico().getFechaFin().toString());
+        }if(reserva.getFechaViaje().isAfter(reserva.getPaqueteTuristico().getFechaInicio().plusDays(ChronoUnit.DAYS.between
+                        (reserva.getPaqueteTuristico().getFechaInicio(), reserva.getPaqueteTuristico().getFechaFin())))){
+            LOGGER.log(Level.SEVERE, "Fecha escogida no es válida");
+            throw new WrongUseOfDatesException("La fecha que escogio no corresponde a las fechas disponibles del paquete. " +
+                    "Estas fechas van desde: "+reserva.getPaqueteTuristico().getFechaInicio().toString()+" hasta: "
+                    +reserva.getPaqueteTuristico().getFechaFin().toString());
         }
-        reservas.add(reserva);
+
         try {
             ArchivoUtils.serializarObjeto("src/main/resources/persistencia/reservas.data", reservas);
         } catch (IOException e) {
             LOGGER.log(Level.WARNING, e.getMessage());
         }
         LOGGER.log(Level.INFO, "Se registró la reserva correctamente");
+
+        reservas.add(reserva);
     }
 
     public void cancelarReserva(Reserva reserva){
+
         reservas.remove(reserva);
     }
 
@@ -337,15 +383,7 @@ public class Agencia {
             return reser;
         }
     }
-    public void abrirVentana(String ruta) throws IOException {
-        FXMLLoader loader = new FXMLLoader(Main.class.getResource(ruta));
-        Parent parent = loader.load();
-        Stage stage = new Stage();
-        Scene scene = new Scene(parent);
-        stage.setScene(scene);
-        stage.setTitle("Agencia de viajes");
-        stage.show();
-    }
+
 
     public void filtrarClima(Clima clima, int i, int j, ArrayList<PaqueteTuristico> paqueteFiltrado){
         if(paquetesTuristicos.size()>i){
@@ -430,10 +468,28 @@ public class Agencia {
         eliminarRepetidosPaquetes(paquetesFiltrados);
         return paquetesFiltrados;
     }
-
+    public ArrayList<Reserva> listarReserva(String id) {
+        ArrayList<Reserva> reservasCliente= new ArrayList<>();
+        for (Reserva reserva : reservas) {
+            System.out.println(reserva + "--------" + reserva.getCliente());
+            if (reserva.getCliente().getIdCliente().equals(id)) {
+                reservasCliente.add(reserva);
+            }
+        }
+        return reservasCliente;
+    }
+    public ArrayList<PaqueteTuristico> listarPaquetes(String id){
+        ArrayList<PaqueteTuristico> paquetes= new ArrayList<>();
+        for(int i=0;i<listarReserva(id).size();i++){
+            System.out.println(listarReserva(id).get(i).getPaqueteTuristico());
+            paquetes.add(listarReserva(id).get(i).getPaqueteTuristico());
+        }
+        return paquetes;
+    }
     public ArrayList<Reserva> listarReserva(String id, int i, ArrayList<Reserva> reservasCliente){
         if(reservas.size()>i){
             if (reservas.get(i).getCliente().getIdCliente().equals(id)){
+                System.out.println(reservas.get(i).getCliente().getIdCliente());
                 reservasCliente.add(reservas.get(i));
                 return listarReserva(id,i+1, reservasCliente);
             }else{

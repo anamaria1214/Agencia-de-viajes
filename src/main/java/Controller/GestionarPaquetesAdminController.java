@@ -92,7 +92,8 @@ public class GestionarPaquetesAdminController implements Initializable {
 
     public void registrarPaquete (){
             PaqueteTuristico paquete = new PaqueteTuristico(destinosSeleccionados, nombrePaquetes.getText(),
-                    Integer.parseInt(cupoMaximo.getText()), serviviosAdicionales.getText(), Double.parseDouble(precioPaquete.getText()),fechaInicio.getValue(), fechaFin.getValue());
+                    Integer.parseInt(cupoMaximo.getText()), serviviosAdicionales.getText(), Double.parseDouble(precioPaquete.getText()),
+                    fechaInicio.getValue().atStartOfDay(), fechaFin.getValue().atStartOfDay());
 
         try {
             agencia.agregarPaquete(paquete);

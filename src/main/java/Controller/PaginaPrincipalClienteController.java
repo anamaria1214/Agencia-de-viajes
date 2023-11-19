@@ -58,11 +58,13 @@ public class PaginaPrincipalClienteController implements Initializable {
     }
     @SuppressWarnings("exports")
     public void setCenter(Node node) {
-        centerPane.getChildren().add(node);
+        centerPane.setCenter(node);
     }
+    /*public void setCenter(Node node) {
+        centerPane.getChildren().add(node);
+    }*/
 
     public void abrirMisReservas(){ cambiarVentana("MisReservas");}
-
     public void abrirPaquetes(){
         cambiarVentana("DestinosDinamico");
     }

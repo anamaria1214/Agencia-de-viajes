@@ -1,8 +1,6 @@
 package Controller;
 
-import Model.Agencia;
-import Model.Reserva;
-import Model.SesionCliente;
+import Model.*;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
@@ -71,16 +69,22 @@ public class CalificarController implements Initializable {
     private Label labelComentarios;
 
     @FXML
-    private TableView<Reserva> tablaCalificar;
+    private TableView<PaqueteTuristico> tablaPaquetes;
+    @FXML
+    private TableView<GuiaTuristico> tablaGuia;
+    @FXML
+    private TableColumn clmPaquete;
+    @FXML
+    private TableColumn clmGuia;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        clmPaqueteCalificar.setCellValueFactory( new PropertyValueFactory<>("nombreDestino"));
-        clmGuiaCalificar.setCellValueFactory( new PropertyValueFactory<>("ciudad"));
+        clmPaquete.setCellValueFactory( new PropertyValueFactory<>("nombrePaquete"));
+        clmGuia.setCellValueFactory( new PropertyValueFactory<>("nombreGuia"));
 
-        tablaCalificar.setItems(FXCollections.observableArrayList(agencia.listarReserva(sesionCliente.getCliente().getIdCliente(), 0,new ArrayList<>())));
-
+        tablaPaquetes.setItems(FXCollections.observableArrayList(agencia.listarPaquetes(sesionCliente.getCliente().getIdCliente())));
+        tablaGuia.setItems(FXCollections.observableArrayList(agencia.getGuiasTuristicos()));
     }
 
 }

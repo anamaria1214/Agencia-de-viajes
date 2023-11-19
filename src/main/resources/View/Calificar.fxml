@@ -6,19 +6,30 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 
-<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="338.0" prefWidth="590.0" style="-fx-background-color: #f0dcf2;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1">
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="338.0" prefWidth="590.0" style="-fx-background-color: #f0dcf2;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.CalificarController">
    <children>
       <VBox alignment="CENTER" prefHeight="174.0" prefWidth="590.0">
          <children>
-            <TableView fx:id="tablaCalificar" prefHeight="157.0" prefWidth="550.0">
-              <columns>
-                <TableColumn fx:id="clmPaqueteCalificar" prefWidth="271.0" text="Paquete turistico" />
-                <TableColumn fx:id="clmGuiaCalificar" minWidth="0.0" prefWidth="278.0" text="Guia turístico" />
-              </columns>
-               <VBox.margin>
-                  <Insets left="20.0" right="20.0" top="20.0" />
-               </VBox.margin>
-            </TableView>
+            <HBox prefHeight="180.0" prefWidth="590.0">
+               <children>
+                  <TableView fx:id="tablaPaquetes" prefHeight="154.0" prefWidth="329.0">
+                    <columns>
+                      <TableColumn fx:id="clmPaquete" prefWidth="282.0" text="Paquete Turístico" />
+                    </columns>
+                     <HBox.margin>
+                        <Insets left="20.0" top="20.0" />
+                     </HBox.margin>
+                  </TableView>
+                  <TableView fx:id="tablaGuia" prefHeight="174.0" prefWidth="319.0">
+                    <columns>
+                      <TableColumn fx:id="clmGuia" prefWidth="306.0" text="Guía turístico" />
+                    </columns>
+                     <HBox.margin>
+                        <Insets right="20.0" top="20.0" />
+                     </HBox.margin>
+                  </TableView>
+               </children>
+            </HBox>
          </children>
       </VBox>
       <HBox prefHeight="148.0" prefWidth="590.0">

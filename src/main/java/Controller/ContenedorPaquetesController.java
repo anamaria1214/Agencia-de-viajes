@@ -1,14 +1,21 @@
 package Controller;
 
+import App.AppPrincipal;
 import Model.Agencia;
+import Model.ConocerPaquete;
 import Model.PaqueteTuristico;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
 
+import java.io.IOException;
 import java.net.URL;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
@@ -17,6 +24,7 @@ public class ContenedorPaquetesController implements Initializable {
 
     private PaqueteTuristico paquete;
     Agencia agencia= Agencia.getInstance();
+    ConocerPaquete paqueteNecesario= ConocerPaquete.getInstance();
     private String idCliente;
 
     @FXML
@@ -42,6 +50,8 @@ public class ContenedorPaquetesController implements Initializable {
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         System.out.println(paquete);
+
+
         //pintarComponente();
     }
     public void pintarComponente(){
@@ -76,16 +86,31 @@ public class ContenedorPaquetesController implements Initializable {
         setAdicionales();
         setPrecio();
         setImagen();
+        paqueteNecesario.setPaquete(paquete);
     }
 
     public void verImagen(){
 
     }
     public void setPaquete(PaqueteTuristico paqueteT){
-        paquete = paqueteT;
+        this.paquete = paqueteT;
         pintarComponente();
     }
     public void setIdCliente(String id){
         idCliente=id;
+    }
+
+    public void abrirVentanaMasDetalles(){
+        try {
+            FXMLLoader loader = new FXMLLoader(AppPrincipal.class.getResource("/View/Reservar.fxml"));
+            Parent parent = loader.load();
+            Stage stage = new Stage();
+            Scene scene = new Scene(parent);
+            stage.setScene(scene);
+            stage.setTitle("Agencia de viajes");
+            stage.show();
+        } catch (IOException ioException) {
+            ioException.printStackTrace();
+        }
     }
 }

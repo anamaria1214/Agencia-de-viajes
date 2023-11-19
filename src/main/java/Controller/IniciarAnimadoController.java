@@ -28,7 +28,7 @@ public class IniciarAnimadoController implements Initializable {
     private Agencia agencia= Agencia.getInstance();
     private static final Logger LOGGER = Logger.getLogger(Agencia.class.getName());
     private Propiedades propiedades = Propiedades.getInstance();
-    private SesionCliente sesionCliente= SesionCliente.getInstance();
+    private final SesionCliente sesionCliente= SesionCliente.getInstance();
 
 
     @FXML
@@ -119,6 +119,8 @@ public class IniciarAnimadoController implements Initializable {
         btnVentanaRegistrarse.setText(propiedades.getBundle().getString("btnVentanaRegistrarse"));
         labelInicioSesion.setText(propiedades.getBundle().getString("labelInicioSesion"));
         vBoxR.setVisible(false);
+
+
     }
 
     public void volverPrincipal(){
@@ -143,6 +145,7 @@ public class IniciarAnimadoController implements Initializable {
             alert.setContentText("Cliente registrado exitosamente");
             alert.setHeaderText(null);
             alert.show();
+            //sesionCliente.setCliente(cliente);
         }catch(Exception e){
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setContentText(e.getMessage());
@@ -179,10 +182,13 @@ public class IniciarAnimadoController implements Initializable {
         });
 
     }
-    public void iniciarSesion(ActionEvent actionEvent) {
+    public void iniciarSesion() {
         try {
+
             agencia.iniciarSesionClienteRecur(emailCliente.getText(),contraseniaIniciar.getText(),0, false);
-            SesionCliente.getInstance().setCliente(agencia.encontrarCliente(emailCliente.getText(), 0, false, new Cliente()));
+            Cliente cliente= agencia.encontrarCliente(emailCliente.getText(), 0, false, new Cliente());
+            sesionCliente.setCliente(cliente);
+            System.out.println(sesionCliente.getCliente());
         } catch (NonRegisteredCustomer e) {
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setContentText(e.getMessage());

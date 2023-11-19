@@ -11,8 +11,10 @@ import java.time.LocalDateTime;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@EqualsAndHashCode (onlyExplicitlyIncluded = true)
 public class Reserva implements Serializable {
 
+    private static final long serialVersionUID= 5497592443841536490L;
     private LocalDateTime fechaSolicitud;
     private LocalDateTime fechaViaje;
     private Cliente cliente;

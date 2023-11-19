@@ -2,12 +2,16 @@ package Model;
 
 import lombok.*;
 
+import java.io.Serializable;
+
+
 @ToString
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Cliente {
+@EqualsAndHashCode (onlyExplicitlyIncluded = true)
+public class Cliente implements Serializable {
 
     private String idCliente;
     private String nombreCliente;
