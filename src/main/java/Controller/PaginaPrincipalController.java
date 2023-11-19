@@ -50,7 +50,7 @@ public class PaginaPrincipalController implements Initializable {
         btnPaquetes.setText(propiedades.getBundle().getString("btnPaquetes"));
         btnAdministrador.setText(propiedades.getBundle().getString("btnAdministrador"));
         labelAgenciaUQ.setText(propiedades.getBundle().getString("labelAgenciaUQ"));
-
+        cambiarVentana("Recomendados");
     }
     private void cambiarVentana(String fxmlname) {
         try {

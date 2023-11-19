@@ -535,5 +535,21 @@ public class Agencia {
             throw new RuntimeException("No hay imágenes");
         }
     }
+
+    public ArrayList<PaqueteTuristico> paquetesAleatorios(){
+        Random random = new Random();
+        ArrayList<Integer> indexes = new ArrayList<>();
+        while (indexes.size()<3){
+            int index = random.nextInt(paquetesTuristicos.size());
+            if(!indexes.contains(index)){
+                indexes.add(index);
+            }
+        }
+        ArrayList<PaqueteTuristico> paquetesRandom = new ArrayList<>();
+        for(int i =0 ; i<indexes.size();i++){
+            paquetesRandom.add(paquetesTuristicos.get(indexes.get(i)));
+        }
+        return paquetesAleatorios();
+    }
 }
 
