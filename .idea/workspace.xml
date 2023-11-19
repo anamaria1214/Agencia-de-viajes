@@ -5,36 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c56749ba-87c2-40c3-b6ca-a9bc8123ef5b" name="Changes" comment="Se agregó ventana gestionar paquetes, se puede agregar destino, los destinos están serializados">
-      <change afterPath="$PROJECT_DIR$/logs.log.lck" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/ReservarController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/ConocerPaquete.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/Persistencia/paquetes.data" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/View/Reservar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_16_11_2023_12_31_a__m___Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Merge_at_16_11_2023_12_31_a__m___Changes_.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log.1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs.log.2" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log.2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs.log.3" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log.3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs.log.4" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log.4" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/CalificarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/CalificarController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/ContenedorPaquetesController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/ContenedorPaquetesController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/GestionarPaquetesAdminController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/GestionarPaquetesAdminController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/IniciarAnimadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/IniciarAnimadoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/MisReservasController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/MisReservasController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/PaginaPrincipalClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PaginaPrincipalClienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Agencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Agencia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Cliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Cliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/PaqueteTuristico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/PaqueteTuristico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Reserva.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Reserva.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/SesionCliente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/SesionCliente.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CSS/Label.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CSS/Label.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Persistencia/clientes.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Persistencia/clientes.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Persistencia/destinos.data" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Persistencia/destinos.data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/Persistencia/reservas.data" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/Persistencia/reservas.data" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/View/Calificar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/Calificar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/View/ContenedorPaquetes.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/ContenedorPaquetes.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/View/MisReservas.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/MisReservas.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs.log.1.lck" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs.log.2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs.log.3" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs.log.4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs.log.5" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs.log.6" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/logs.log.lck" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
