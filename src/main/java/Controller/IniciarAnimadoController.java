@@ -28,7 +28,7 @@ public class IniciarAnimadoController implements Initializable {
     private Agencia agencia= Agencia.getInstance();
     private static final Logger LOGGER = Logger.getLogger(Agencia.class.getName());
     private Propiedades propiedades = Propiedades.getInstance();
-    private SesionCliente sesionCliente= SesionCliente.getInstance();
+    private final SesionCliente sesionCliente= SesionCliente.getInstance();
 
 
     @FXML
@@ -119,6 +119,8 @@ public class IniciarAnimadoController implements Initializable {
         btnVentanaRegistrarse.setText(propiedades.getBundle().getString("btnVentanaRegistrarse"));
         labelInicioSesion.setText(propiedades.getBundle().getString("labelInicioSesion"));
         vBoxR.setVisible(false);
+
+
     }
 
     public void volverPrincipal(){
@@ -137,12 +139,14 @@ public class IniciarAnimadoController implements Initializable {
     public void registrarse(){
         Cliente cliente = new Cliente(idTextField.getText(), nombreTextField.getText(), apellidoTextField.getText(), emailRegistro.getText(),telefonoTextF.getText() ,direccionTextF.getText(), passwordRegistro.getText() );
         try{
+            System.out.println(emailRegistro.getText());
             agencia.registrarCliente(cliente);
             Alert alert = new Alert(Alert.AlertType.INFORMATION);
             alert.setContentText("Cliente registrado exitosamente");
             alert.setHeaderText(null);
             alert.show();
-        }catch(ExistingCustomerException  | EmptyFieldException e){
+            //sesionCliente.setCliente(cliente);
+        }catch(Exception e){
             Alert alert = new Alert(Alert.AlertType.WARNING);
             alert.setContentText(e.getMessage());
             alert.setHeaderText(null);
@@ -178,13 +182,27 @@ public class IniciarAnimadoController implements Initializable {
         });
 
     }
-    public void iniciarSesion(ActionEvent actionEvent) {
-        try {
-            agencia.iniciarSesionClienteRecur(emailCliente.getText(),contraseniaIniciar.getText(),0, false);
-            SesionCliente.getInstance().setCliente(agencia.encontrarCliente(emailCliente.getText(), 0, false, new Cliente()));
-        } catch (NonRegisteredCustomer e) {
-            Alert alert = new Alert(Alert.AlertType.WARNING);
-            alert.setContentText(e.getMessage());
+    public void iniciarSesion() {
+        if(agencia.iniciarSesionClienteRecur(emailCliente.getText(),contraseniaIniciar.getText(),0, false)){
+            try {
+
+                Cliente cliente= agencia.encontrarCliente(emailCliente.getText(), 0, false, new Cliente());
+                sesionCliente.setCliente(cliente);
+                System.out.println(sesionCliente.getCliente());
+                FXMLLoader loader = new FXMLLoader(AppPrincipal.class.getResource("/View/PaginaPrincipalCliente.fxml"));
+                Parent parent = loader.load();
+                Stage stage = new Stage();
+                Scene scene = new Scene(parent);
+                stage.setScene(scene);
+                stage.setTitle("Agencia de viajes");
+                stage.show();
+                ((Stage) vBoxR.getScene().getWindow()).close();
+            } catch (IOException ioException) {
+                ioException.printStackTrace();
+            }
+        }else{
+            Alert alert = new Alert(Alert.AlertType.INFORMATION);
+            alert.setContentText("Cliente no encontrado");
             alert.setHeaderText(null);
             alert.show();
         }

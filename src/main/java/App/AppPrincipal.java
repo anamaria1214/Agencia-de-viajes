@@ -1,6 +1,7 @@
 package App;
 
 import Controller.IniciarAnimadoController;
+import Controller.PaginaPrincipalController;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;

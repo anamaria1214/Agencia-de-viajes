@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ContenedorPaquetesController">
+      <ImageView fx:id="imagenPack" fitHeight="82.0" fitWidth="88.0" layoutX="6.0" layoutY="4.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="verBoton" layoutX="8.0" layoutY="59.0" prefHeight="17.0" prefWidth="88.0" text="Ver Imagen" />
+      <Label fx:id="nombrePaquete" layoutX="104.0" layoutY="14.0" prefHeight="28.0" prefWidth="180.0" text="Nombre Paquete" />
+      <Label fx:id="precio" layoutX="328.0" layoutY="14.0" prefHeight="28.0" prefWidth="88.0" text="Precio" />
+      <Label fx:id="servAdicionales" layoutX="104.0" layoutY="59.0" prefHeight="28.0" prefWidth="273.0" text="Incluye:   " />
+      <Label fx:id="destinos" layoutX="328.0" layoutY="23.0" prefHeight="58.0" prefWidth="153.0" text="Destinos:" />
+      <Button fx:id="btnReservar" layoutX="461.0" layoutY="33.0" mnemonicParsing="false" onAction="#abrirVentanaMasDetalles" prefHeight="25.0" prefWidth="104.0" text="Reservar" />
+</AnchorPane>

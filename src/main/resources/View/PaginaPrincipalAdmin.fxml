@@ -38,7 +38,7 @@
    <left>
       <VBox prefHeight="394.0" prefWidth="210.0" style="-fx-background-color: #e8c5e8; -fx-border-color: #a368ff;" BorderPane.alignment="CENTER">
          <children>
-            <Button fx:id="btnGestionarDestinos" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#abrirGestonarDestinos" stylesheets="@../CSS/Button.css" text="Gestionar destinos">
+            <Button fx:id="btnGestionarDestinos" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#abrirGestonarDestinos" stylesheets="@../CSS/Button.css" text="Agregar destinos">
                <VBox.margin>
                   <Insets left="11.0" right="11.0" top="32.0" />
                </VBox.margin>
@@ -46,7 +46,7 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button fx:id="btnGestionarPaquetes" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#abrirGestionarPaquetes" stylesheets="@../CSS/Button.css" text="Gestionar paquetes">
+            <Button fx:id="btnGestionarPaquetes" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#abrirGestionarPaquetes" stylesheets="@../CSS/Button.css" text="Agregar paquetes">
                <VBox.margin>
                   <Insets left="11.0" right="11.0" top="32.0" />
                </VBox.margin>
@@ -54,22 +54,25 @@
                   <Cursor fx:constant="HAND" />
                </cursor>
             </Button>
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" prefWidth="187.0" stylesheets="@../CSS/Button.css" text="Gestionar guias turísticos" textOverrun="CLIP">
+            <Button fx:id="btnGestionarGuiaTuristico" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#abrirGesGuia" prefWidth="187.0" stylesheets="@../CSS/Button.css" text="Gestionar guias turísticos" textOverrun="CLIP">
                <VBox.margin>
                   <Insets left="11.0" right="11.0" top="32.0" />
                </VBox.margin>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
             </Button>
             <Button fx:id="btnEstadisticas" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../CSS/Button.css" text="Estadísticas">
                <VBox.margin>
                   <Insets left="11.0" right="11.0" top="32.0" />
                </VBox.margin>
             </Button>
-            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../CSS/Button.css" text="Paquetes">
+            <Button maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../CSS/Button.css" text="Eliminar paquetes">
                <VBox.margin>
                   <Insets left="11.0" right="11.0" top="32.0" />
                </VBox.margin>
             </Button>
-            <Button fx:id="btnDestinos" maxWidth="1.7976931348623157E308" mnemonicParsing="false" stylesheets="@../CSS/Button.css" text="Destinos">
+            <Button fx:id="btnDestinos" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#abrirEliminarDestinos" stylesheets="@../CSS/Button.css" text="Eliminar destinos">
                <VBox.margin>
                   <Insets left="11.0" right="11.0" top="32.0" />
                </VBox.margin>

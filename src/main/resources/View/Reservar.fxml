@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="365.0" style="-fx-background-color: #f0dcf2; -fx-border-color: #a368ff;" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.ReservarController">
+   <children>
+      <Label styleClass="tiulo" stylesheets="@../CSS/Label.css" text="Datos adicionales">
+         <VBox.margin>
+            <Insets top="25.0" />
+         </VBox.margin></Label>
+      <Label styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Fecha del viaje:">
+         <VBox.margin>
+            <Insets top="15.0" />
+         </VBox.margin></Label>
+      <DatePicker fx:id="fechaViaje" maxWidth="1.7976931348623157E308" styleClass="textoField" stylesheets="@../CSS/TextField.css">
+         <VBox.margin>
+            <Insets left="11.0" right="11.0" />
+         </VBox.margin></DatePicker>
+      <Label styleClass="subtitulo" stylesheets="@../CSS/Label.css" text="Cantidad de personas a viajar:">
+         <VBox.margin>
+            <Insets top="10.0" />
+         </VBox.margin></Label>
+      <TextField fx:id="cantPersonasViajan" styleClass="textoField" stylesheets="@../CSS/TextField.css">
+         <VBox.margin>
+            <Insets left="11.0" right="11.0" />
+         </VBox.margin></TextField>
+      <RadioButton fx:id="mandarCorreo" ellipsisString="" mnemonicParsing="false" prefHeight="71.0" prefWidth="365.0" styleClass="tituloRadioButton" stylesheets="@../CSS/Label.css" text="¿Está de acuerdo con recibir un correo con los detalles de la reserva?" textOverrun="CENTER_WORD_ELLIPSIS" wrapText="true">
+         <VBox.margin>
+            <Insets left="11.0" right="11.0" top="10.0" />
+         </VBox.margin></RadioButton>
+      <Button fx:id="btnReservar" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#hacerReserva" stylesheets="@../CSS/Button.css" text="Reservar">
+         <VBox.margin>
+            <Insets left="11.0" right="11.0" top="15.0" />
+         </VBox.margin></Button>
+   </children>
+</VBox>

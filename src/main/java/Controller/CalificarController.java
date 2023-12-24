@@ -1,13 +1,12 @@
 package Controller;
 
-import Model.Agencia;
-import Model.Reserva;
-import Model.SesionCliente;
+import Model.*;
 import javafx.collections.FXCollections;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.*;
 import javafx.scene.control.cell.PropertyValueFactory;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.SVGPath;
 
 import java.net.URL;
@@ -71,16 +70,114 @@ public class CalificarController implements Initializable {
     private Label labelComentarios;
 
     @FXML
-    private TableView<Reserva> tablaCalificar;
+    private TableView<PaqueteTuristico> tablaPaquetes;
+    @FXML
+    private TableView<GuiaTuristico> tablaGuia;
+    @FXML
+    private TableColumn clmPaquete;
+    @FXML
+    private TableColumn clmGuia;
 
+    private int calificacionGuia=0;
+    private int calificacionPaq=0;
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
 
-        clmPaqueteCalificar.setCellValueFactory( new PropertyValueFactory<>("nombreDestino"));
-        clmGuiaCalificar.setCellValueFactory( new PropertyValueFactory<>("ciudad"));
+        clmPaquete.setCellValueFactory( new PropertyValueFactory<>("nombrePaquete"));
+        clmGuia.setCellValueFactory( new PropertyValueFactory<>("nombreGuia"));
 
-        tablaCalificar.setItems(FXCollections.observableArrayList(agencia.listarReserva(sesionCliente.getCliente().getIdCliente(), 0,new ArrayList<>())));
+        tablaPaquetes.setItems(FXCollections.observableArrayList(agencia.listarPaquetes(sesionCliente.getCliente().getIdCliente())));
+        tablaGuia.setItems(FXCollections.observableArrayList(agencia.getGuiasTuristicos()));
+    }
+    public void calificarGuia1(){
+        estrellaGuia1.setFill(Color.PURPLE);
+        estrellaGuia2.setFill(Color.WHITE);
+        estrellaGuia3.setFill(Color.WHITE);
+        estrellaGuia4.setFill(Color.WHITE);
+        estrellaGuia5.setFill(Color.WHITE);
+        calificacionGuia=1;
+    }
+    public void calificarGuia2(){
+        estrellaGuia1.setFill(Color.PURPLE);
+        estrellaGuia2.setFill(Color.PURPLE);
+        estrellaGuia3.setFill(Color.WHITE);
+        estrellaGuia4.setFill(Color.WHITE);
+        estrellaGuia5.setFill(Color.WHITE);
+        calificacionGuia = 2;
+    }
+    public void calificarGuia3(){
+        estrellaGuia1.setFill(Color.PURPLE);
+        estrellaGuia2.setFill(Color.PURPLE);
+        estrellaGuia3.setFill(Color.PURPLE);
+        estrellaGuia4.setFill(Color.WHITE);
+        estrellaGuia5.setFill(Color.WHITE);
+        calificacionGuia = 3;
+    }
+    public void calificarGuia4(){
+        estrellaGuia1.setFill(Color.PURPLE);
+        estrellaGuia2.setFill(Color.PURPLE);
+        estrellaGuia3.setFill(Color.PURPLE);
+        estrellaGuia4.setFill(Color.PURPLE);
+        estrellaGuia5.setFill(Color.WHITE);
+        calificacionGuia= 4;
 
+    }
+    public void calificarGuia5(){
+        estrellaGuia1.setFill(Color.PURPLE);
+        estrellaGuia2.setFill(Color.PURPLE);
+        estrellaGuia3.setFill(Color.PURPLE);
+        estrellaGuia4.setFill(Color.PURPLE);
+        estrellaGuia5.setFill(Color.PURPLE);
+        calificacionGuia= 5;
+    }
+    public void calificarPaq1(){
+        estrellaPaquete1.setFill(Color.PURPLE);
+        estrellaPaquete2.setFill(Color.WHITE);
+        estrellaPaquete3.setFill(Color.WHITE);
+        estrellaPaquete4.setFill(Color.WHITE);
+        estrellaPaquete5.setFill(Color.WHITE);
+        calificacionPaq= 1;
+    }
+    public void calificarPaq2(){
+        estrellaPaquete1.setFill(Color.PURPLE);
+        estrellaPaquete2.setFill(Color.PURPLE);
+        estrellaPaquete3.setFill(Color.WHITE);
+        estrellaPaquete4.setFill(Color.WHITE);
+        estrellaPaquete5.setFill(Color.WHITE);
+        calificacionPaq= 2;
+    }
+    public void calificarPaq3(){
+        estrellaPaquete1.setFill(Color.PURPLE);
+        estrellaPaquete2.setFill(Color.PURPLE);
+        estrellaPaquete3.setFill(Color.PURPLE);
+        estrellaPaquete4.setFill(Color.WHITE);
+        estrellaPaquete5.setFill(Color.WHITE);
+        calificacionPaq= 3;
+    }
+    public void calificarPaq4(){
+        estrellaPaquete1.setFill(Color.PURPLE);
+        estrellaPaquete2.setFill(Color.PURPLE);
+        estrellaPaquete3.setFill(Color.PURPLE);
+        estrellaPaquete4.setFill(Color.PURPLE);
+        estrellaPaquete5.setFill(Color.WHITE);
+        calificacionPaq= 4;
+    }
+    public void calificarPaq5(){
+        estrellaPaquete1.setFill(Color.PURPLE);
+        estrellaPaquete2.setFill(Color.PURPLE);
+        estrellaPaquete3.setFill(Color.PURPLE);
+        estrellaPaquete4.setFill(Color.PURPLE);
+        estrellaPaquete5.setFill(Color.PURPLE);
+        calificacionPaq= 5;
+    }
+
+    public void enviarCalificar(){
+        Alert alert = new Alert(Alert.AlertType.INFORMATION);
+        alert.setContentText("Su calificación se recibió exitosamente."+" \n Ha calificado al paquete "+tablaPaquetes.getSelectionModel().getSelectedItem().getNombrePaquete()
+        +" con "+calificacionPaq+" estrellas."+"\n Ha calificado a el guia turístico con "+calificacionGuia+" estrellas."+
+                "\nSu opinión es muy valiosa para nosostros");
+        alert.setHeaderText(null);
+        alert.show();
     }
 
 }

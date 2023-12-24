@@ -8,24 +8,13 @@
     <list default="true" id="c56749ba-87c2-40c3-b6ca-a9bc8123ef5b" name="Changes" comment="Se agregó ventana gestionar paquetes, se puede agregar destino, los destinos están serializados">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/logs.log" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/logs.log.1" beforeDir="false" afterPath="$PROJECT_DIR$/logs.log.1" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/IniciarAnimadoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/IniciarAnimadoController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/PaginaPrincipalController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PaginaPrincipalController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Agencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Agencia.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CSS/Button.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CSS/Button.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/View/IniciarAnimado.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/IniciarAnimado.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/View/PaginaPrincipal.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/PaginaPrincipal.fxml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/CalificarController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/CalificarController.java" afterDir="false" />
 =======
-    <list default="true" id="c56749ba-87c2-40c3-b6ca-a9bc8123ef5b" name="Changes" comment="Se modificó mis reservas">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Controller/CalificarController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/Model/SesionCliente.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/View/Calificar.fxml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Controller/PaginaPrincipalClienteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Controller/PaginaPrincipalClienteController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/Model/PaqueteTuristico.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/PaqueteTuristico.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/CSS/Label.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/CSS/Label.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/View/PaginaPrincipalCliente.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/PaginaPrincipalCliente.fxml" afterDir="false" />
+    <list default="true" id="c56749ba-87c2-40c3-b6ca-a9bc8123ef5b" name="Changes" comment="Cerrar sesión y cambio del método cerrar sesión">
+      <change afterPath="$PROJECT_DIR$/logs.log.1.lck" afterDir="false" />
 >>>>>>> Stashed changes
+      <change beforePath="$PROJECT_DIR$/src/main/java/Model/Agencia.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Model/Agencia.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/View/Calificar.fxml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/View/Calificar.fxml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -58,28 +47,31 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "master",
-    "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Juanes/Desktop/Github/Agencia-de-viajes/src/main/resources/View/IniciarAnimado.fxml",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;Juanes&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/Juanes/Desktop/Github/Agencia-de-viajes&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\ANAMARIA\OneDrive\Documentos\GitHub\Agencia de viajes\src\main\resources\Persistencia" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\ANAMARIA\OneDrive\Documentos\GitHub\Agencia de viajes\src\main\resources\Propiedades" />
+    </key>
+    <key name="ExtractSuperBase.RECENT_KEYS">
+      <recent name="Controller" />
     </key>
   </component>
   <component name="RunManager">
@@ -150,11 +142,24 @@
       <workItem from="1699567382707" duration="40000" />
       <workItem from="1699568895879" duration="1623000" />
       <workItem from="1699756938179" duration="3840000" />
-<<<<<<< Updated upstream
       <workItem from="1699907972018" duration="336000" />
-      <workItem from="1699909010752" duration="9801000" />
+      <workItem from="1699909010752" duration="14205000" />
+      <workItem from="1699985233720" duration="414000" />
+      <workItem from="1700101351768" duration="467000" />
+      <workItem from="1700102669153" duration="2975000" />
+      <workItem from="1700105665570" duration="219000" />
+      <workItem from="1700105959318" duration="332000" />
+      <workItem from="1700106343872" duration="33000" />
+      <workItem from="1700106461198" duration="221000" />
+      <workItem from="1700107045101" duration="1122000" />
+      <workItem from="1700108611892" duration="2398000" />
+      <workItem from="1700112644538" duration="75000" />
+<<<<<<< Updated upstream
+      <workItem from="1700367929963" duration="939000" />
+      <workItem from="1700373208786" duration="969000" />
 =======
-      <workItem from="1699907972018" duration="9343000" />
+      <workItem from="1700367929963" duration="641000" />
+      <workItem from="1700372691836" duration="467000" />
 >>>>>>> Stashed changes
     </task>
     <task id="LOCAL-00001" summary="Cambio con ventana IniciarSesion hecha">
@@ -221,13 +226,13 @@
       <option name="project" value="LOCAL" />
       <updated>1699450936431</updated>
     </task>
-    <task id="LOCAL-00009" summary="Se modificó mis reservas">
+    <task id="LOCAL-00009" summary="Cerrar sesión y cambio del método cerrar sesión">
       <option name="closed" value="true" />
-      <created>1699908397911</created>
+      <created>1700373039545</created>
       <option name="number" value="00009" />
       <option name="presentableId" value="LOCAL-00009" />
       <option name="project" value="LOCAL" />
-      <updated>1699908397911</updated>
+      <updated>1700373039545</updated>
     </task>
     <option name="localTasksCounter" value="10" />
     <servers />
@@ -254,8 +259,9 @@
     <MESSAGE value="Commit cambio de ventanas en Pagina Principal" />
     <MESSAGE value="Se agregó ventana de gestionar destinos desde la ventana del admin" />
     <MESSAGE value="Se agregó ventana gestionar paquetes, se puede agregar destino, los destinos están serializados" />
-    <MESSAGE value="Se modificó mis reservas" />
-    <option name="LAST_COMMIT_MESSAGE" value="Se modificó mis reservas" />
+    <MESSAGE value="Demasiados cambios xd" />
+    <MESSAGE value="Cerrar sesión y cambio del método cerrar sesión" />
+    <option name="LAST_COMMIT_MESSAGE" value="Cerrar sesión y cambio del método cerrar sesión" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

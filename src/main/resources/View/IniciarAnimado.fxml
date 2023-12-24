@@ -44,7 +44,7 @@
                                <Insets top="14.0" />
                            </VBox.margin>
                        </Label>
-                       <TextField fx:id="emailCliente" styleClass="textoField" stylesheets="@../CSS/TextField.css">
+                       <TextField fx:id="emailCliente" styleClass="textoField" stylesheets="@../CSS/TextField.css" text="anicu2314@gmail.com">
                            <font>
                                <Font size="15.0" />
                            </font>
@@ -57,7 +57,7 @@
                                <Insets top="14.0" />
                            </VBox.margin>
                        </Label>
-                       <PasswordField fx:id="contraseniaIniciar" styleClass="textoField" stylesheets="@../CSS/TextField.css">
+                       <PasswordField fx:id="contraseniaIniciar" styleClass="textoField" stylesheets="@../CSS/TextField.css" text="123">
                            <font>
                                <Font size="15.0" />
                            </font>
